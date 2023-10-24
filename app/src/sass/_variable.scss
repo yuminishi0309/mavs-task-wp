@@ -1,3 +1,8 @@
+/* ================================================================
+変数
+================================================================ */
+
+// レスポンシブ
 $w1800: "only screen and (max-width:1800px) ";
 $w1600: "only screen and (max-width:1600px) ";
 $w1400: "only screen and (max-width:1400px) ";
@@ -14,6 +19,10 @@ $hover: "(hover: hover) and (pointer: fine)";
 $colorBlack: #222;
 $colorWhite: #fff;
 $colorOrange: #ea9631;
+
+/* ================================================================
+mixin
+================================================================ */
 
 @mixin txtNormal {
   font-family: "Hiragino Sans";
