@@ -1,6 +1,6 @@
 # 概要
 
-WordPress 制作に特化した gulp テンプレートです。
+WordPress 制作に特化した gulp ボイラープレートです。
 
 Docker を使用してローカルで WordPress を起動することも可能です。
 
