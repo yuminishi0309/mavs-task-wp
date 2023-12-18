@@ -35,7 +35,7 @@
             <li class="gnavTop__list"><a href="contact.html" class="gnavTop__link">CONTACT</a></li>
           </ul>
         </nav>
-        <!-- 詳細ナビゲーション -->
+        <!-- FadeInナビゲーション -->
         <nav class="gnav">
           <ul class="gnav__nav--left">
             <li class="gnav__list"><a href="index.html" class="gnav__link">TOP</a></li>
@@ -66,50 +66,132 @@
         <!-- mv ===================================== -->
         <div class="mv">
           <div class="mv__wrap">
-            <p>MVが入ります</p>
+            <div class="mv__container">
+              <p class="mv__ttl">UNION</p>
+              <p class="mv__ttl">CREATE</p>
+              <p class="mv__ttl">STRENGTH</p>
+            </div>
+            <p class="mv__sub">最高のチームで、最高の価値を提供する</p>
           </div>
+          <div class="mv__icon">
+            <p class="mv__iconImg"><img src="assets/image/top/icon-img.svg" alt="山のアイコン" class="mv__img"></p>
+            <p class="mv__iconTxt"><img src="assets/image/top/icon-txt.svg" alt="アイコンテキスト" class="mv__img"></p>
+          </div>
+          <div class="mv__bg">
+            <p class="mv__bg-wolf"><img src="assets/image/top/mv_wolf.png" alt="狼の顔" class="mv__img"></p>
+            <div class="mv__bg-grey"></div>
+            <div class="mv__bg-city"></div>
+            <div class="mv__bg-plant"></div>
+          </div>
+        </div>
+        <!-- mv以降の全体bg ===================================== -->
+        <div class="mainBg">
+          <div class="mainBg-color"></div>
+          <div class="mainBg-grey"></div>
         </div>
         <!-- about sec ===================================== -->
         <section class="about">
           <div class="about__wrap">
-            <h2>about section 普通のタイトル</h2>
-            <p>aboutのテキストが入ります。</p>
-            <p><a href="">READ MOREボタン</a></p>
+            <h2 class="about__ttl">ABOUT</h2>
+            <p class="about__txt">マーベリックスは<br class="about__br">技術力とコミュニケーションスキルを<br class="about__br">兼ね備えたエンジニア集団。<br class="about__br">それぞれの個性を活かしチームで取り組む
+              からこそ最高の価値を提供できる。<br class="about__br">変化を恐れず己を磨き、挑戦を続けながら明日の世界を創造していく。
+            </p>
+            <p class="about__btn"><a href="#" class="about__link">READ MORE</a></p>
           </div>
         </section>
         <!-- service sec ===================================== -->
         <section class="service">
           <div class="service__wrap">
-
-            <div class="partsTtl">
-              <h2>SERVICE section 共通化したタイトル</h2>
-              <p>サービスセクション 共通化したサブタイトル</p>
+            <div class="service__container">
+              <h2 class="service__ttl">SERVICE</h2>
+              <p class="service__sub">サービス</p>
+              <p class="service__txt">マーベリックスは経験豊富なメンバーによるサイト制作やシステム開発を得意としています。さらに業務に柔軟に対応できる「リモートラボ」なら、お客様の開発を効率的に進めることができます。</p>
+              <p class="service__btn"><a href="#" class="service__link">READ MORE</a></p>
             </div>
-            <p>serviceのテキストが入ります。</p>
-            <p><a href="">READ MOREボタン</a></p>
+            <div class="service__pic"></div>
           </div>
         </section>
         <!-- blog sec ===================================== -->
         <section class="blog">
           <div class="blog__wrap">
-            <h2>ブログセクション</h2>
-            <p>ブログセクションのタイトルも、サービスセクションのタイトルと同様、パーツをEJSでincludeしたかったができません</p>
+            <h2 class="blog__ttl">BLOG</h2>
+            <p class="blog__sub">ブログ</p>
+            <!-- スライダー -->
+            <div class="slider">
+              <p>スライダーが入ります</p>
+            </div>
+            <p class="blog__btn"><a href="blog.html" class="blog__link">READ MORE</a></p>
           </div>
         </section>
+        <!-- member sec ===================================== -->
+        <section class="member">
+          <div class="member__wrap">
+            <div class="member__container">
+              <h2 class="member__ttl">MEMBER</h2>
+              <p class="member__sub">メンバー</p>
+              <div class="member__bg">
+                <div class="member__bg-pic"></div>
+                <div class="member__bg-plant"></div>
+              </div>
+              <p class="member__txt">個性あるマーベリックスの仲間をご紹介します！</p>
+              <p class="member__btn"><a href="#" class="member__link">READ MORE</a></p>
+            </div>
+            <div class="member__pic"></div>
+          </div>
+        </section>
+        <!-- テキストループアニメーション ===================================== -->
+        <div class="loop__wrap">
+          <p class="loop__txt1"><img src="assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
+          <p class="loop__txt2"><img src="assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
+        </div>
+        <!-- バナー ===================================== -->
+        <div class="banner__wrap">
+          <picture class="banner__pic">
+            <!-- PC用の画像 -->
+            <source media="(min-width: 1024px)" srcset="assets/image/top/banner-pc.jpg">
+            <!-- TAB用の画像 -->
+            <source media="(min-width: 768px)" srcset="assets/image/top/banner-pc.jpg">
+            <!-- スマホ用とデフォルト設定 -->
+            <img src="assets/image/top/banner-sp.jpg" alt="スマホ用バナー" class="banner__img">
+          </picture>
+        </div>
+        <!-- news sec ===================================== -->
+        <section class="news">
+          <div class="news__wrap">
+            <div class="news__unit">
+              <h2 class="news__ttl">NEWS</h2>
+              <p class="news__sub">ニュース</p>
+              <p class="news__btn"><a href="#" class="news__link">READ MORE</a></p>
+            </div>
+            <div class="news__container">
+              <div class="news__box">
+                <a href="#" class="news__link">
+                  <p class="news__date">2022.05.01</p>
+                  <p class="news__txt">ホームページをリニューアルしました</p>
+                </a>
+              </div>
+              <div class="news__box">
+                <a href="#" class="news__link">
+                  <p class="news__date">2022.05.01</p>
+                  <p class="news__txt">ホームページをリニューアルしました</p>
+                </a>
+              </div>
+              <div class="news__box">
+                <a href="#" class="news__link">
+                  <p class="news__date">2022.05.01</p>
+                  <p class="news__txt">ホームページをリニューアルしました</p>
+                </a>
+              </div>
+            </div>
+            <p class="news__top"><a href="#" class="news__link">GO TOP</a></p>
 
-        <!-- sample -->
-        <section class="topContents">
-          <div class="topContents_wrap">
-            <h2>↓ブログ/コンタクトページサンプルに飛ぶボタン</h2>
-            <div class="c-link"><a href="blog.html">ブログページへ</a></div>
-            <div class="c-link"><a href="contact.html">コンタクトページへ</a></div>
           </div>
         </section>
       </div>
     </main>
-
     <footer class="footer">
       <div class="footer__wrap">
+
         <!-- 詳細ナビゲーション -->
         <nav class="gnav">
           <ul class="gnav__nav--left">
@@ -133,6 +215,7 @@
             <a href="#" class="nav__link">RECRUIT</a>
           </p>
         </div>
+
       </div>
       <p class="footer__logo">
         <a href="index.html" class="footer__logo-link"><img src="assets/image/top/logo-mvs.svg" alt="マーベリックスロゴ"></a>
