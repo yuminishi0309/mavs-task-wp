@@ -2,6 +2,59 @@
 @media #{$sp} {
 }
 
+// ============================================================
+// ↓ ナビゲーションレイアウトお試し＠ヘッダー、フッター
+
+// ヘッダーgnav
+.header {
+  background: grey;
+  .gnavTop {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+  .gnav {
+    color: red;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+  .nav {
+    color: green;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+// フッターgnav
+.footer {
+  background: grey;
+  &__wrap {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+  }
+  .gnav {
+    display: flex;
+    color: blue;
+    @media screen and (min-width: 1024px) {
+      color: #000;
+      order: 2;
+    }
+  }
+  .nav {
+    &__btn {
+      border: 1px solid #000;
+    }
+  }
+}
+
+// ↑ ナビゲーションレイアウトお試し＠ヘッダー、フッター
+// ============================================================
+
+
 .topContents {
   &_wrap {
     @include inner;

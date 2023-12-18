@@ -1,36 +1,55 @@
 <% 
-let title = 'トップページ'; 
+let title = '北海道札幌市のホームページ・Web制作・システム開発会社｜株式会社マーベリックス'; 
 let description = 'トップページのディスクリプション'; 
 let pageId = 'home'; 
 %>
 <%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
 
-<main class="topMain c-main">
-  <section class="topMv">
-    <div class="topMv_wrap">
-    </div>
-  </section>
-  <section class="topContents">
-    <div class="topContents_wrap">
-      <div class="topContents_title">
-        <h2>タイトル</h2>
-        <p>テスト</p>
+<main class="topMain">
+  <div class="wrapper">
+    <!-- mv ===================================== -->
+    <div class="mv">
+      <div class="mv__wrap">
+        <p>MVが入ります</p>
       </div>
-      <p class="topContents_text">テキスト</p>
-      <div class="c-link"><a href="about.html">会社概要ページへ</a></div>
     </div>
-  </section>
-  <section class="topImages">
-    <div class="topImages_wrap">
-      <p>JPG</p>
-      <img src="assets/image/morning.jpg" alt="">
-      <p>PNG</p>
-      <img src="assets/image/fashion.png" alt="">
-      <p>SVG</p>
-      <img src="assets/image/car.svg" alt="">
-      <%- include('./common/_parts')  %>
-    </div>
-  </section>
+    <!-- about sec ===================================== -->
+    <section class="about">
+      <div class="about__wrap">
+        <h2>about section 普通のタイトル</h2>
+        <p>aboutのテキストが入ります。</p>
+        <%- include('./common/_button') %>
+      </div>
+    </section>
+    <!-- service sec ===================================== -->
+    <section class="service">
+      <div class="service__wrap">
+        <% 
+        let h2 = 'SERVICE section 共通化したタイトル'; 
+        let p = 'サービスセクション 共通化したサブタイトル'
+        %>
+        <%- include('./common/_parts-sec-ttl' ,{ h2: h2,p: p }) %>
+        <p>serviceのテキストが入ります。</p>
+        <%- include('./common/_button') %>
+      </div>
+    </section>
+    <!-- blog sec ===================================== -->
+    <section class="blog">
+      <div class="blog__wrap">
+        <h2>ブログセクション</h2>
+        <p>ブログセクションのタイトルも、サービスセクションのタイトルと同様、パーツをEJSでincludeしたかったができません</p>
+      </div>
+    </section>
+    
+    <!-- sample -->
+    <section class="topContents">
+      <div class="topContents_wrap">
+        <h2>↓ブログ/コンタクトページサンプルに飛ぶボタン</h2>
+        <div class="c-link"><a href="blog.html">ブログページへ</a></div>
+        <div class="c-link"><a href="contact.html">コンタクトページへ</a></div>
+      </div>
+    </section>
+  </div> 
 </main>
 
 <%- include('./common/_footer')  %>

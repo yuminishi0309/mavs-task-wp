@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,user-scalable=yes" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="<%= description %>">
     <title><%= title %></title>
     <meta property="og:title" content="" />
@@ -17,13 +16,23 @@
     <script src="./assets/js/script.js"></script>
   </head>
   <body>
-    <header class="c-header" id="js-header">
-      <div class="c-header_wrap">
-        <h1><a href="/"></a><img src="assets/image/logo.png" alt="" width="80"></a></h1>
-        <%_ if (pageId === 'home'){ -%>
-          <h2>トップヘッダー</h2>
-        <%_ } else { -%>
-          <h2><%= title %></h2>
-        <%_ } -%>
-      </div>
-    </header>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__wrap">
+                <h1 class="header__ttl">
+                    <a href="index.html" class="header__logo-link"><img src="assets/image/top/logo-bl.svg" alt="マーベリックスロゴ"></a>
+                </h1>
+                <nav class="gnavTop">
+                    <ul class="gnavTop__nav-pc">
+                        <li class="gnavTop__list"><a href="#" class="gnavTop__link">ABOUT</a></li>
+                        <li class="gnavTop__list"><a href="#" class="gnavTop__link">SERVICE</a></li>
+                        <li class="gnavTop__list"><a href="#" class="gnavTop__link">NEWS</a></li>
+                        <li class="gnavTop__list"><a href="blog.html" class="gnavTop__link">BLOG</a></li>
+                        <li class="gnavTop__list"><a href="#" class="gnavTop__link">COMPANY</a></li>
+                        <li class="gnavTop__list"><a href="#" class="gnavTop__link">RECRUIT</a></li>
+                        <li class="gnavTop__list"><a href="contact.html" class="gnavTop__link">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <%- include('_nav'); %>
+            </div>
+        </header>
