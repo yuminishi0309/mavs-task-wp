@@ -36,8 +36,13 @@ let pageId = 'home';
     <!-- blog sec ===================================== -->
     <section class="blog">
       <div class="blog__wrap">
-        <h2>ブログセクション</h2>
-        <p>ブログセクションのタイトルも、サービスセクションのタイトルと同様、パーツをEJSでincludeしたかったができません</p>
+        <% 
+        let h2 = 'BLOG section 共通化したタイトル'; 
+        let p = 'ブログセクション 共通化したサブタイトル'
+        %>
+        <%- include('./common/_parts-sec-ttl' ,{ h2: h2,p: p }) %>
+        <p>↑ブログセクションのタイトルも、サービスセクションのタイトルと同様、パーツをEJSでincludeしたかったができません</p>
+        <%- include('./common/_button') %>
       </div>
     </section>
     
