@@ -1,83 +1,139 @@
 /* ================================================================
 変数
 ================================================================ */
-
-// レスポンシブ
-$w1800: "only screen and (max-width:1800px) ";
-$w1600: "only screen and (max-width:1600px) ";
-$w1400: "only screen and (max-width:1400px) ";
-$w1200: "only screen and (max-width:1200px) ";
-$tab: "only screen and (max-width:999px) ";
-$pc: "only screen and (min-width:769px) ";
-$sp: "only screen and (max-width:769px) ";
-$sp500: "only screen and (max-width:500px) ";
-$sp400: "only screen and (max-width:400px) ";
-$sp350: "only screen and (max-width:350px) ";
-$hover: "(hover: hover) and (pointer: fine)";
+// フォント
+$plus: 'M PLUS 1', sans-serif;
+$sans: 'Noto Sans JP', sans-serif;
+$futura: "futura-pt", sans-serif;
 
 // 色
-$colorBlack: #222;
-$colorWhite: #fff;
-$colorOrange: #ea9631;
+$black: #000;
+$white: #fff;
+$grey: #E6E6E6;
+$middleGrey: #A0A0A0;
+$darkGrey: #888;
+$magenda: #ED1E79;
+/* ================================================================
+mixin
+================================================================ */
+// READ MOREボタン
+@mixin readMoreBtn-p {
+    color: $white;
+    &>a {
+        background: $black;
+        padding: 9px 36px;
+        border-radius: 6.25rem;
+    }
+}
+// セクションタイトル
+
+
+
+/* ================================================================
+keyframe animation
+================================================================ */
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(24px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+//mv テキスト回転アニメーション
+@keyframes rotation {
+    from {
+        transform: rotate(0deg); transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg); transform: rotate(359deg);
+    }
+}
+
+
+// sample =============================================
+
+// レスポンシブ
+// $w1800: "only screen and (max-width:1800px) ";
+// $w1600: "only screen and (max-width:1600px) ";
+// $w1400: "only screen and (max-width:1400px) ";
+// $w1200: "only screen and (max-width:1200px) ";
+// $tab: "only screen and (max-width:999px) ";
+// $pc: "only screen and (min-width:769px) ";
+// $sp: "only screen and (max-width:769px) ";
+// $sp500: "only screen and (max-width:500px) ";
+// $sp400: "only screen and (max-width:400px) ";
+// $sp350: "only screen and (max-width:350px) ";
+// $hover: "(hover: hover) and (pointer: fine)";
+
+// 色
+// $colorBlack: #222;
+// $colorWhite: #fff;
+// $colorOrange: #ea9631;
 
 /* ================================================================
 mixin
 ================================================================ */
 
-@mixin txtNormal {
-  font-family: "Hiragino Sans";
-  font-weight: 400;
-  font-size: 1.6rem;
-  letter-spacing: 0.12em;
-  line-height: 3.2rem;
-  color: #222;  
-}
+// sample =============================================
 
-@mixin inner($mW: 102.4rem, $w: 92%, $mT: 0, $mB: 0px) {
-  margin-top: $mT;
-  margin-bottom: $mB;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $mW;
+// @mixin txtNormal {
+//   font-family: "Hiragino Sans";
+//   font-weight: 400;
+//   font-size: 1.6rem;
+//   letter-spacing: 0.12em;
+//   line-height: 3.2rem;
+//   color: #222;  
+// }
 
-  width: 98%;
+// @mixin inner($mW: 102.4rem, $w: 92%, $mT: 0, $mB: 0px) {
+//   margin-top: $mT;
+//   margin-bottom: $mB;
+//   margin-left: auto;
+//   margin-right: auto;
+//   max-width: $mW;
 
-  @media #{$sp} {
-    width: $w;
-    max-width: 32.7rem;
-  }
-}
+//   width: 98%;
 
-@mixin lineAbb($line: 1) {
-  display: -webkit-box;
-  -webkit-line-clamp: $line;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+//   @media #{$sp} {
+//     width: $w;
+//     max-width: 32.7rem;
+//   }
+// }
 
-@mixin linkHover($op: 0.9) {
-  transition: 0.3s;
-  &:hover {
-    opacity: $op;
-  }
-}
+// @mixin lineAbb($line: 1) {
+//   display: -webkit-box;
+//   -webkit-line-clamp: $line;
+//   -webkit-box-orient: vertical;
+//   overflow: hidden;
+// }
 
-@mixin fontGothic {
-  /* 游ゴシック体 */
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro",
-    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic",
-    sans-serif;
-}
+// @mixin linkHover($op: 0.9) {
+//   transition: 0.3s;
+//   &:hover {
+//     opacity: $op;
+//   }
+// }
 
-@mixin textGrad($deg: 90deg, $s: 0%, $e: 40%) {
-  background: linear-gradient($deg, #6fc3d3 $s, #0e7092 $e);
-  -webkit-background-clip: text; //テキストでくり抜く
-  -webkit-text-fill-color: transparent; //くり抜いた部分は背景を表示
-}
+// @mixin fontGothic {
+//   /* 游ゴシック体 */
+//   font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro",
+//     "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic",
+//     sans-serif;
+// }
 
-@mixin pddAll {
-  padding: 80px 0;
-  @media #{$sp} {
-    padding: 64px 0;
-  }
-}
+// @mixin textGrad($deg: 90deg, $s: 0%, $e: 40%) {
+//   background: linear-gradient($deg, #6fc3d3 $s, #0e7092 $e);
+//   -webkit-background-clip: text; //テキストでくり抜く
+//   -webkit-text-fill-color: transparent; //くり抜いた部分は背景を表示
+// }
+
+// @mixin pddAll {
+//   padding: 80px 0;
+//   @media #{$sp} {
+//     padding: 64px 0;
+//   }
+// }

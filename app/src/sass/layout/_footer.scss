@@ -1,0 +1,85 @@
+@import "../_variable";
+
+.footer {
+    color: $white;
+    // GO TOP ボタン
+    &__top {
+        color:  $magenda;
+    }
+    
+    &__link {
+    
+    }
+    // 以下帯部分
+    &__wrap {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+        background: $black;
+
+        @media screen and (min-width: 1024px) {
+          display: flex;
+          justify-content: space-between;
+          padding: 6.8rem 10.2em;
+        }
+    }
+}
+// ナビゲーション
+.footerGnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+    margin-bottom: 7.6rem;
+
+    @media screen and (min-width: 1024px) {
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    &__list {
+        margin: 0.7rem 0;
+    }
+
+    &__link {
+        display: block;
+        font-family: $futura;
+        font-weight: 500;
+    }
+}
+
+// コンタクト/リクルート 独立ボタン
+.footerNav {
+    margin-bottom: 5.7rem;
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+    &__btn {
+        text-align: center;
+    }
+    &__link {
+    
+    }
+}
+// ロゴ/コピーライト
+.footer {
+    &__logo {
+        text-align: center;
+    }
+    &__logo-link {
+        display: inline-block;
+    }
+    &__logo-img {
+        display: block;
+    }
+    &__copyright {
+        text-align: center;
+        font-size: 1rem;
+
+        @media screen and (min-width: 1024px) {
+          text-align: left;
+        }
+    }
+}
+
+

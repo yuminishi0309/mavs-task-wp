@@ -1,0 +1,198 @@
+@import "../_variable";
+// ↓ ナビゲーションレイアウトお試し＠ヘッダー、フッター
+.wrapper {
+    overflow: hidden;
+}
+
+// ヘッダーgnav
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    z-index: 3;
+    
+    @media screen and (min-width: 768px) {
+        padding: 2rem 3rem;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 1.25rem 3.5rem;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__ttl {
+        width: 3.5rem;
+    }
+    &__link {
+        display: block;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+}
+// PCナビゲーション=================
+.gnavTop {
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+        display: block;
+
+        &__nav {
+            display: flex;
+        }
+        &__list {
+            margin-right: 3rem;
+        }
+        &__link {
+            display: block;
+            padding: 0.06rem 1rem;
+            &:hover {
+                opacity: .5;
+            }
+        }
+        &__contactList {
+            color: $white;
+        }
+        &__contactLink {
+            background: $black;
+            padding: 0.6rem 2rem;
+            border-radius: 6.25rem;
+        }
+    }
+
+}
+// FadeIn ナビゲーション=================
+// ボタン
+.btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    z-index: 11;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+
+    &__top, &__middle, &__bottom {
+        position: absolute;
+        display: block;
+        width: 1.75rem;
+        height: 1px;
+        background: $white;
+        transition: .3s;
+    }
+    &__top {
+        transform: translateY(-0.6rem);
+    }
+    &__bottom {
+        transform: translateY(0.6rem);
+    }
+}
+// フェードインnav
+.gnavFadeIn {
+    background: url(../image/top/menu-bg.jpg) left top / contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    color: $white;
+    transition: .4s;
+    opacity: 0;
+    pointer-events: none;
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3.5rem;
+        margin-left: 1.5rem;
+        margin-top: 1.1rem;
+    }
+    &__logoLink {
+        display: block;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4.8rem;
+        width: 100%;
+
+        // 黒背景
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 2rem;
+            content: "";
+            width: 150%;
+            height: 100vh;
+            transform: skewX(-23deg);
+            background: #000;
+        }
+    }
+    &__nav--left, &__nav--right {
+        z-index: 10;
+    }
+    &__list {
+        
+    }
+    &__link {
+        display: block;
+        font-family: $futura;
+        font-weight: 500;
+    }
+}
+// メニュー内ボタン
+.nav {
+    position: absolute;
+    bottom: 16rem;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    z-index: 10;
+    color: $white;
+    font-family: $futura;
+    font-weight: 500;
+    // &__btn {
+        
+        
+    // }
+    
+    &__link {
+        display: block;
+
+    
+    }
+
+}
+
+
+
+
+
