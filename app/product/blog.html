@@ -12,13 +12,10 @@
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
   <link rel="stylesheet" href="https://use.typekit.net/zte7fky.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link href="./assets/css/common.css" rel="stylesheet" />
   <link href="./assets/css/style.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="./assets/favicon.ico" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-  <script src="./assets/js/script.js"></script>
 </head>
 
 <body>
@@ -36,7 +33,12 @@
             <li class="gnavTop__list"><a href="blog.html" class="gnavTop__link">BLOG</a></li>
             <li class="gnavTop__list"><a href="#" class="gnavTop__link">COMPANY</a></li>
             <li class="gnavTop__list"><a href="#" class="gnavTop__link">RECRUIT</a></li>
-            <li class="gnavTop__contactList"><a href="contact.html" class="gnavTop__contactLink">CONTACT</a></li>
+            <!-- <li class="gnavTop__contactList"><a href="contact.html" class="gnavTop__contactLink">CONTACT</a></li> -->
+            <li class="gnavTop__list gnavTop__btn">
+              <a href="#" class="gnavTop__link gnavTop__contactLink">
+                <span class="gnavTop__letter readMoreLetter">CONTACT</span>
+              </a>
+            </li>
           </ul>
         </nav>
         <!-- FadeInメニュー -->
@@ -67,11 +69,11 @@
           </div>
           <!-- nav独立ボタン -->
           <div class="nav">
-            <p class="nav__btn">
-              <a href="contact.html" class="nav__link">CONTACT</a>
+            <p class="nav__btn nav__btnBg">
+              <a href="contact.html" class="nav__link"></a>
             </p>
-            <p class="nav__btn">
-              <a href="#" class="nav__link">RECRUIT</a>
+            <p class="nav__btn nav__btnBg">
+              <a href="#" class="nav__link"></a>
             </p>
           </div>
         </nav>
@@ -96,7 +98,7 @@
     </main>
 
     <footer class="footer">
-      <p class="footer__top"><a href="#" class="footer__link">GO TOP</a></p>
+      <p class="footer__top"><a href="#" class="footer__link"><img src="assets/image/top/goTop.svg" alt="GO TOP画像"></a></p>
       <div class="footer__wrap">
         <nav class="footerGnav">
           <ul class="footerGnav__nav--left">
@@ -115,11 +117,11 @@
         <div class="footer__container">
 
           <div class="footerNav">
-            <p class="footerNav__btn">
-              <a href="contact.html" class="footerNav__link">CONTACT</a>
+            <p class="footerNav__btn footerNav__btnBg">
+              <a href="contact.html" class="footerNav__link"></a>
             </p>
-            <p class="footerNav__btn">
-              <a href="#" class="footerNav__link">RECRUIT</a>
+            <p class="footerNav__btn footerNav__btnBg">
+              <a href="#" class="footerNav__link"></a>
             </p>
           </div>
           <p class="footer__logo">
@@ -130,7 +132,12 @@
       </div>
     </footer>
   </div>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+  <!-- swiper本体 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <!-- .jsファイルの読み込み -->
+  <script src="./assets/js/swiper.js"></script>
+  <script src="./assets/js/script.js"></script>
 
 
 </body>

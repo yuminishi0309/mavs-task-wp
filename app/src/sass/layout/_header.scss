@@ -1,5 +1,4 @@
 @import "../_variable";
-// ↓ ナビゲーションレイアウトお試し＠ヘッダー、フッター
 .wrapper {
     overflow: hidden;
 }
@@ -47,6 +46,7 @@
 
         &__nav {
             display: flex;
+            align-items: center;
         }
         &__list {
             margin-right: 3rem;
@@ -58,16 +58,14 @@
                 opacity: .5;
             }
         }
-        &__contactList {
-            color: $white;
-        }
-        &__contactLink {
-            background: $black;
-            padding: 0.6rem 2rem;
-            border-radius: 6.25rem;
+        &__btn {
+            @include readMoreBtn;
+
+            &>a {
+                padding: 0.6rem 2rem;
+            }
         }
     }
-
 }
 // FadeIn ナビゲーション=================
 // ボタン
@@ -104,6 +102,10 @@
 }
 // フェードインnav
 .gnavFadeIn {
+    // 作業用 後で削除******
+    // opacity: 1;
+    // pointer-events: auto;
+    // ↑作業用 ******
     background: url(../image/top/menu-bg.jpg) left top / contain;
     position: fixed;
     top: 0;
@@ -141,7 +143,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 4.8rem;
+        gap: 3.6rem;
         width: 100%;
 
         // 黒背景
@@ -160,36 +162,77 @@
         z-index: 10;
     }
     &__list {
-        
+        margin: 0.8rem 0;
     }
     &__link {
         display: block;
+        padding: 0.6rem;
         font-family: $futura;
         font-weight: 500;
     }
 }
-// メニュー内ボタン
+// メニュー内独立ボタン
 .nav {
     position: absolute;
     bottom: 16rem;
     left: 50%;
     transform: translateX(-50%);
-    
-    z-index: 10;
     color: $white;
     font-family: $futura;
     font-weight: 500;
-    // &__btn {
-        
-        
-    // }
-    
+    z-index: 10;
+
+    &__btn {
+        position: relative;
+        overflow: hidden;
+        width: 264px;
+        height: 53px;
+        margin-bottom: 6px;
+        font-size: 16px;
+        border: 1px solid $white;
+        transform: skewX(-23deg);
+        transition: ease .4s;
+        cursor: pointer;
+        // ボタン内テキスト
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            content: "CONTACT　→";
+            color: $white;
+            transform: skew(23deg) translate(-50%,-50%);
+            pointer-events: none;
+        }
+        &:last-child {
+            &::after {
+                content: "RECRUIT　→";
+                font-size: 17px;
+            }
+        }
+    }
+    // ホバー時出現のbg要素
+    &__btnBg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background: hsla(0, 0%, 23%, 0.4);
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        transition: ease .4s;
+        pointer-events: none;
+      }
+      &__btnBg:hover::before {
+        transform: translateX(100%);
+        }
+
     &__link {
         display: block;
-
-    
+        width: 100%;
+        height: 100%;
     }
-
 }
 
 

@@ -4,13 +4,19 @@
     color: $white;
     // GO TOP ボタン
     &__top {
-        color:  $magenda;
+        width: 38px;
+        margin-left: auto;
+        margin-right: 1.3rem;
     }
-    
     &__link {
-    
+        display: block;
     }
-    // 以下帯部分
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    // 以下footer本体
     &__wrap {
         padding-top: 10rem;
         padding-bottom: 8rem;
@@ -28,20 +34,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4.8rem;
+    gap: 3.6rem;
     margin-bottom: 7.6rem;
 
     @media screen and (min-width: 1024px) {
       order: 2;
       margin-bottom: 0;
     }
-
     &__list {
         margin: 0.7rem 0;
     }
-
     &__link {
         display: block;
+        padding: 0.6rem;
         font-family: $futura;
         font-weight: 500;
     }
@@ -51,20 +56,82 @@
 .footerNav {
     margin-bottom: 5.7rem;
 
+    // position: absolute;
+    // bottom: 16rem;
+    // left: 50%;
+    // transform: translateX(-50%);
+    color: $white;
+    font-family: $futura;
+    font-weight: 500;
+    // z-index: 10;
+
     @media screen and (min-width: 1024px) {
       display: flex;
     }
     &__btn {
-        text-align: center;
+        position: relative;
+        overflow: hidden;
+        width: 264px;
+        height: 53px;
+        margin: 0 auto 6px;
+        font-size: 16px;
+        border: 1px solid $white;
+        transform: skewX(-23deg);
+        transition: ease .4s;
+        cursor: pointer;
+
+        @media screen and (min-width: 1024px) {
+          margin: 0 3px;
+        }
+        // ボタン内テキスト
+        &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            content: "CONTACT　→";
+            color: $white;
+            transform: skew(23deg) translate(-50%,-50%);
+            pointer-events: none;
+        }
+        &:last-child {
+            &::after {
+                content: "RECRUIT　→";
+                font-size: 17px;
+            }
+        }
     }
+    // ホバー時出現のbg要素
+    &__btnBg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background: hsla(0, 0%, 23%, 0.4);
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        transition: ease .4s;
+        pointer-events: none;
+      }
+      &__btnBg:hover::before {
+        transform: translateX(100%);
+        }
+
     &__link {
-    
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 }
 // ロゴ/コピーライト
 .footer {
     &__logo {
         text-align: center;
+
+        @media screen and (min-width: 1024px) {
+          text-align: left;
+        }
     }
     &__logo-link {
         display: inline-block;
