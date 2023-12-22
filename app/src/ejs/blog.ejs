@@ -5,20 +5,108 @@ let pageId = 'blog';
 %>
 <%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
 
-<main class="aboutMain c-main">
-  <section class="aboutMv">
-    <div class="aboutMv_wrap">
+<main id="blog">
+  <div class="wrapper">
+    <!-- 全体bg ===================================== -->
+    <div class="mainBg">
+      <div class="mainBg-bg"></div>
     </div>
-  </section>
-  <section class="aboutContents">
-    <div class="aboutContents_wrap">
-      <div class="aboutContents_title">
-        <h2>ブログページです</h2>
+    <!-- blogList sec ===================================== -->
+    <section class="blogList">
+      <h2 class="blogList__ttl">BLOG</h2>
+      <p class="blogList__sub">ブログ</p>
+      <!-- ↓カテゴリページのみ******************* -->
+      <p class="blogList__content">TECHNOLOGY</p>
+      <!-- ↑カテゴリページのみ******************* -->
+      <nav class="blogListNav">
+        <ul class="blogListNav__ul">
+          <li class="blogListNav__list"><a href="#" class="blogListNav__link">ALL</a></li>
+          <li class="blogListNav__list"><a href="#" class="blogListNav__link">TECHNOLOGY</a></li>
+          <li class="blogListNav__list"><a href="#" class="blogListNav__link">CURRY</a></li>
+          <li class="blogListNav__list"><a href="#" class="blogListNav__link">EVENT</a></li>
+        </ul>
+      </nav>
+      <div class="blogList__container">
+        <a href="blog_single.html" class="blogList__link">
+          <div class="blogList__box">
+            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
+            <div class="blogList__unit">
+              <p class="blogList__date">2023.09.23</p>
+              <p class="blogList__category">CATEGORY</p>
+            </div>
+            <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
+          </div>
+        </a>
+        <a href="blog_single.html" class="blogList__link">
+          <div class="blogList__box">
+            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
+            <div class="blogList__unit">
+              <p class="blogList__date">2023.09.23</p>
+              <p class="blogList__category">CATEGORY</p>
+            </div>
+            <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
+          </div>
+        </a>
+        <a href="blog_single.html" class="blogList__link">
+          <div class="blogList__box">
+            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
+            <div class="blogList__unit">
+              <p class="blogList__date">2023.09.23</p>
+              <p class="blogList__category">CATEGORY</p>
+            </div>
+            <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
+          </div>
+        </a>
+        <a href="blog_single.html" class="blogList__link">
+          <div class="blogList__box">
+            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
+            <div class="blogList__unit">
+              <p class="blogList__date">2023.09.23</p>
+              <p class="blogList__category">CATEGORY</p>
+            </div>
+            <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
+          </div>
+        </a>
+        <!-- ↓pc用ダミー  ================================== -->
+        <a href="blog_single.html" class="blogList__link responsivePc">
+          <div class="blogList__box">
+            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
+            <div class="blogList__unit">
+              <p class="blogList__date">2023.09.23</p>
+              <p class="blogList__category">CATEGORY</p>
+            </div>
+            <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
+          </div>
+        </a>
+        <a href="blog_single.html" class="blogList__link responsivePc">
+          <div class="blogList__box">
+            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
+            <div class="blogList__unit">
+              <p class="blogList__date">2023.09.23</p>
+              <p class="blogList__category">CATEGORY</p>
+            </div>
+            <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
+          </div>
+        </a>
+        <!-- ↑pc用ダミー  ================================== -->
       </div>
-      <p class="aboutContents_text">テキスト</p>
-      <div class="c-link"><a href="/">トップページへ</a></div>
-    </div>
-  </section>
+      <!-- ページネーション -->
+      <ul class="blogList__ul">
+        <li class="blogList__list"><a href="#" class="blogList__link">&lt;</a></li>
+        <li class="blogList__list"><a href="#" class="blogList__link">1</a></li>
+        <li class="blogList__list"><a href="#" class="blogList__link">2</a></li>
+        <li class="blogList__list"><a href="#" class="blogList__link">3</a></li>
+        <li class="blogList__list"><a href="#" class="blogList__link">4</a></li>
+        <li class="blogList__list"><a href="#" class="blogList__link">5</a></li>
+        <li class="blogList__list"><a href="#" class="blogList__link">&gt;</a></li>
+      </ul>
+
+      
+      <div class="c-link"><a href="blog_single.html">sample　ブログ個別投稿ページへ飛ぶ</a></div>
+    </section>
+  </div>
+  
 </main>
+
 
 <%- include('./common/_footer')  %>

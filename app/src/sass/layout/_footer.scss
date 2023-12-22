@@ -1,12 +1,18 @@
 @import "../_variable";
 
 .footer {
+    position: relative;
     color: $white;
     // GO TOP ボタン
     &__top {
+        position: absolute;
+        top: -56px;
+        right: 1.3rem;
         width: 38px;
-        margin-left: auto;
-        margin-right: 1.3rem;
+        @media screen and (min-width: 1024px) {
+            top: -60px;
+            right: 3.6rem;
+        }
     }
     &__link {
         display: block;
@@ -26,6 +32,28 @@
           display: flex;
           justify-content: space-between;
           padding: 6.8rem 10.2em;
+        }
+
+        // フッター装飾
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 91px;
+            height: 215px;
+            background: #4d4d4d;
+            transform: skewX(-23deg) translateX(-50%);
+        }
+        &:after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            content: "";
+            width: 91px;
+            height: 215px;
+            background: #4d4d4d;
+            transform: skewX(-23deg) translateX(50%);
         }
     }
 }

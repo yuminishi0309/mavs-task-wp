@@ -7,7 +7,7 @@ const swiperBlog = new Swiper('.swiper-blog', {
         speed: 4000,
         autoplay : {
             delay: 1,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
         }
 });
 // swiperレスポンシブ対応--------------------------------------------

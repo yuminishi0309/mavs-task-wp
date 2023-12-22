@@ -5,7 +5,7 @@ let pageId = 'home';
 %>
 <%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
 
-<main class="topMain">
+<main id="top">
   <div class="wrapper">
     <!-- mv ===================================== -->
     <div class="mv">
@@ -78,22 +78,34 @@ let pageId = 'home';
           <div class="swiper-wrapper swiper-blog__wrapper">
             <div class="swiper-slide swiper-blog__slide">
               <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-              <p class="swiper-blog__date">2023.09.23</p>
+              <div class="swiper-blog__unit">
+                <p class="swiper-blog__date">2023.09.23</p>
+                <p class="swiper-blog__category">CATEGORY</p>
+              </div>
               <p class="swiper-blog__txt">ここにブログタイトルが入ります。タイトルタイトルタイトル</p>
             </div>
             <div class="swiper-slide swiper-blog__slide">
               <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-              <p class="swiper-blog__date">2023.09.23</p>
+              <div class="swiper-blog__unit">
+                <p class="swiper-blog__date">2023.09.23</p>
+                <p class="swiper-blog__category">CATEGORY</p>
+              </div>
               <p class="swiper-blog__txt">ここにブログタイトルが入ります。ここにブログタイトルが入ります。</p>
             </div>
             <div class="swiper-slide swiper-blog__slide">
               <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-              <p class="swiper-blog__date">2023.09.23</p>
+              <div class="swiper-blog__unit">
+                <p class="swiper-blog__date">2023.09.23</p>
+                <p class="swiper-blog__category">CATEGORY</p>
+              </div>
               <p class="swiper-blog__txt">ここにブログタイトルが入ります。</p>
             </div>
             <div class="swiper-slide swiper-blog__slide">
               <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-              <p class="swiper-blog__date">2023.09.23</p>
+              <div class="swiper-blog__unit">
+                <p class="swiper-blog__date">2023.09.23</p>
+                <p class="swiper-blog__category">CATEGORY</p>
+              </div>
               <p class="swiper-blog__txt">ここにブログタイトルが入ります。タイトルタイトル</p>
             </div>
           </div>
@@ -132,14 +144,16 @@ let pageId = 'home';
     </div>
     <!-- バナー ===================================== -->
     <div class="banner__wrap">
-      <picture class="banner__pic">
-        <!-- PC用の画像 -->
-        <source media="(min-width: 1024px)" srcset="assets/image/top/banner-pc.jpg">
-        <!-- TAB用の画像 -->
-        <source media="(min-width: 768px)" srcset="assets/image/top/banner-pc.jpg">
-        <!-- スマホ用とデフォルト設定 -->
-        <img src="assets/image/top/banner-sp.jpg" alt="スマホ用バナー" class="banner__img">
-      </picture>
+      <a href="#" class="banner__link">
+        <picture class="banner__pic">
+          <!-- PC用の画像 -->
+          <source media="(min-width: 1024px)" srcset="assets/image/top/banner-pc.jpg">
+          <!-- TAB用の画像 -->
+          <source media="(min-width: 768px)" srcset="assets/image/top/banner-pc.jpg">
+          <!-- スマホ用とデフォルト設定 -->
+          <img src="assets/image/top/banner-sp.jpg" alt="スマホ用バナー" class="banner__img">
+        </picture>
+      </a>
     </div>
     <!-- news sec ===================================== -->
     <section class="news">
