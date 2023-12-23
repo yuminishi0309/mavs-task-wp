@@ -18,6 +18,14 @@ keyframe animation
     opacity: 1;
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -65,17 +73,13 @@ keyframe animation
 #top .mv__container {
   position: absolute;
   top: 10.2rem;
-  left: 0.74rem;
+  left: 0;
   z-index: 1;
-}
-@media screen and (min-width: 1024px) {
-  #top .mv__container {
-    left: 3.1rem;
-  }
 }
 #top .mv__ttl {
   position: relative;
   margin-bottom: 2rem;
+  margin-left: 1.2rem;
   font-family: "M PLUS 1", sans-serif;
   font-size: 6.95rem;
   font-style: normal;
@@ -85,12 +89,14 @@ keyframe animation
 }
 @media screen and (min-width: 768px) {
   #top .mv__ttl {
+    margin-left: 3.6rem;
     font-size: 10.8rem;
     line-height: 10rem;
   }
 }
 @media screen and (min-width: 1024px) {
   #top .mv__ttl {
+    margin-left: 3.1rem;
     margin-bottom: 3.1rem;
   }
 }
@@ -107,6 +113,7 @@ keyframe animation
   height: 32%;
   background: #000;
   z-index: -1;
+  animation: fadeUp 1s 0.5s backwards;
 }
 @media screen and (min-width: 768px) {
   #top .mv__ttl::before {
@@ -122,31 +129,33 @@ keyframe animation
   width: 110%;
   height: 1px;
   background: #000;
-}
-@media screen and (min-width: 1024px) {
-  #top .mv__ttl::after {
-    display: none;
-  }
+  animation: slide 1s 1.3s backwards;
 }
 #top .mv__ttl--01 {
   display: block;
-  animation: fadeUp 1s 1.5s backwards;
+  animation: fadeUp 1s 0.5s backwards;
 }
 #top .mv__ttl--02 {
   display: block;
-  animation: fadeUp 1s 2s backwards;
+  animation: fadeUp 1s 0.7s backwards;
 }
 #top .mv__ttl--03 {
   display: block;
-  animation: fadeUp 1s 2.5s backwards;
+  animation: fadeUp 1s 0.9s backwards;
 }
 #top .mv__sub {
+  margin-left: 1.5rem;
   font-weight: 700;
-  animation: fadeUp 1s 3.5s backwards;
+  animation: fadeUp 1s 1.7s backwards;
+}
+@media screen and (min-width: 768px) {
+  #top .mv__sub {
+    margin-left: 4.3rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   #top .mv__sub {
-    font-size: 2.5rem;
+    margin-left: 3.7rem;
   }
 }
 #top .mv__icon {
@@ -160,6 +169,11 @@ keyframe animation
   height: 135.5px;
   z-index: 1;
 }
+@media screen and (min-width: 768px) {
+  #top .mv__icon {
+    left: 3.8rem;
+  }
+}
 @media screen and (min-width: 1024px) {
   #top .mv__icon {
     left: 3.1rem;
@@ -170,6 +184,7 @@ keyframe animation
 }
 #top .mv__img {
   display: block;
+  width: 100%;
 }
 #top .mv__iconTxt {
   position: absolute;
@@ -326,12 +341,13 @@ keyframe animation
 #top .about__btn {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 #top .about__btn > a {
   position: relative;
+  padding: 0.6rem 4.2rem;
   background: #000;
-  padding: 9px 36px;
   border-radius: 6.25rem;
 }
 #top .about__btn > a::after {
@@ -452,13 +468,14 @@ keyframe animation
 #top .service__btn {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   margin-bottom: 4rem;
 }
 #top .service__btn > a {
   position: relative;
+  padding: 0.6rem 4.2rem;
   background: #000;
-  padding: 9px 36px;
   border-radius: 6.25rem;
 }
 #top .service__btn > a::after {
@@ -491,7 +508,8 @@ keyframe animation
 }
 @media screen and (min-width: 1024px) {
   #top .service__btn {
-    text-align: left;
+    display: flex;
+    justify-content: flex-start;
     margin-bottom: 0;
   }
 }
@@ -588,12 +606,13 @@ keyframe animation
 #top .blog__btn {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 #top .blog__btn > a {
   position: relative;
+  padding: 0.6rem 4.2rem;
   background: #000;
-  padding: 9px 36px;
   border-radius: 6.25rem;
 }
 #top .blog__btn > a::after {
@@ -632,12 +651,9 @@ keyframe animation
     margin-bottom: 5rem;
   }
 }
-#top .swiper-blog__slide {
-  width: 30rem;
-}
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   #top .swiper-blog__slide {
-    width: 43rem;
+    padding: 0;
   }
 }
 #top .swiper-blog__pic {
@@ -722,11 +738,13 @@ keyframe animation
 }
 #top .member__bg-pic {
   background: url(../image/top/member_img.jpg) center center/contain;
+  width: 100%;
   height: 19.4rem;
 }
 @media screen and (min-width: 768px) {
   #top .member__bg-pic {
     background: url(../image/top/member_img.jpg) center bottom/cover;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -782,12 +800,13 @@ keyframe animation
 #top .member__btn {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 #top .member__btn > a {
   position: relative;
+  padding: 0.6rem 4.2rem;
   background: #000;
-  padding: 9px 36px;
   border-radius: 6.25rem;
 }
 #top .member__btn > a::after {
@@ -817,6 +836,12 @@ keyframe animation
   transform-origin: center left;
   transition: color 0.3s ease;
   z-index: 1;
+}
+@media screen and (min-width: 1024px) {
+  #top .member__btn {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 #top .loop__wrap {
   overflow: hidden;
@@ -883,12 +908,13 @@ keyframe animation
   #top .news__btn {
     font-family: "futura-pt", sans-serif;
     font-weight: 500;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
   }
   #top .news__btn > a {
     position: relative;
+    padding: 0.6rem 4.2rem;
     background: #000;
-    padding: 9px 36px;
     border-radius: 6.25rem;
   }
   #top .news__btn > a::after {
@@ -974,6 +1000,14 @@ keyframe animation
     opacity: 1;
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -1044,6 +1078,14 @@ keyframe animation
     opacity: 1;
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -1106,6 +1148,14 @@ keyframe animation
     opacity: 1;
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -1143,6 +1193,14 @@ keyframe animation
     opacity: 1;
   }
 }
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -1161,10 +1219,6 @@ keyframe animation
     transform: translateX(-100%);
   }
 }
-.wrapper {
-  overflow: hidden;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -1227,8 +1281,8 @@ keyframe animation
   }
   .gnavTop__btn > a {
     position: relative;
+    padding: 0.6rem 4.2rem;
     background: #000;
-    padding: 9px 36px;
     border-radius: 6.25rem;
   }
   .gnavTop__btn > a::after {
@@ -1363,7 +1417,7 @@ keyframe animation
 
 .nav {
   position: absolute;
-  bottom: 16rem;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
@@ -1373,7 +1427,7 @@ keyframe animation
 }
 @media screen and (min-width: 768px) {
   .nav {
-    bottom: 8rem;
+    bottom: 20%;
   }
 }
 .nav__btn {
@@ -1440,6 +1494,14 @@ keyframe animation
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 @keyframes rotation {
@@ -1604,18 +1666,20 @@ keyframe animation
 }
 
 .footer__logo {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (min-width: 1024px) {
   .footer__logo {
-    text-align: left;
+    justify-content: start;
   }
 }
 .footer__logo-link {
-  display: inline-block;
+  display: block;
 }
 .footer__logo-img {
   display: block;
+  width: 100%;
 }
 .footer__copyright {
   text-align: center;
@@ -1644,6 +1708,14 @@ keyframe animation
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 @keyframes rotation {

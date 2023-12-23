@@ -1,6 +1,6 @@
 @import "../_variable";
 .wrapper {
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 // ヘッダーgnav
@@ -172,7 +172,8 @@
 // メニュー内独立ボタン
 .nav {
     position: absolute;
-    bottom: 16rem;
+    // bottom: 16rem;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     color: $white;
@@ -180,7 +181,8 @@
     font-weight: 500;
     z-index: 10;
     @media screen and (min-width: 768px) {
-      bottom: 8rem;
+    //   bottom: 8rem;
+    bottom: 20%;
     }
 
     &__btn {

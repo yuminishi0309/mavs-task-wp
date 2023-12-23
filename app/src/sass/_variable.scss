@@ -1,6 +1,12 @@
 /* ================================================================
 変数
 ================================================================ */
+// レスポンシブ
+// $tab: 'only screen and (max-width: 1024px) and (orientation: portrait) and (min-width: 770px)';
+$tabLarge: 'only screen and (min-width: 1024px) and (orientation: portrait)';
+// @media #{$tabLarge} {
+// }
+
 // フォント
 $plus: 'M PLUS 1', sans-serif;
 $sans: 'Noto Sans JP', sans-serif;
@@ -22,9 +28,11 @@ mixin
     font-weight: 500;
     &>a {
         position: relative;
+        // padding: 9px 36px;
+        padding: 0.6rem 4.2rem;
         background: $black;
-        padding: 9px 36px;
         border-radius: 6.25rem;
+
         // ボタンのbgスライド要素
         &::after {
             position: absolute;
@@ -74,6 +82,15 @@ keyframe animation
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+// 横からスライド
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 // mv テキスト回転＠MV
