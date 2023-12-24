@@ -1541,6 +1541,30 @@ keyframe animation
   height: 1px;
   background: #000;
 }
+#blogSingle .blogSingle__table {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+#blogSingle .blogSingle__th {
+  text-align: left;
+  padding: 0.2rem 0.4rem;
+  background: #E6E6E6;
+  border: 1px solid #999;
+}
+@media screen and (min-width: 1024px) {
+  #blogSingle .blogSingle__th {
+    padding: 1rem 2rem;
+  }
+}
+#blogSingle .blogSingle__td {
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #999;
+}
+@media screen and (min-width: 1024px) {
+  #blogSingle .blogSingle__td {
+    padding: 1rem 2rem;
+  }
+}
 #blogSingle .blogSingle__h4 {
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -1568,6 +1592,153 @@ keyframe animation
   justify-content: space-between;
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
+}
+/* ================================================================
+変数
+================================================================ */
+/* ================================================================
+mixin
+================================================================ */
+/* ================================================================
+keyframe animation
+================================================================ */
+@keyframes fadeUp {
+  0% {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#contact .contact__container {
+  padding: 4rem 2rem;
+  margin-bottom: 29rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+@media screen and (min-width: 1024px) {
+  #contact .contact__container {
+    padding: 10rem 12rem;
+    margin: 0 10rem 26.7rem;
+  }
+}
+/* ================================================================
+変数
+================================================================ */
+/* ================================================================
+mixin
+================================================================ */
+/* ================================================================
+keyframe animation
+================================================================ */
+@keyframes fadeUp {
+  0% {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* ================================================================
+変数
+================================================================ */
+/* ================================================================
+mixin
+================================================================ */
+/* ================================================================
+keyframe animation
+================================================================ */
+@keyframes fadeUp {
+  0% {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 /* ================================================================
 変数

@@ -14,22 +14,22 @@
     .mainBg {
         position: relative;
         &-bg {
-        position: absolute;
-        top: 0;
-        right: -13.3rem;
-        background: url(../image/top/about_bg.png) left top / cover;
-        width: 100rem;
-        height: 200vh;
-        z-index: -10;
-
-        @media screen and (min-width: 1024px) {
-            width: 100%;
-            right: 0;
-        }
-        @media screen and (min-width: 1440px) {
+            position: absolute;
+            top: 0;
+            right: -13.3rem;
+            background: url(../image/top/about_bg.png) left top / cover;
             width: 100rem;
-            right: 39rem;
-        }
+            height: 200vh;
+            z-index: -10;
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                right: 0;
+            }
+            @media screen and (min-width: 1440px) {
+                width: 100rem;
+                right: 39rem;
+            }
         }
     }
 
@@ -115,7 +115,6 @@
                 padding: 10rem 12rem;
                 margin: 0 10rem 26.7rem;
             }
-        
         }
 
         &__box {
@@ -200,6 +199,31 @@
                 width: 100%;
                 height: 1px;
                 background: $black;
+            }
+        }
+
+        &__table {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        
+        &__th {
+            text-align: left;
+            padding: 0.2rem 0.4rem;
+            background: $grey;
+            border: 1px solid #999;
+            
+            @media screen and (min-width: 1024px) {
+                padding: 1rem 2rem;
+            }
+        }
+        
+        &__td {
+            padding: 0.2rem 0.4rem;
+            border: 1px solid #999;
+            
+            @media screen and (min-width: 1024px) {
+                padding: 1rem 2rem;
             }
         }
         
