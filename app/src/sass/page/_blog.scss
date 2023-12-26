@@ -44,6 +44,7 @@
 
     .blogList {
         &__wrap {
+            position: relative;
             margin-bottom: 8rem;
 
             @media screen and (min-width: 1024px) {
@@ -190,18 +191,21 @@
     // ブログページナビゲーション  ========================
     .blogListNav {
         position: absolute;
-        display: none;
         width: 100%;
         padding: 1rem 0;
         background: $white;
         font-size: 2rem;
         font-weight: 700;
+        opacity: 0;
+        transition: .3s;
 
         @media screen and (min-width: 1024px) {
             position: static;
             display: flex;
             justify-content: center;
             background: inherit;
+            opacity: 1;
+            transition: none;
         }
 
         &__ul {

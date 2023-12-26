@@ -1067,6 +1067,7 @@ keyframe animation
   }
 }
 #blog .blogList__wrap {
+  position: relative;
   margin-bottom: 8rem;
 }
 @media screen and (min-width: 1024px) {
@@ -1200,12 +1201,13 @@ keyframe animation
 }
 #blog .blogListNav {
   position: absolute;
-  display: none;
   width: 100%;
   padding: 1rem 0;
   background: #fff;
   font-size: 2rem;
   font-weight: 700;
+  opacity: 0;
+  transition: 0.3s;
 }
 @media screen and (min-width: 1024px) {
   #blog .blogListNav {
@@ -1213,6 +1215,8 @@ keyframe animation
     display: flex;
     justify-content: center;
     background: inherit;
+    opacity: 1;
+    transition: none;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2370,6 +2374,9 @@ top page
 /* ================================================================
 blog page
 ================================================================ */
+#blog .blogListNav-isActive {
+  opacity: 1;
+}
 #blog .RotateItem::after {
   content: "〉";
   top: -2px;

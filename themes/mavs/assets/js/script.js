@@ -21,16 +21,36 @@ $(function () {
     blog page
     ================================================================ */
     // トグルメニュー  =======================================
-    $('#blogListMenu').on('click', function(){
-        $('#blogListNav').stop().slideToggle(300);
-        $('#blogListMenu').toggleClass('RotateItem');
+    function updateBlogNav() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 1024) {
+            $('#blogListMenu').on('click', function(){
+                $('#blogListNav').toggleClass('blogListNav-isActive');
+                $('#blogListMenu').toggleClass('RotateItem');
+            });
+        } else {
+            // toggleClassで追加のクラスをPC幅リサイズ時に除去
+            const menuHasClass = $('#blogListMenu').hasClass('RotateItem');
+            if (menuHasClass) {
+                $('#blogListMenu').removeClass('RotateItem');
+            }
+            const navHasClass = $('#blogListNav').hasClass('blogListNav-isActive');
+            if (navHasClass) {
+                $('#blogListNav').removeClass('blogListNav-isActive');
+            }
+        }
+    }
+    // 初回の設定
+    updateBlogNav();
+    // 画面サイズ変更時の処理
+    window.addEventListener('resize', function() {
+        updateBlogNav();
     });
-    // nav操作時処理
-    $('#blogListNav').on('click', function(){
-        $('#blogListNav').hide(300);
-    });
+
     // ナビゲーションカレント表示  =======================================
     const links = document.querySelectorAll(".blogListNav__link");
+    
+    
     links.forEach(function (link) {
         if (link.href === location.href) {
             link.closest(".blogListNav__link").classList.add("current");
