@@ -1,2 +1,192 @@
 @import "../_variable";
 
+#contactConfirm {
+    .wrapper {
+        padding: 0 3rem;
+
+        @media screen and (min-width: 1024px) {
+            padding: 0;
+        }
+    }
+
+    // 全体bg
+    .mainBg {
+        position: relative;
+
+        &-bg {
+            position: absolute;
+            top: 0;
+            right: -13.3rem;
+            background: url(../image/top/about_bg.png) left top / cover;
+            width: 100rem;
+            height: 200vh;
+            z-index: -10;
+
+            @media screen and (min-width: 1024px) {
+                width: 100%;
+                right: 0;
+            }
+            @media screen and (min-width: 1440px) {
+                width: 100rem;
+                right: 39rem;
+            }
+        }
+    }
+    
+    .contactConfirm {
+        &__ttl {
+            position: relative;
+            display: inline-block;
+            font-family: $plus;
+            font-size: 5.3rem;
+            font-weight: 700;
+            line-height: normal;
+
+            // このページの個別設定
+            margin-top: 11.2rem;
+      
+            @media screen and (min-width: 1024px) {
+                font-size: 7.1rem;
+
+                // このページの個別設定
+                margin-top: 14rem;
+                margin-left: 21.8rem;
+            }
+      
+            // 文頭型抜き
+            &::first-letter {
+                color: $white;
+            }
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                content: "";
+                width: 3.8rem;
+                height: 86%;
+                background: #000;
+                z-index: -1;
+                
+                @media screen and (min-width: 1024px) {
+                width: 4.9rem;
+                }
+            }
+            // タイトル下線
+            &::after {
+              position: absolute;
+              bottom: 6px;
+              right: 0;
+              display: block;
+              content: "";
+              width: 200%;
+              height: 2px;
+              background: $black;
+
+              @media screen and (min-width: 1024px) {
+                  width: 300%;
+              }
+            }
+        }
+        &__sub {
+            font-size: 1.2rem;
+
+            // このページの個別設定
+            margin-bottom: 6rem; 
+            
+            @media screen and (min-width: 1024px) {
+                font-size: 1.6rem;
+
+                // このページの個別設定
+                margin-left: 21.8rem;
+            }
+        }
+        
+        &__container {
+            padding: 6rem 2rem;
+            margin-bottom: 14rem;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            @media screen and (min-width: 1024px) {
+                padding: 10rem 12rem;
+                margin: 0 10rem 26.7rem;
+            }
+        }
+        
+        &__txt {
+            margin-bottom: 4rem;
+            font-weight: 700;
+        }
+        // Table  ========================
+        &__table {
+            margin-bottom: 4rem;
+
+            @media screen and (min-width: 768px) {
+                width: 100%;
+            }
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 6rem;
+            }
+        }
+
+        &__tr {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        &__td {
+            &:first-child {
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }
+            &:nth-child(2) {
+                padding: 1rem;
+                background: #f5f5f5;
+                border: 1px solid $middleGrey;
+                border-radius: 0.5rem;
+                
+                @media screen and (min-width: 1024px) {
+                    width: 69.6rem;
+                }
+            }
+        }
+
+        &__unit {
+            @media screen and (min-width: 1024px) {
+                display: flex;
+                justify-content: center;
+                gap: 3rem;
+            }
+        }
+        
+        &__btn {
+            @include readMoreBtn;
+
+            display: flex;
+            justify-content: center;
+
+            &:first-child {
+                margin-bottom: 2rem;
+
+                @media screen and (min-width: 1024px) {
+                    margin-bottom: 0;
+                }
+
+                &>a {
+                    background: $darkGrey;
+                }
+            }
+        }
+    }
+}
