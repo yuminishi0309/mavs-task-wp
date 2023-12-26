@@ -76,6 +76,11 @@ keyframe animation
   left: 0;
   z-index: 1;
 }
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  #top .mv__container {
+    top: 20rem;
+  }
+}
 #top .mv__ttl {
   position: relative;
   margin-bottom: 2rem;
@@ -87,17 +92,33 @@ keyframe animation
   line-height: 7rem;
   letter-spacing: -0.13rem;
 }
+@media screen and (min-width: 600px) {
+  #top .mv__ttl {
+    font-size: 5.8rem;
+    line-height: 5.2rem;
+  }
+}
 @media screen and (min-width: 768px) {
   #top .mv__ttl {
     margin-left: 3.6rem;
-    font-size: 10.8rem;
-    line-height: 10rem;
+    font-size: 13rem;
+    line-height: 12rem;
+    letter-spacing: -0.4rem;
   }
 }
 @media screen and (min-width: 1024px) {
   #top .mv__ttl {
+    font-size: 11.8rem;
+    line-height: 11rem;
     margin-left: 3.1rem;
     margin-bottom: 3.1rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  #top .mv__ttl {
+    font-size: 136px;
+    line-height: 1;
+    margin-left: 6.5rem;
   }
 }
 #top .mv__ttl::first-letter {
@@ -112,12 +133,27 @@ keyframe animation
   width: 5rem;
   height: 32%;
   background: #000;
-  z-index: -1;
   animation: fadeUp 1s 0.5s backwards;
+  z-index: -1;
+}
+@media screen and (min-width: 600px) {
+  #top .mv__ttl::before {
+    width: 4.3rem;
+  }
 }
 @media screen and (min-width: 768px) {
   #top .mv__ttl::before {
-    width: 7.8rem;
+    width: 9.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .mv__ttl::before {
+    width: 8.6rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  #top .mv__ttl::before {
+    width: 100px;
   }
 }
 #top .mv__ttl::after {
@@ -148,14 +184,27 @@ keyframe animation
   font-weight: 700;
   animation: fadeUp 1s 1.7s backwards;
 }
+@media screen and (min-width: 600px) {
+  #top .mv__sub {
+    font-size: 1.2rem;
+  }
+}
 @media screen and (min-width: 768px) {
   #top .mv__sub {
     margin-left: 4.3rem;
+    font-size: 2.9rem;
   }
 }
 @media screen and (min-width: 1024px) {
   #top .mv__sub {
+    font-size: 2.5rem;
     margin-left: 3.7rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  #top .mv__sub {
+    margin-left: 7rem;
+    font-size: 30px;
   }
 }
 #top .mv__icon {
@@ -184,7 +233,6 @@ keyframe animation
 }
 #top .mv__img {
   display: block;
-  width: 100%;
 }
 #top .mv__iconTxt {
   position: absolute;
@@ -192,25 +240,37 @@ keyframe animation
 }
 #top .mv__bg-wolf {
   position: absolute;
-  bottom: 0;
-  right: 1.5rem;
+  bottom: 0rem;
+  right: 3rem;
   width: 61rem;
+}
+@media screen and (min-width: 500px) {
+  #top .mv__bg-wolf {
+    width: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   #top .mv__bg-wolf {
-    width: auto;
+    right: 17rem;
     left: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   #top .mv__bg-wolf {
-    right: 4.2rem;
-    left: auto;
+    bottom: 0;
+    right: 0;
+    left: 64rem;
+    width: 75.3rem;
     z-index: -3;
   }
 }
-#top .mv__wolf-img {
-  display: block;
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  #top .mv__bg-wolf {
+    z-index: 0;
+    width: auto;
+    left: 0;
+    right: 20rem;
+  }
 }
 #top .mv__bg-grey {
   position: absolute;
@@ -234,12 +294,25 @@ keyframe animation
     left: 30.7rem;
   }
 }
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  #top .mv__bg-grey {
+    width: 82rem;
+    height: 102rem;
+    top: 16.7rem;
+    left: 5rem;
+  }
+}
 #top .mv__bg-city {
   background: url(../image/top/mv_city.png) center center/cover;
   height: 100vh;
   z-index: -2;
 }
 @media screen and (min-width: 1024px) {
+  #top .mv__bg-city {
+    background: url(../image/top/mv_city.png) center center/contain no-repeat;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
   #top .mv__bg-city {
     background: url(../image/top/mv_city.png) center center/cover no-repeat;
   }
@@ -252,7 +325,7 @@ keyframe animation
 #top .mv__bg-plant {
   position: absolute;
   bottom: 0;
-  right: 0.44rem;
+  right: 0;
   background: url(../image/top/mv_plant.png) left top/cover;
   width: 37.7rem;
   height: 47rem;
@@ -260,7 +333,10 @@ keyframe animation
 }
 @media screen and (min-width: 768px) {
   #top .mv__bg-plant {
+    bottom: 0;
     right: 0;
+    width: 100rem;
+    height: 70rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2438,6 +2514,12 @@ keyframe animation
     padding: 1.25rem 3.5rem;
   }
 }
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  .header {
+    padding: 3rem 5.5rem;
+    font-size: 16px;
+  }
+}
 .header__wrap {
   display: flex;
   justify-content: space-between;
@@ -2445,6 +2527,11 @@ keyframe animation
 }
 .header__ttl {
   width: 3.5rem;
+}
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+  .header__ttl {
+    width: 35px;
+  }
 }
 .header__link {
   display: block;

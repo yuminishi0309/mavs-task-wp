@@ -1,7 +1,4 @@
 @import "../_variable";
-.wrapper {
-    // overflow: hidden;
-}
 
 // ヘッダーgnav
 .header {
@@ -18,6 +15,11 @@
     @media screen and (min-width: 1024px) {
         padding: 1.25rem 3.5rem;
     }
+    @media #{$tabLarge} {
+        padding: 3rem 5.5rem;
+        font-size: 16px;
+    }
+
     &__wrap {
         display: flex;
         justify-content: space-between;
@@ -25,6 +27,10 @@
     }
     &__ttl {
         width: 3.5rem;
+
+        @media #{$tabLarge} {
+            width: 35px;
+        }
     }
     &__link {
         display: block;
