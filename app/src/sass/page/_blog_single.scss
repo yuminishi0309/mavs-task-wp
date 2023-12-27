@@ -12,25 +12,7 @@
 
     // 全体bg
     .mainBg {
-        position: relative;
-        &-bg {
-            position: absolute;
-            top: 0;
-            right: -13.3rem;
-            background: url(../image/top/about_bg.png) left top / cover;
-            width: 100rem;
-            height: 200vh;
-            z-index: -10;
-
-            @media screen and (min-width: 1024px) {
-                width: 100%;
-                right: 0;
-            }
-            @media screen and (min-width: 1440px) {
-                width: 100rem;
-                right: 39rem;
-            }
-        }
+        @include mainBg;
     }
 
     .blogSingle {

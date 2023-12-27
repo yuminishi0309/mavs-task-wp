@@ -224,9 +224,13 @@
       z-index: -2;
       
       @media screen and (min-width: 1024px) {
+        position: relative;
+        right: 3.5rem;
         background: url(../image/top/mv_city.png) center center / contain no-repeat;
+
       }
       @media #{$tabLarge} {
+        position: static;
         background: url(../image/top/mv_city.png) center center / cover no-repeat;
       }
       @media screen and (min-width: 1240px) {
@@ -262,23 +266,26 @@
   // mv以降の全体bg
   .mainBg {
     position: relative;
+
     &-bg {
       position: absolute;
-      top: 0;
-      right: -13.3rem;
-      background: url(../image/top/about_bg.png) left top / cover;
-      width: 100rem;
-      height: 200vh;
+      top: 2.4rem;
+      right: -13.5rem;
+      width: 102rem;
       z-index: -10;
 
+      @media screen and (min-width: 768px) {
+        right: 5.5rem;
+      }
       @media screen and (min-width: 1024px) {
-        width: 100%;
+        top: 0;
         right: 0;
+        left: 0;
       }
-      @media screen and (min-width: 1440px) {
-        width: 100rem;
-        right: 39rem;
-      }
+    }
+    
+    &__img {
+      display: block;
     }
   }
 
@@ -288,6 +295,7 @@
     @media screen and (min-width: 1024px) {
       padding: 17rem 29rem 0;
     }
+
     &__ttl {
       text-align: center;
       margin-bottom: 4rem;
@@ -299,15 +307,15 @@
         font-size: 4.9rem;
       }
     }
+
     &__txt {
       margin-bottom: 4rem;
       font-size: 1.7rem;
       font-weight: 700;
-      line-height: 3.4rem;
+      line-height: 3.5rem;
 
       @media screen and (min-width: 1024px) {
         font-size: 2.1rem;
-        line-height: 3.2rem;
       }
 
       @media screen and (min-width: 768px) {
@@ -319,11 +327,13 @@
         }
       }
     }
+
     &__br {
       @media screen and (min-width: 768px) {
         display: none;
       }
     }
+    
     // READ MOREボタン
     &__btn {
       @include readMoreBtn;
@@ -342,7 +352,7 @@
       padding: 13rem 11rem 0;
     }
     @media screen and (min-width: 1024px) {
-      padding: 14rem 0 0;
+      padding: 14.3rem 0 0;
       
     }
     &__wrap {

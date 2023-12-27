@@ -23,13 +23,33 @@ $magenda: #ED1E79;
 /* ================================================================
 mixin
 ================================================================ */
+// 下層ページ メイン背景
+@mixin mainBg {
+    position: relative;
+    &-bg {
+        position: absolute;
+        top: 0;
+        right: -17rem;
+        width: 102rem;
+        z-index: -10;
+
+        @media screen and (min-width: 1024px) {
+        top: 0;
+        right: 0;
+        left: 0;
+        }
+    }
+    &__img {
+        display: block;
+    }
+}
+
 // READ MOREボタン
 @mixin readMoreBtn {
     font-family: $futura;
     font-weight: 500;
     &>a {
         position: relative;
-        // padding: 9px 36px;
         padding: 0.6rem 4.2rem;
         background: $black;
         border-radius: 6.25rem;
@@ -68,8 +88,6 @@ mixin
         }
     }
 }
-
-// セクションタイトル
 
 /* ================================================================
 keyframe animation

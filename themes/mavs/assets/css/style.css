@@ -309,11 +309,14 @@ keyframe animation
 }
 @media screen and (min-width: 1024px) {
   #top .mv__bg-city {
+    position: relative;
+    right: 3.5rem;
     background: url(../image/top/mv_city.png) center center/contain no-repeat;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: portrait) {
   #top .mv__bg-city {
+    position: static;
     background: url(../image/top/mv_city.png) center center/cover no-repeat;
   }
 }
@@ -350,24 +353,25 @@ keyframe animation
 }
 #top .mainBg-bg {
   position: absolute;
-  top: 0;
-  right: -13.3rem;
-  background: url(../image/top/about_bg.png) left top/cover;
-  width: 100rem;
-  height: 200vh;
+  top: 2.4rem;
+  right: -13.5rem;
+  width: 102rem;
   z-index: -10;
+}
+@media screen and (min-width: 768px) {
+  #top .mainBg-bg {
+    right: 5.5rem;
+  }
 }
 @media screen and (min-width: 1024px) {
   #top .mainBg-bg {
-    width: 100%;
+    top: 0;
     right: 0;
+    left: 0;
   }
 }
-@media screen and (min-width: 1440px) {
-  #top .mainBg-bg {
-    width: 100rem;
-    right: 39rem;
-  }
+#top .mainBg__img {
+  display: block;
 }
 #top .about {
   padding: 13rem 3rem 0;
@@ -393,12 +397,11 @@ keyframe animation
   margin-bottom: 4rem;
   font-size: 1.7rem;
   font-weight: 700;
-  line-height: 3.4rem;
+  line-height: 3.5rem;
 }
 @media screen and (min-width: 1024px) {
   #top .about__txt {
     font-size: 2.1rem;
-    line-height: 3.2rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -464,7 +467,7 @@ keyframe animation
 }
 @media screen and (min-width: 1024px) {
   #top .service {
-    padding: 14rem 0 0;
+    padding: 14.3rem 0 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1124,23 +1127,19 @@ keyframe animation
 #blog .mainBg-bg {
   position: absolute;
   top: 0;
-  right: -13.3rem;
-  background: url(../image/top/about_bg.png) left top/cover;
-  width: 100rem;
-  height: 200vh;
+  right: -17rem;
+  width: 102rem;
   z-index: -10;
 }
 @media screen and (min-width: 1024px) {
   #blog .mainBg-bg {
-    width: 100%;
+    top: 0;
     right: 0;
+    left: 0;
   }
 }
-@media screen and (min-width: 1440px) {
-  #blog .mainBg-bg {
-    width: 100rem;
-    right: 39rem;
-  }
+#blog .mainBg__img {
+  display: block;
 }
 #blog .blogList__wrap {
   position: relative;
@@ -1455,23 +1454,19 @@ keyframe animation
 #blogSingle .mainBg-bg {
   position: absolute;
   top: 0;
-  right: -13.3rem;
-  background: url(../image/top/about_bg.png) left top/cover;
-  width: 100rem;
-  height: 200vh;
+  right: -17rem;
+  width: 102rem;
   z-index: -10;
 }
 @media screen and (min-width: 1024px) {
   #blogSingle .mainBg-bg {
-    width: 100%;
+    top: 0;
     right: 0;
+    left: 0;
   }
 }
-@media screen and (min-width: 1440px) {
-  #blogSingle .mainBg-bg {
-    width: 100rem;
-    right: 39rem;
-  }
+#blogSingle .mainBg__img {
+  display: block;
 }
 #blogSingle .blogSingle__ttl {
   position: relative;
@@ -1732,23 +1727,19 @@ keyframe animation
 #contact .mainBg-bg {
   position: absolute;
   top: 0;
-  right: -13.3rem;
-  background: url(../image/top/about_bg.png) left top/cover;
-  width: 100rem;
-  height: 200vh;
+  right: -17rem;
+  width: 102rem;
   z-index: -10;
 }
 @media screen and (min-width: 1024px) {
   #contact .mainBg-bg {
-    width: 100%;
+    top: 0;
     right: 0;
+    left: 0;
   }
 }
-@media screen and (min-width: 1440px) {
-  #contact .mainBg-bg {
-    width: 100rem;
-    right: 39rem;
-  }
+#contact .mainBg__img {
+  display: block;
 }
 #contact .contact__ttl {
   position: relative;
@@ -2014,23 +2005,19 @@ keyframe animation
 #contactConfirm .mainBg-bg {
   position: absolute;
   top: 0;
-  right: -13.3rem;
-  background: url(../image/top/about_bg.png) left top/cover;
-  width: 100rem;
-  height: 200vh;
+  right: -17rem;
+  width: 102rem;
   z-index: -10;
 }
 @media screen and (min-width: 1024px) {
   #contactConfirm .mainBg-bg {
-    width: 100%;
+    top: 0;
     right: 0;
+    left: 0;
   }
 }
-@media screen and (min-width: 1440px) {
-  #contactConfirm .mainBg-bg {
-    width: 100rem;
-    right: 39rem;
-  }
+#contactConfirm .mainBg__img {
+  display: block;
 }
 #contactConfirm .contactConfirm__ttl {
   position: relative;
@@ -2269,23 +2256,19 @@ keyframe animation
 #contactComplete .mainBg-bg {
   position: absolute;
   top: 0;
-  right: -13.3rem;
-  background: url(../image/top/about_bg.png) left top/cover;
-  width: 100rem;
-  height: 200vh;
+  right: -17rem;
+  width: 102rem;
   z-index: -10;
 }
 @media screen and (min-width: 1024px) {
   #contactComplete .mainBg-bg {
-    width: 100%;
+    top: 0;
     right: 0;
+    left: 0;
   }
 }
-@media screen and (min-width: 1440px) {
-  #contactComplete .mainBg-bg {
-    width: 100rem;
-    right: 39rem;
-  }
+#contactComplete .mainBg__img {
+  display: block;
 }
 #contactComplete .contactComplete__ttl {
   position: relative;
