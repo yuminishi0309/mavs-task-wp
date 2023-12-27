@@ -4,6 +4,7 @@
 // レスポンシブ
 // $tab: 'only screen and (max-width: 1024px) and (orientation: portrait) and (min-width: 770px)';
 $tabLarge: 'only screen and (min-width: 1024px) and (orientation: portrait)';
+// ↓Tab用メディアクエリはpc用（min-width: 1024px）より後で記述
 // @media #{$tabLarge} {
 // }
 

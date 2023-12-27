@@ -20,7 +20,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header id="header" class="header">
       <div class="header__wrap">
         <h1 class="header__ttl">
           <a href="index.html" class="header__link"><img src="assets/image/top/logo-bl.svg" alt="マーベリックスロゴ" class="header__img"></a>
@@ -84,7 +84,7 @@
     <main id="top">
       <div class="wrapper">
         <!-- mv ===================================== -->
-        <div class="mv">
+        <div class="mv scroll">
           <div class="mv__wrap">
             <div class="mv__container">
               <p class="mv__ttl">
@@ -113,7 +113,7 @@
       <div class="mainBg-grey"></div> -->
         </div>
         <!-- about sec ===================================== -->
-        <section class="about">
+        <section class="about scroll">
           <div class="about__wrap">
             <h2 class="about__ttl">ABOUT</h2>
             <p class="about__txt">
@@ -129,7 +129,7 @@
           </div>
         </section>
         <!-- service sec ===================================== -->
-        <section class="service">
+        <section id="service" class="service standardScroll">
           <div class="service__wrap">
             <div class="service__container">
               <h2 class="service__ttl">SERVICE</h2>
@@ -145,7 +145,7 @@
           </div>
         </section>
         <!-- blog sec ===================================== -->
-        <section class="blog">
+        <section id="blog" class="blog standardScroll">
           <div class="blog__wrap">
             <h2 class="blog__ttl">BLOG</h2>
             <p class="blog__sub">ブログ</p>
@@ -195,7 +195,7 @@
           </div>
         </section>
         <!-- member sec ===================================== -->
-        <section class="member">
+        <section id="member" class="member standardScroll">
           <div class="member__wrap">
             <div class="member__container">
               <h2 class="member__ttl">MEMBER</h2>
@@ -214,12 +214,12 @@
           </div>
         </section>
         <!-- テキストループアニメーション ===================================== -->
-        <div class="loop__wrap">
+        <div id="loop" class="loop__wrap standardScroll">
           <p class="loop__txt1"><img src="assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
           <p class="loop__txt2"><img src="assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
         </div>
         <!-- バナー ===================================== -->
-        <div class="banner__wrap">
+        <div id="banner" class="banner__wrap standardScroll">
           <a href="#" class="banner__link">
             <picture class="banner__pic">
               <!-- PC用の画像 -->
@@ -232,7 +232,7 @@
           </a>
         </div>
         <!-- news sec ===================================== -->
-        <section class="news">
+        <section id="news" class="news standardScroll">
           <div class="news__wrap">
             <div class="news__unit">
               <h2 class="news__ttl">NEWS</h2>
@@ -267,7 +267,7 @@
         </section>
       </div>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <p class="footer__top"><a href="#" class="footer__link"><img src="assets/image/top/goTop.svg" alt="GO TOP画像"></a></p>
       <div class="footer__wrap">
         <nav class="footerGnav">
@@ -305,8 +305,10 @@
   <!-- swiper本体 -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
   <!-- .jsファイルの読み込み -->
   <script src="./assets/js/swiper.js"></script>
+  <script src="./assets/js/scrollify.js"></script>
   <script src="./assets/js/script.js"></script>
 
 
