@@ -25,6 +25,7 @@
         justify-content: space-between;
         align-items: center;
     }
+
     &__ttl {
         width: 3.5rem;
 
@@ -32,9 +33,11 @@
             width: 35px;
         }
     }
+
     &__link {
         display: block;
     }
+    
     &__img {
         display: block;
         width: 100%;
@@ -106,10 +109,6 @@
 }
 // フェードインnav
 .gnavFadeIn {
-    // 作業用 後で削除******
-    // opacity: 1;
-    // pointer-events: auto;
-    // ↑作業用 ******
     background: url(../image/top/menu-bg.jpg) left top / contain;
     position: fixed;
     top: 0;
@@ -117,10 +116,15 @@
     display: flex;
     width: 100%;
     height: 100vh;
+    margin-bottom: 16rem;
     color: $white;
     transition: .4s;
     opacity: 0;
     pointer-events: none;
+    // 作業用 後で削除******
+    // opacity: 1;
+    // pointer-events: auto;
+    // ↑作業用 ******
 
     @media screen and (min-width: 1024px) {
         display: none;
@@ -134,20 +138,22 @@
         margin-left: 1.5rem;
         margin-top: 1.1rem;
     }
+
     &__logoLink {
         display: block;
     }
+
     &__img {
         display: block;
         width: 100%;
         height: 100%;
     }
+
     &__wrap {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 3.6rem;
         width: 100%;
 
         // 黒背景
@@ -162,12 +168,21 @@
             background: #000;
         }
     }
+
+    &__container {
+        display: flex;
+        gap: 3.6rem;
+        margin-bottom: 16rem;
+    }
+
     &__nav--left, &__nav--right {
         z-index: 10;
     }
+
     &__list {
         margin: 0.8rem 0;
     }
+
     &__link {
         display: block;
         padding: 0.6rem;
@@ -175,10 +190,10 @@
         font-weight: 500;
     }
 }
+
 // メニュー内独立ボタン
 .nav {
     position: absolute;
-    // bottom: 16rem;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
@@ -186,18 +201,14 @@
     font-family: $futura;
     font-weight: 500;
     z-index: 10;
-    @media screen and (min-width: 768px) {
-    //   bottom: 8rem;
-    bottom: 20%;
-    }
 
     &__btn {
         position: relative;
         overflow: hidden;
-        width: 264px;
-        height: 53px;
-        margin-bottom: 6px;
-        font-size: 16px;
+        width: 26.4rem;
+        height: 5.3rem;
+        margin-bottom: 0.6rem;
+        font-size: 1.6rem;
         border: 1px solid $white;
         transform: skewX(-23deg);
         transition: ease .4s;
@@ -216,7 +227,6 @@
         &:last-child {
             &::after {
                 content: "RECRUIT　→";
-                font-size: 17px;
             }
         }
     }
@@ -226,16 +236,17 @@
         position: absolute;
         top: 0;
         left: -100%;
-        background: hsla(0, 0%, 23%, 0.4);
+        background: hsla(0, 0%, 73%, 0.4);
         mix-blend-mode: multiply;
         width: 100%;
         height: 100%;
         transition: ease .4s;
         pointer-events: none;
       }
-      &__btnBg:hover::before {
+
+    &__btnBg:hover::before {
         transform: translateX(100%);
-        }
+    }
 
     &__link {
         display: block;
@@ -243,8 +254,3 @@
         height: 100%;
     }
 }
-
-
-
-
-

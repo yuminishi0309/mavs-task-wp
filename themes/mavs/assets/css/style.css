@@ -2656,6 +2656,7 @@ keyframe animation
   display: flex;
   width: 100%;
   height: 100vh;
+  margin-bottom: 16rem;
   color: #fff;
   transition: 0.4s;
   opacity: 0;
@@ -2687,7 +2688,6 @@ keyframe animation
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3.6rem;
   width: 100%;
 }
 .gnavFadeIn__wrap::before {
@@ -2699,6 +2699,11 @@ keyframe animation
   height: 100vh;
   transform: skewX(-23deg);
   background: #000;
+}
+.gnavFadeIn__container {
+  display: flex;
+  gap: 3.6rem;
+  margin-bottom: 16rem;
 }
 .gnavFadeIn__nav--left, .gnavFadeIn__nav--right {
   z-index: 10;
@@ -2723,18 +2728,13 @@ keyframe animation
   font-weight: 500;
   z-index: 10;
 }
-@media screen and (min-width: 768px) {
-  .nav {
-    bottom: 20%;
-  }
-}
 .nav__btn {
   position: relative;
   overflow: hidden;
-  width: 264px;
-  height: 53px;
-  margin-bottom: 6px;
-  font-size: 16px;
+  width: 26.4rem;
+  height: 5.3rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
   border: 1px solid #fff;
   transform: skewX(-23deg);
   transition: ease 0.4s;
@@ -2752,14 +2752,13 @@ keyframe animation
 }
 .nav__btn:last-child::after {
   content: "RECRUIT　→";
-  font-size: 17px;
 }
 .nav__btnBg::before {
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
-  background: hsla(0, 0%, 23%, 0.4);
+  background: hsla(0, 0%, 73%, 0.4);
   mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
