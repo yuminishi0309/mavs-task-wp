@@ -934,14 +934,41 @@ keyframe animation
   }
 }
 #top .loop__txt1 {
+  width: 260%;
+  padding: 0 1rem;
   animation: loop 20s linear infinite;
-  padding: 0 10px;
+}
+@media screen and (min-width: 768px) {
+  #top .loop__txt1 {
+    width: 180%;
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .loop__txt1 {
+    width: 100%;
+    padding: 0 2rem;
+  }
 }
 #top .loop__txt2 {
   position: absolute;
   top: 0;
   left: 0;
+  width: 260%;
+  padding: 0 1rem;
   animation: loop 20s -10s linear infinite;
+}
+@media screen and (min-width: 768px) {
+  #top .loop__txt2 {
+    width: 180%;
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .loop__txt2 {
+    width: 100%;
+    padding: 0 2rem;
+  }
 }
 #top .loop__img {
   display: block;
@@ -2799,13 +2826,13 @@ keyframe animation
 }
 .footer__top {
   position: absolute;
-  top: -56px;
+  top: -5.6rem;
   right: 1.3rem;
-  width: 38px;
+  width: 3.8rem;
 }
 @media screen and (min-width: 1024px) {
   .footer__top {
-    top: -60px;
+    top: -6rem;
     right: 3.6rem;
   }
 }
@@ -2834,8 +2861,8 @@ keyframe animation
   top: 0;
   left: 0;
   content: "";
-  width: 91px;
-  height: 215px;
+  width: 9.1rem;
+  height: 21.5rem;
   background: #4d4d4d;
   transform: skewX(-23deg) translateX(-50%);
 }
@@ -2844,8 +2871,8 @@ keyframe animation
   right: 0;
   bottom: 0;
   content: "";
-  width: 91px;
-  height: 215px;
+  width: 9.1rem;
+  height: 21.5rem;
   background: #4d4d4d;
   transform: skewX(-23deg) translateX(50%);
 }
@@ -2887,10 +2914,10 @@ keyframe animation
 .footerNav__btn {
   position: relative;
   overflow: hidden;
-  width: 264px;
-  height: 53px;
-  margin: 0 auto 6px;
-  font-size: 16px;
+  width: 26.4rem;
+  height: 5.3rem;
+  margin: 0 auto 0.6rem;
+  font-size: 1.6rem;
   border: 1px solid #fff;
   transform: skewX(-23deg);
   transition: ease 0.4s;
@@ -2898,7 +2925,7 @@ keyframe animation
 }
 @media screen and (min-width: 1024px) {
   .footerNav__btn {
-    margin: 0 3px;
+    margin: 0 0.3rem;
   }
 }
 .footerNav__btn::after {
@@ -2913,18 +2940,17 @@ keyframe animation
 }
 .footerNav__btn:last-child::after {
   content: "RECRUIT　→";
-  font-size: 17px;
 }
 .footerNav__btnBg::before {
   content: "";
   position: absolute;
   top: 0;
   left: -100%;
-  background: hsla(0, 0%, 23%, 0.4);
+  background: hsla(0, 0%, 73%, 0.4);
   mix-blend-mode: multiply;
   width: 100%;
   height: 100%;
-  transition: ease 0.4s;
+  transition: ease 0.2s;
   pointer-events: none;
 }
 .footerNav__btnBg:hover::before {
@@ -2937,20 +2963,25 @@ keyframe animation
 }
 
 .footer__logo {
-  display: flex;
-  justify-content: center;
+  width: 16rem;
+  margin: 0 auto 1rem;
 }
 @media screen and (min-width: 1024px) {
   .footer__logo {
+    display: flex;
     justify-content: start;
+    margin: 0 0 1rem;
   }
 }
 .footer__logo-link {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 .footer__logo-img {
   display: block;
   width: 100%;
+  height: 100%;
 }
 .footer__copyright {
   text-align: center;

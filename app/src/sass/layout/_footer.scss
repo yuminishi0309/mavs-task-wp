@@ -6,11 +6,11 @@
     // GO TOP ボタン
     &__top {
         position: absolute;
-        top: -56px;
+        top: -5.6rem;
         right: 1.3rem;
-        width: 38px;
+        width: 3.8rem;
         @media screen and (min-width: 1024px) {
-            top: -60px;
+            top: -6rem;
             right: 3.6rem;
         }
     }
@@ -40,8 +40,8 @@
             top: 0;
             left: 0;
             content: "";
-            width: 91px;
-            height: 215px;
+            width: 9.1rem;
+            height: 21.5rem;
             background: #4d4d4d;
             transform: skewX(-23deg) translateX(-50%);
         }
@@ -50,8 +50,8 @@
             right: 0;
             bottom: 0;
             content: "";
-            width: 91px;
-            height: 215px;
+            width: 9.1rem;
+            height: 21.5rem;
             background: #4d4d4d;
             transform: skewX(-23deg) translateX(50%);
         }
@@ -83,34 +83,30 @@
 // コンタクト/リクルート 独立ボタン
 .footerNav {
     margin-bottom: 5.7rem;
-
-    // position: absolute;
-    // bottom: 16rem;
-    // left: 50%;
-    // transform: translateX(-50%);
     color: $white;
     font-family: $futura;
     font-weight: 500;
-    // z-index: 10;
 
     @media screen and (min-width: 1024px) {
       display: flex;
     }
+
     &__btn {
         position: relative;
         overflow: hidden;
-        width: 264px;
-        height: 53px;
-        margin: 0 auto 6px;
-        font-size: 16px;
+        width: 26.4rem;
+        height: 5.3rem;
+        margin: 0 auto 0.6rem;
+        font-size: 1.6rem;
         border: 1px solid $white;
         transform: skewX(-23deg);
         transition: ease .4s;
         cursor: pointer;
 
         @media screen and (min-width: 1024px) {
-          margin: 0 3px;
+          margin: 0 0.3rem;
         }
+
         // ボタン内テキスト
         &::after {
             position: absolute;
@@ -125,7 +121,6 @@
         &:last-child {
             &::after {
                 content: "RECRUIT　→";
-                font-size: 17px;
             }
         }
     }
@@ -135,15 +130,15 @@
         position: absolute;
         top: 0;
         left: -100%;
-        background: hsla(0, 0%, 23%, 0.4);
+        background: hsla(0, 0%, 73%, 0.4);
         mix-blend-mode: multiply;
         width: 100%;
         height: 100%;
-        transition: ease .4s;
+        transition: ease .2s;
         pointer-events: none;
-      }
-      &__btnBg:hover::before {
-        transform: translateX(100%);
+        }
+        &__btnBg:hover::before {
+            transform: translateX(100%);
         }
 
     &__link {
@@ -155,20 +150,28 @@
 // ロゴ/コピーライト
 .footer {
     &__logo {
-        display: flex;
-        justify-content: center;
+        width: 16rem;
+        margin: 0 auto 1rem;
 
         @media screen and (min-width: 1024px) {
+            display: flex;
             justify-content: start;
+            margin: 0 0 1rem;
         }
     }
+
     &__logo-link {
         display: block;
+        width: 100%;
+        height: 100%;
     }
+
     &__logo-img {
         display: block;
         width: 100%;
+        height: 100%;
     }
+
     &__copyright {
         text-align: center;
         font-size: 1rem;

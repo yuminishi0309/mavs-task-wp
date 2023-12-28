@@ -333,7 +333,7 @@
         display: none;
       }
     }
-    
+
     // READ MOREボタン
     &__btn {
       @include readMoreBtn;
@@ -721,14 +721,37 @@
     }
 
     &__txt1 {
+      width: 260%;
+      padding: 0 1rem;
       animation: loop 20s linear infinite;
-      padding: 0 10px;
+
+      @media screen and (min-width: 768px) {
+        width: 180%;
+        padding: 0 2rem;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 100%;
+        padding: 0 2rem;
+      }
     }
+    
     &__txt2 {
       position: absolute;
       top: 0; left: 0;
+      width: 260%;
+      padding: 0 1rem;
       animation: loop 20s -10s linear infinite;
+
+      @media screen and (min-width: 768px) {
+        width: 180%;
+        padding: 0 2rem;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 100%;
+        padding: 0 2rem;
+      }
     }
+
     &__img {
       display: block;
       width: 100%;
