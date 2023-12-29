@@ -1,85 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,user-scalable=yes" />
-  <meta name="description" content="トップページのディスクリプション">
-  <title>北海道札幌市のホームページ・Web制作・システム開発会社｜株式会社マーベリックス</title>
-  <meta property="og:title" content="" />
-  <meta property="og:description" content="" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <link rel="stylesheet" href="https://use.typekit.net/zte7fky.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-  <link href="./assets/css/common.css" rel="stylesheet" />
-  <link href="./assets/css/style.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="./assets/favicon.ico" />
-</head>
-
-<body>
-  <div class="wrapper">
-    <header id="header" class="header">
-      <div class="header__wrap">
-        <h1 class="header__ttl">
-          <a href="index.html" class="header__link"><img src="assets/image/top/logo-bl.svg" alt="マーベリックスロゴ" class="header__img"></a>
-        </h1>
-        <nav class="gnavTop">
-          <ul class="gnavTop__nav">
-            <li class="gnavTop__list"><a href="#" class="gnavTop__link">ABOUT</a></li>
-            <li class="gnavTop__list"><a href="#" class="gnavTop__link">SERVICE</a></li>
-            <li class="gnavTop__list"><a href="#" class="gnavTop__link">NEWS</a></li>
-            <li class="gnavTop__list"><a href="blog.html" class="gnavTop__link">BLOG</a></li>
-            <li class="gnavTop__list"><a href="#" class="gnavTop__link">COMPANY</a></li>
-            <li class="gnavTop__list"><a href="#" class="gnavTop__link">RECRUIT</a></li>
-            <li class="gnavTop__list gnavTop__btn">
-              <a href="contact.html" class="gnavTop__link gnavTop__contactLink">
-                <span class="gnavTop__letter readMoreLetter">CONTACT</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- FadeInメニュー -->
-        <!-- ハンバーガーメニューボタン -->
-        <div class="btn" id="btn">
-          <span class="btn__top" id="btn__top"></span>
-          <span class="btn__middle" id="btn__middle"></span>
-          <span class="btn__bottom" id="btn__bottom"></span>
-        </div>
-        <!-- FadeInナビゲーション -->
-        <nav class="gnavFadeIn" id="gnavFadeIn">
-          <p class="gnavFadeIn__logo">
-            <a href="index.html" class="gnavFadeIn__logoLink"><img src="assets/image/top/logo-wh.svg" alt="マーベリックスロゴ" class="gnavFadeIn__img"></a>
-          </p>
-          <div class="gnavFadeIn__wrap">
-            <div class="gnavFadeIn__container">
-              <ul class="gnavFadeIn__nav--left">
-                <li class="gnavFadeIn__list"><a href="index.html" class="gnavFadeIn__link">TOP</a></li>
-                <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">ABOUT</a></li>
-                <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">WORKS</a></li>
-                <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">SERVICE</a></li>
-              </ul>
-              <ul class="gnavFadeIn__nav--right">
-                <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">MEMBER</a></li>
-                <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">COMPANY</a></li>
-                <li class="gnavFadeIn__list"><a href="blog.html" class="gnavFadeIn__link">BLOG</a></li>
-                <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">NEWS</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- nav独立ボタン -->
-          <div class="nav">
-            <p class="nav__btn nav__btnBg">
-              <a href="contact.html" class="nav__link"></a>
-            </p>
-            <p class="nav__btn nav__btnBg">
-              <a href="#" class="nav__link"></a>
-            </p>
-          </div>
-        </nav>
-      </div>
-    </header>
+<?php get_header(); ?>
 
     <main id="top">
       <div class="wrapper">
@@ -95,7 +14,8 @@
               <p class="mv__sub">最高のチームで、最高の価値を提供する</p>
             </div>
             <div class="mv__icon">
-              <p class="mv__iconImg"><img src="assets/image/top/icon-img.svg" alt="山のアイコン" class="mv__img"></p>
+                <!-- 画像お試しパス -->
+              <p class="mv__iconImg"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/icon-img.svg" alt="山のアイコン" class="mv__img"></p>
               <p class="mv__iconTxt"><img src="assets/image/top/icon-txt.svg" alt="アイコンテキスト" class="mv__img"></p>
             </div>
             <div class="mv__bg">
@@ -265,49 +185,4 @@
         </section>
       </div>
     </main>
-    <footer id="footer" class="footer">
-      <p class="footer__top"><a href="#" class="footer__link"><img src="assets/image/top/goTop.svg" alt="GO TOP画像"></a></p>
-      <div class="footer__wrap">
-        <nav class="footerGnav">
-          <ul class="footerGnav__nav--left">
-            <li class="footerGnav__list"><a href="index.html" class="footerGnav__link">TOP</a></li>
-            <li class="footerGnav__list"><a href="#" class="footerGnav__link">ABOUT</a></li>
-            <li class="footerGnav__list"><a href="#" class="footerGnav__link">WORKS</a></li>
-            <li class="footerGnav__list"><a href="#" class="footerGnav__link">SERVICE</a></li>
-          </ul>
-          <ul class="footerGnav__nav--right">
-            <li class="footerGnav__list"><a href="#" class="footerGnav__link">MEMBER</a></li>
-            <li class="footerGnav__list"><a href="#" class="footerGnav__link">COMPANY</a></li>
-            <li class="footerGnav__list"><a href="blog.html" class="footerGnav__link">BLOG</a></li>
-            <li class="footerGnav__list"><a href="#" class="footerGnav__link">NEWS</a></li>
-          </ul>
-        </nav>
-        <div class="footer__container">
-
-          <div class="footerNav">
-            <p class="footerNav__btn footerNav__btnBg">
-              <a href="contact.html" class="footerNav__link"></a>
-            </p>
-            <p class="footerNav__btn footerNav__btnBg">
-              <a href="#" class="footerNav__link"></a>
-            </p>
-          </div>
-          <p class="footer__logo">
-            <a href="index.html" class="footer__logo-link"><img src="assets/image/top/logo-mvs.svg" alt="マーベリックスロゴ" class="footer__logo-img"></a>
-          </p>
-          <div class="footer__copyright">@Mavericks Inc.</div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <!-- swiper本体 -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
-  <!-- .jsファイルの読み込み -->
-  <script src="./assets/js/swiper.js"></script>
-  <script src="./assets/js/scrollify.js"></script>
-  <script src="./assets/js/script.js"></script>
-</body>
-
-</html>
+<?php get_footer(); ?>
