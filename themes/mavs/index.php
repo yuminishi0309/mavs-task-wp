@@ -16,7 +16,7 @@
             <div class="mv__icon">
                 <!-- 画像お試しパス -->
               <p class="mv__iconImg"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/icon-img.svg" alt="山のアイコン" class="mv__img"></p>
-              <p class="mv__iconTxt"><img src="assets/image/top/icon-txt.svg" alt="アイコンテキスト" class="mv__img"></p>
+              <p class="mv__iconTxt"><img src="<?php echo get_templete_directory_uri();?>/assets/image/top/icon-txt.svg" alt="アイコンテキスト" class="mv__img"></p>
             </div>
             <div class="mv__bg">
               <p class="mv__bg-wolf"><img src="assets/image/top/mv_wolf.png" alt="狼の顔" class="mv__img"></p>
@@ -163,19 +163,19 @@
             </div>
             <div class="news__container">
               <div class="news__box">
-                <a href="#" class="news__link">
+                <a href="#" class="news__link-ttl">
                   <p class="news__date">2022.05.01</p>
                   <p class="news__txt">ホームページをリニューアルしました</p>
                 </a>
               </div>
               <div class="news__box">
-                <a href="#" class="news__link">
+                <a href="#" class="news__link-ttl">
                   <p class="news__date">2022.05.01</p>
                   <p class="news__txt">ホームページをリニューアルしました</p>
                 </a>
               </div>
               <div class="news__box">
-                <a href="#" class="news__link">
+                <a href="#" class="news__link-ttl">
                   <p class="news__date">2022.05.01</p>
                   <p class="news__txt">ホームページをリニューアルしました</p>
                 </a>

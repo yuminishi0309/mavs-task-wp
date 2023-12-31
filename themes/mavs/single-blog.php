@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<!-- 個別投稿ページ -->
     <main id="blogSingle">
       <div class="wrapper">
         <!-- 全体bg ===================================== -->

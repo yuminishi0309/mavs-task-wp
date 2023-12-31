@@ -36,6 +36,10 @@
 
     &__link {
         display: block;
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
     
     &__img {
@@ -135,12 +139,20 @@
         top: 0;
         left: 0;
         width: 3.5rem;
-        margin-left: 1.5rem;
-        margin-top: 1.1rem;
+        margin: 1.1rem 0 0 1.5rem;
+        z-index: 11;
+        
+        @media screen and (min-width: 768px) {
+            margin: 2rem 0 0 3rem;
+        }
     }
 
     &__logoLink {
         display: block;
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
 
     &__img {
@@ -184,10 +196,29 @@
     }
 
     &__link {
-        display: block;
+        position: relative;
+        // display: block;
         padding: 0.6rem;
         font-family: $futura;
         font-weight: 500;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $white;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+        }
+
+        &:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
     }
 }
 
@@ -236,8 +267,7 @@
         position: absolute;
         top: 0;
         left: -100%;
-        background: hsla(0, 0%, 73%, 0.4);
-        mix-blend-mode: multiply;
+        background: linear-gradient(315.21deg,#6e6e6e,#1d1d1d 100.37%);
         width: 100%;
         height: 100%;
         transition: ease .4s;

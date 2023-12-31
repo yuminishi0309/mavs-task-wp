@@ -17,7 +17,7 @@
           2日営業日を過ぎても返信がない場合は、お手数ですがもう1度お問合せください。
         </p>
         <p class="contactComplete__btn">
-          <a href="index.html" class="contactComplete__link">
+          <a href="<?php echo esc_url( get_home_url() ); ?>" class="contactComplete__link">
             <span class="contactComplete__letter readMoreLetter" >トップページへ　&rarr;</span>
           </a>
         </p>   

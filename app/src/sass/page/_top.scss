@@ -825,8 +825,8 @@
         border-bottom: 1px solid $black;
       }
     }
-    &__link {
-      transition: .3s ease-in-out;
+    &__link-ttl {
+      transition: .1s ease-in-out;
       &:hover {
         transform: translateX(2rem);
       }

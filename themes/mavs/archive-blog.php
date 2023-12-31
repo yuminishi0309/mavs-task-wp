@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<!-- 投稿一覧ページ -->
 <main id="blog">
   <div class="wrapper">
     <!-- 全体bg ===================================== -->
@@ -12,10 +13,7 @@
         <h2 class="blogList__ttl">BLOG</h2>
         <p class="blogList__sub">ブログ</p>
         <!-- ↓カテゴリページのみ*************************************** -->
-        <div class="blogList__group">
-          <p class="blogList__heading">CATEGORY</p>
-          <p class="blogList__content">TECHNOLOGY</p>
-        </div>
+
         <!-- ↑カテゴリページのみ*************************************** -->
         <p id="blogListMenu" class="blogList__menu">CATEGORY</p>
         <nav id="blogListNav" class="blogListNav">

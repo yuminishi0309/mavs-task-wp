@@ -27,7 +27,7 @@
                         <li class="gnavTop__list"><a href="#" class="gnavTop__link">COMPANY</a></li>
                         <li class="gnavTop__list"><a href="#" class="gnavTop__link">RECRUIT</a></li>
                         <li class="gnavTop__list gnavTop__btn">
-                            <a href="contact.html" class="gnavTop__link gnavTop__contactLink">
+                            <a href="<?php echo esc_url( get_home_url() ); ?>/contact" class="gnavTop__link gnavTop__contactLink">
                               <span class="gnavTop__letter readMoreLetter" >CONTACT</span>
                             </a>
                         </li>

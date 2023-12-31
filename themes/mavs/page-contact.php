@@ -61,7 +61,7 @@
               </form>
               <!-- ↑フォーム -->
               <p class="contact__btn">
-                <a href="contact_confirm.html" class="contact__link">
+                <a href="<?php echo esc_url( get_home_url() ); ?>/contact-confirm" class="contact__link">
                   <span class="contact__letter readMoreLetter">内容確認　&rarr;</span>
                 </a>
               </p>

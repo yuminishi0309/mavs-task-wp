@@ -44,12 +44,12 @@
             </table>
             <div class="contactConfirm__unit">
               <p class="contactConfirm__btn">
-                <a href="contact.html" class="contactConfirm__link">
+                <a href="<?php echo esc_url( get_home_url() ); ?>/contact" class="contactConfirm__link">
                   <span class="contactConfirm__letter readMoreLetter">&larr;　戻る</span>
                 </a>
               </p>
               <p class="contactConfirm__btn">
-                <a href="contact_complete.html" class="contactConfirm__link">
+                <a href="<?php echo esc_url( get_home_url() ); ?>/contact-complete" class="contactConfirm__link">
                   <span class="contactConfirm__letter readMoreLetter">送信する　&rarr;</span>
                 </a>
               </p>
