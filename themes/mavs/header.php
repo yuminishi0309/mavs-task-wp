@@ -16,7 +16,9 @@
         <header id="header" class="header">
             <div class="header__wrap">
                 <h1 class="header__ttl">
-                    <a href="<?php echo esc_url( get_home_url() ); ?>" class="header__link"><img src="assets/image/top/logo-bl.svg" alt="マーベリックスロゴ" class="header__img"></a>
+                    <a href="<?php echo esc_url( get_home_url() ); ?>" class="header__link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/logo-bl.svg" alt="マーベリックスロゴ" class="header__img">
+                    </a>
                 </h1>
                 <nav class="gnavTop">
                     <ul class="gnavTop__nav">
@@ -43,7 +45,9 @@
                 <!-- FadeInナビゲーション -->
                 <nav class="gnavFadeIn" id="gnavFadeIn">
                     <p class="gnavFadeIn__logo">
-                        <a href="index.html" class="gnavFadeIn__logoLink"><img src="assets/image/top/logo-wh.svg" alt="マーベリックスロゴ" class="gnavFadeIn__img"></a>
+                        <a href="index.html" class="gnavFadeIn__logoLink">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/logo-wh.svg" alt="マーベリックスロゴ" class="gnavFadeIn__img">
+                        </a>
                     </p>
                     <div class="gnavFadeIn__wrap">
                         <div class="gnavFadeIn__container">

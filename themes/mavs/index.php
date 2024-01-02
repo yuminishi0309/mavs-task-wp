@@ -14,21 +14,24 @@
               <p class="mv__sub">最高のチームで、最高の価値を提供する</p>
             </div>
             <div class="mv__icon">
-                <!-- 画像お試しパス -->
-              <p class="mv__iconImg"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/icon-img.svg" alt="山のアイコン" class="mv__img"></p>
-              <p class="mv__iconTxt"><img src="<?php echo get_templete_directory_uri();?>/assets/image/top/icon-txt.svg" alt="アイコンテキスト" class="mv__img"></p>
+                <p class="mv__iconImg"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/icon-img.svg" alt="山のアイコン" class="mv__img"></p>
+                <p class="mv__iconTxt"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/icon-txt.svg" alt="アイコンテキスト" class="mv__img"></p>
             </div>
             <div class="mv__bg">
-              <p class="mv__bg-wolf"><img src="assets/image/top/mv_wolf.png" alt="狼の顔" class="mv__img"></p>
-              <div class="mv__bg-grey"></div>
-              <div class="mv__bg-city"></div>
-              <div class="mv__bg-plant"></div>
+                <p class="mv__bg-wolf">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/mv_wolf.png" alt="狼の顔" class="mv__img">
+                </p>
+                <div class="mv__bg-grey"></div>
+                <div class="mv__bg-city"></div>
+                <div class="mv__bg-plant"></div>
             </div>
           </div>
         </div>
         <!-- mv以降の全体bg ===================================== -->
         <div class="mainBg">
-          <p class="mainBg-bg"><img src="assets/image/top/about_bg.png" alt="グラデーション背景画像" class="mainBg__img"></p>
+            <p class="mainBg-bg">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/about_bg.png" alt="グラデーション背景画像" class="mainBg__img">
+            </p>
         </div>
         <!-- about sec ===================================== -->
         <section id="about" class="about scroll">
@@ -67,44 +70,41 @@
           <div class="blog__wrap">
             <h2 class="blog__ttl">BLOG</h2>
             <p class="blog__sub">ブログ</p>
-            <!-- スライダー本体 -->
+            <!-- スライダー本体 ================== -->
             <div class="swiper swiper-blog">
-              <div class="swiper-wrapper swiper-blog__wrapper">
-                <div class="swiper-slide swiper-blog__slide">
-                  <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-                  <div class="swiper-blog__unit">
-                    <p class="swiper-blog__date">2023.09.23</p>
-                    <p class="swiper-blog__category">CATEGORY</p>
-                  </div>
-                  <p class="swiper-blog__txt">ここにブログタイトルが入ります。タイトルタイトルタイトル</p>
+                <div class="swiper-wrapper swiper-blog__wrapper">
+                    <!-- ループ表示 ================== -->
+                    <?php 
+                        $post_query = new WP_Query(
+                        array (
+                            'post_type' => 'blog',
+                            'posts_per_page' => 8,
+                        )
+                        );
+                    ?>
+                    <?php if($post_query -> have_posts()) : ?>
+                    <?php while($post_query -> have_posts()) : $post_query -> the_post(); ?>
+                        <!-- スライド -->
+                        <div class="swiper-slide swiper-blog__slide">
+                            <a href="<?php the_permalink(); ?>">
+                                <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
+                                <div class="swiper-blog__unit">
+                                    <p class="swiper-blog__date"><?php the_time('Y.m.d'); ?></p>
+                                    <p class="swiper-blog__category"><?php echo get_the_term_list($post->ID, 'genre'); ?></p>
+                                </div>
+                                <p class="swiper-blog__txt"><?php the_title(); ?></p>
+                            </a>
+                        </div>
+                        <!-- ↑スライド -->
+                    <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                    <?php else : ?>
+                        <h2>記事がありません</h2>
+                    <?php endif; ?>
+                    <!-- ↑ループ表示 ================== -->
                 </div>
-                <div class="swiper-slide swiper-blog__slide">
-                  <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-                  <div class="swiper-blog__unit">
-                    <p class="swiper-blog__date">2023.09.23</p>
-                    <p class="swiper-blog__category">CATEGORY</p>
-                  </div>
-                  <p class="swiper-blog__txt">ここにブログタイトルが入ります。ここにブログタイトルが入ります。</p>
-                </div>
-                <div class="swiper-slide swiper-blog__slide">
-                  <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-                  <div class="swiper-blog__unit">
-                    <p class="swiper-blog__date">2023.09.23</p>
-                    <p class="swiper-blog__category">CATEGORY</p>
-                  </div>
-                  <p class="swiper-blog__txt">ここにブログタイトルが入ります。</p>
-                </div>
-                <div class="swiper-slide swiper-blog__slide">
-                  <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
-                  <div class="swiper-blog__unit">
-                    <p class="swiper-blog__date">2023.09.23</p>
-                    <p class="swiper-blog__category">CATEGORY</p>
-                  </div>
-                  <p class="swiper-blog__txt">ここにブログタイトルが入ります。タイトルタイトル</p>
-                </div>
-              </div>
             </div>
-            <!-- ↑ここまでスライダー -->
+            <!-- ↑ここまでスライダー本体 ================== -->
             <p class="blog__btn">
               <a href="blog.html" class="blog__link">
                 <span class="blog__letter readMoreLetter">READ MORE</span>
