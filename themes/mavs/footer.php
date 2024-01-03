@@ -1,5 +1,5 @@
 <footer id="footer" class="footer">
-            <p class="footer__top"><a href="#" class="footer__link"><img src="assets/image/top/goTop.svg" alt="GO TOP画像"></a></p>
+            <p class="footer__top"><a href="#" class="footer__link"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/goTop.svg" alt="GO TOP画像"></a></p>
             <div class="footer__wrap">
                 <nav class="footerGnav">
                     <ul class="footerGnav__nav--left">
@@ -16,17 +16,16 @@
                     </ul>
                 </nav>
                 <div class="footer__container">
-
                     <div class="footerNav">
                         <p class="footerNav__btn footerNav__btnBg">
-                            <a href="contact.html" class="footerNav__link"></a>
+                            <a href="<?php echo esc_url( get_home_url() ); ?>/contact" class="footerNav__link"></a>
                         </p>
                         <p class="footerNav__btn footerNav__btnBg">
                             <a href="#" class="footerNav__link"></a>
                         </p>
                     </div>
                     <p class="footer__logo">
-                        <a href="index.html" class="footer__logo-link"><img src="assets/image/top/logo-mvs.svg" alt="マーベリックスロゴ" class="footer__logo-img"></a>
+                        <a href="index.html" class="footer__logo-link"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/logo-mvs.svg" alt="マーベリックスロゴ" class="footer__logo-img"></a>
                     </p>
                     <div class="footer__copyright">@Mavericks Inc.</div>
                 </div>

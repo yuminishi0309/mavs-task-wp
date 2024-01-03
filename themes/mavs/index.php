@@ -138,19 +138,19 @@
         </section>
         <!-- テキストループアニメーション ===================================== -->
         <div id="loop" class="loop__wrap standardScroll">
-          <p class="loop__txt1"><img src="assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
-          <p class="loop__txt2"><img src="assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
+          <p class="loop__txt1"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
+          <p class="loop__txt2"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
         </div>
         <!-- バナー ===================================== -->
         <div id="banner" class="banner__wrap standardScroll">
           <a href="#" class="banner__link">
             <picture class="banner__pic">
               <!-- PC用の画像 -->
-              <source media="(min-width: 1024px)" srcset="assets/image/top/banner-pc.jpg">
+              <source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-pc.jpg">
               <!-- TAB用の画像 -->
-              <source media="(min-width: 768px)" srcset="assets/image/top/banner-pc.jpg">
+              <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-pc.jpg">
               <!-- スマホ用とデフォルト設定 -->
-              <img src="assets/image/top/banner-sp.jpg" alt="スマホ用バナー" class="banner__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-sp.jpg" alt="スマホ用バナー" class="banner__img">
             </picture>
           </a>
         </div>

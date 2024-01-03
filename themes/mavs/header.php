@@ -68,7 +68,7 @@
                     <!-- nav独立ボタン -->
                     <div class="nav">
                         <p class="nav__btn nav__btnBg">
-                            <a href="contact.html" class="nav__link"></a>
+                            <a href="<?php echo esc_url( get_home_url() ); ?>/contact" class="nav__link"></a>
                         </p>
                         <p class="nav__btn nav__btnBg">
                             <a href="#" class="nav__link"></a>

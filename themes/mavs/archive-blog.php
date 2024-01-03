@@ -12,9 +12,6 @@
       <div class="blogList__wrap">
         <h2 class="blogList__ttl">BLOG</h2>
         <p class="blogList__sub">ブログ</p>
-        <!-- ↓カテゴリページのみ*************************************** -->
-
-        <!-- ↑カテゴリページのみ*************************************** -->
         <p id="blogListMenu" class="blogList__menu">CATEGORY</p>
         <nav id="blogListNav" class="blogListNav">
           <ul class="blogListNav__ul">

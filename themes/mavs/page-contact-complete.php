@@ -4,7 +4,7 @@
   <div class="wrapper">
     <!-- 全体bg ===================================== -->
     <div class="mainBg">
-      <p class="mainBg-bg"><img src="assets/image/top/about_bg.png" alt="グラデーション背景画像" class="mainBg__img"></p>
+      <p class="mainBg-bg"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/about_bg.png" alt="グラデーション背景画像" class="mainBg__img"></p>
     </div>
     <!-- section ===================================== -->
     <section class="contactComplete">
