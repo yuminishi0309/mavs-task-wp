@@ -87,7 +87,12 @@
                         <!-- スライド -->
                         <div class="swiper-slide swiper-blog__slide">
                             <a href="<?php the_permalink(); ?>">
-                                <p class="swiper-blog__pic"><img src="./assets/image/top/blog_img.jpg" alt="ブログ内容写真" class="swiper-blog__img"></p>
+                                <?php if(has_post_thumbnail()): ?>
+                                    <?php the_post_thumbnail("", array("class" => "swiper-blog__img")); ?>
+                                <?php else: ?>
+                                    <!-- no imageパターン -->
+                                    <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="テスト">
+                                <?php endif; ?>
                                 <div class="swiper-blog__unit">
                                     <p class="swiper-blog__date"><?php the_time('Y.m.d'); ?></p>
                                     <p class="swiper-blog__category"><?php echo get_the_term_list($post->ID, 'genre'); ?></p>

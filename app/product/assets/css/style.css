@@ -740,6 +740,7 @@ keyframe animation
 }
 #top .swiper-blog__img {
   display: block;
+  height: 100%;
 }
 #top .swiper-blog__unit {
   display: flex;
@@ -1616,6 +1617,10 @@ keyframe animation
   #blogSingle .blogSingle__pic {
     margin-bottom: 6rem;
   }
+}
+#blogSingle .blogSingle__img {
+  display: block;
+  height: 100%;
 }
 #blogSingle .blogSingle__h2 {
   font-size: 2.8rem;
