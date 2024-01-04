@@ -61,23 +61,17 @@
               </div>
             </a>
           </div>
-        <?php endwhile;
-          endif;
-          wp_reset_postdata();
-        ?>
+        <?php endwhile; ?>
       </div>
+          <!-- ページネーション wp-pagenavi -->
+          <?php
+              if( function_exists('wp_pagenavi') ) {
+                wp_pagenavi(array('query' => $wp_query));
+              }
+          ?>
+          <!-- ↑ ページネーション wp-pagenavi ここまで -->
+      <? endif; wp_reset_postdata(); ?>
       <!-- ↑ループ表示  =================== -->
-
-      <!-- ページネーション -->
-      <ul class="blogList__pageUl">
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">&lt;</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">1</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">2</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">3</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">4</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">5</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">&gt;</a></li>
-      </ul>
     </section>
   </div>
 </main>

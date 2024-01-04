@@ -13,15 +13,6 @@
         <h2 class="blogList__ttl">BLOG</h2>
         <p class="blogList__sub">ブログ</p>
         <p id="blogListMenu" class="blogList__menu">CATEGORY</p>
-        <!-- <nav id="blogListNav" class="blogListNav">
-          <ul class="blogListNav__ul">
-            <li class="blogListNav__list"><a href="<?php echo esc_url( get_home_url() ); ?>/archives/blog" class="blogListNav__link">ALL</a></li>
-            <li class="blogListNav__list"><a href="<?php echo esc_url( get_home_url() ); ?>/archives/genre/technology" class="blogListNav__link">TECHNOLOGY</a></li>
-            <li class="blogListNav__list"><a href="<?php echo esc_url( get_home_url() ); ?>/archives/genre/curry" class="blogListNav__link">CURRY</a></li>
-            <li class="blogListNav__list"><a href="<?php echo esc_url( get_home_url() ); ?>/archives/genre/event" class="blogListNav__link">EVENT</a></li>
-          </ul>
-        </nav> -->
-
         <nav id="blogListNav" class="blogListNav">
           <ul class="blogListNav__ul">
             <?php
@@ -38,9 +29,13 @@
       <!-- ↓ループ表示  =================== -->
       <div class="blogList__container">
         <?php
+          $paged = get_query_var('paged')? get_query_var('paged') : 1;
+
+
           $wp_query = new WP_Query();
           $my_posts = array(
               'post_type' => 'blog',
+              'paged' => $paged,
               'posts_per_page' => '12',
           );
 
@@ -51,46 +46,39 @@
           <!-- ループさせるコンテンツ -->
           <div class="blogList__box">
               <a href="<?php the_permalink(); ?>" class="blogList__link">
-              <!-- サムネイル表示 -->
-              <?php if(has_post_thumbnail()): ?>
-                  <p><?php the_post_thumbnail("", array("class" => "blogList__img")); ?></p>
-              <?php else: ?>
-                  <p><img class="blogList__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像"></p>
-              <?php endif; ?>
-              <div class="blogList__inner">
-                <div class="blogList__unit">
-                  <p class="blogList__date"><?php the_time('Y.m.d'); ?></p>
-                  <p class="blogList__category">
-                    <?php
-                      $terms = get_the_terms($post->ID, 'genre');
-                      foreach($terms as $term):
-                      echo $term->name;
-                      endforeach;
-                    ?>
-                  </p>
+                <!-- サムネイル表示 -->
+                <?php if(has_post_thumbnail()): ?>
+                    <p><?php the_post_thumbnail("", array("class" => "blogList__img")); ?></p>
+                <?php else: ?>
+                    <p><img class="blogList__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像"></p>
+                <?php endif; ?>
+                <div class="blogList__inner">
+                  <div class="blogList__unit">
+                    <p class="blogList__date"><?php the_time('Y.m.d'); ?></p>
+                    <p class="blogList__category">
+                      <?php
+                        $terms = get_the_terms($post->ID, 'genre');
+                        foreach($terms as $term):
+                        echo $term->name;
+                        endforeach;
+                      ?>
+                    </p>
+                  </div>
+                  <p class="blogList__txt"><?php the_title(); ?></p>
                 </div>
-                <p class="blogList__txt"><?php the_title(); ?></p>
-              </div>
-            </a>
+              </a>
           </div>
-
-        <?php endwhile;
-          endif;
-          wp_reset_postdata();
-        ?>
+        <?php endwhile; ?>
       </div>
+          <!-- ページネーション wp-pagenavi -->
+          <?php
+              if( function_exists('wp_pagenavi') ) {
+                wp_pagenavi(array('query' => $wp_query));
+              }
+          ?>
+          <!-- ↑ ページネーション wp-pagenavi ここまで -->
+      <? endif; wp_reset_postdata(); ?>
       <!-- ↑ループ表示  =================== -->
-
-      <!-- ページネーション -->
-      <ul class="blogList__pageUl">
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">&lt;</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">1</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">2</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">3</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">4</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">5</a></li>
-        <li class="blogList__pageList"><a href="#" class="blogList__pageLink">&gt;</a></li>
-      </ul>
     </section>
   </div>
 </main>

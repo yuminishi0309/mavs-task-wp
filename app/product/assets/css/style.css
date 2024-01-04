@@ -1398,9 +1398,9 @@ keyframe animation
     font-size: 2rem;
   }
 }
-#blog .blogList__pageUl {
+#blog .wp-pagenavi {
   display: flex;
-  align-items: center;
+  justify-content: center;
   width: 29.2rem;
   margin: 0 auto 17rem;
   background: #000;
@@ -1411,21 +1411,27 @@ keyframe animation
   border-radius: 6.25rem;
 }
 @media screen and (min-width: 1024px) {
-  #blog .blogList__pageUl {
+  #blog .wp-pagenavi {
     margin-bottom: 18rem;
   }
 }
-#blog .blogList__pageList {
+#blog .wp-pagenavi > .current::after {
+  display: none;
+}
+#blog .wp-pagenavi > a {
   display: flex;
   justify-content: center;
   width: 100%;
   border-right: 2px solid #fff;
 }
-#blog .blogList__pageList:last-child {
-  border: none;
+#blog .current {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-right: 2px solid #fff;
 }
-#blog .blogList__pageLink {
-  display: block;
+#blog .current:last-child {
+  border: none;
 }
 
 /* ================================================================
@@ -3126,7 +3132,7 @@ blog page
   top: -2px;
 }
 @media screen and (min-width: 1024px) {
-  #blog .current::after {
+  #blog .currentCategory::after {
     display: block;
     content: "";
     width: 100%;

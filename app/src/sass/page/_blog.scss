@@ -272,38 +272,44 @@
                 font-size: 2rem;
             }
         }
+    }
 
-        // ページネーション
-        &__pageUl {
-            display: flex;
-            align-items: center;
-            width: 29.2rem;
-            margin: 0 auto 17rem;
-            background: $black;
-            color: $white;
-            font-family: $futura;
-            font-size: 1.6rem;
-            font-weight: 500;
-            border-radius: 6.25rem;
+    // ページネーション wp-pagenavi
+    .wp-pagenavi {
+        display: flex;
+        justify-content: center;
+        width: 29.2rem;
+        margin: 0 auto 17rem;
+        background: $black;
+        color: $white;
+        font-family: $futura;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border-radius: 6.25rem;
 
-            @media screen and (min-width: 1024px) {
-                margin-bottom: 18rem;
-            }
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 18rem;
         }
-        
-        &__pageList {
+
+        > .current::after {
+            display: none;
+        }
+
+        > a {
             display: flex;
             justify-content: center;
             width: 100%;
             border-right: 2px solid $white;
-
-            &:last-child {
-                border: none;
-            }
         }
-        
-        &__pageLink {
-            display: block;
+    }
+    .current {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border-right: 2px solid $white;
+
+        &:last-child {
+            border: none;
         }
     }
 }

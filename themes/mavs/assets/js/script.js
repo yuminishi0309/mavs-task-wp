@@ -51,7 +51,7 @@ $(function () {
     const links = document.querySelectorAll(".blogListNav__link");
     links.forEach(function (link) {
         if (link.href === location.href) {
-            link.closest(".blogListNav__link").classList.add("current");
+            link.closest(".blogListNav__link").classList.add("currentCategory");
         }
     });
     /* ================================================================

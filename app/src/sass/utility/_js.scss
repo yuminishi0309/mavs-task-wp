@@ -34,7 +34,7 @@ blog page
     }
 
     // ページ内ナビゲーション > カレントページスタイル
-    .current {
+    .currentCategory {
         @media screen and (min-width: 1024px) {
             &::after {
                 display: block;
