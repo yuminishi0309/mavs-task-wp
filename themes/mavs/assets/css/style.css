@@ -1325,6 +1325,7 @@ keyframe animation
 @media screen and (min-width: 1024px) {
   #blog .blogListNav__ul {
     display: flex;
+    flex-direction: row-reverse;
   }
 }
 #blog .blogListNav__link {
@@ -1353,8 +1354,12 @@ keyframe animation
     margin-bottom: 5rem;
   }
 }
+#blog .blogList__link {
+  display: block;
+}
 #blog .blogList__img {
   display: block;
+  height: 100%;
 }
 #blog .blogList__inner {
   padding: 2rem;

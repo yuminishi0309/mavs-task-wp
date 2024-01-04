@@ -17,14 +17,21 @@
               <?php if(have_posts()): while(have_posts()): the_post(); ?>
                 <div class="blogSingle__unit">
                   <p class="blogSingle__date"><?php the_time("Y.m.d"); ?></p>
-                  <p class="blogSingle__category"><?php echo get_the_term_list($post->ID, 'genre'); ?></p>
+                  <p class="blogSingle__category">
+                    <?php
+                      $terms = get_the_terms($post->ID, 'genre');
+                      foreach($terms as $term):
+                      echo $term->name;
+                      endforeach;
+                    ?>
+                  </p>
                 </div>
                 <p class="blogSingle__heading"><?php the_title(); ?></p>
 
                 <?php if(has_post_thumbnail()): ?>
                   <?php the_post_thumbnail("", array("class" => "blogSingle__img")); ?>
                 <?php else: ?>
-                  <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="テスト">
+                  <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像">
                 <?php endif; ?>
 
                 <p class="blogSingle__txt"><?php the_content(); ?></p>

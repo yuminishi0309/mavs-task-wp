@@ -191,6 +191,7 @@
         &__ul {
             @media screen and (min-width: 1024px) {
                 display: flex;
+                flex-direction: row-reverse;
             }
         }
 
@@ -223,8 +224,13 @@
             }
         }
 
+        &__link {
+            display: block;
+        }
+
         &__img {
             display: block;
+            height: 100%;
         }
 
         &__inner {

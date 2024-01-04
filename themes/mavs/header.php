@@ -25,7 +25,7 @@
                         <li class="gnavTop__list"><a href="#" class="gnavTop__link">ABOUT</a></li>
                         <li class="gnavTop__list"><a href="#" class="gnavTop__link">SERVICE</a></li>
                         <li class="gnavTop__list"><a href="#" class="gnavTop__link">NEWS</a></li>
-                        <li class="gnavTop__list"><a href="<?php echo esc_url( get_home_url() ); ?>/blog" class="gnavTop__link">BLOG</a></li>
+                        <li class="gnavTop__list"><a href="<?php echo esc_url( get_home_url() ); ?>/archives/blog" class="gnavTop__link">BLOG</a></li>
                         <li class="gnavTop__list"><a href="#" class="gnavTop__link">COMPANY</a></li>
                         <li class="gnavTop__list"><a href="#" class="gnavTop__link">RECRUIT</a></li>
                         <li class="gnavTop__list gnavTop__btn">
@@ -60,7 +60,7 @@
                             <ul class="gnavFadeIn__nav--right">
                                 <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">MEMBER</a></li>
                                 <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">COMPANY</a></li>
-                                <li class="gnavFadeIn__list"><a href="blog.html" class="gnavFadeIn__link">BLOG</a></li>
+                                <li class="gnavFadeIn__list"><a href="<?php echo esc_url( get_home_url() ); ?>/archives/blog" class="gnavFadeIn__link">BLOG</a></li>
                                 <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">NEWS</a></li>
                             </ul>
                         </div>

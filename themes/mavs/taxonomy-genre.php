@@ -5,178 +5,69 @@
   <div class="wrapper">
     <!-- 全体bg ===================================== -->
     <div class="mainBg">
-      <p class="mainBg-bg"><img src="assets/image/top/about_bg.png" alt="グラデーション背景画像" class="mainBg__img"></p>
+      <p class="mainBg-bg"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/about_bg.png" alt="グラデーション背景画像" class="mainBg__img"></p>
     </div>
     <!-- blogList sec ===================================== -->
     <section class="blogList">
       <div class="blogList__wrap">
         <h2 class="blogList__ttl">BLOG</h2>
         <p class="blogList__sub">ブログ</p>
-        <!-- ↓カテゴリページのみ*************************************** -->
+        <!-- ↓カテゴリページのみ - 現在のカテゴリ表示 *************************************** -->
         <div class="blogList__group">
           <p class="blogList__heading">CATEGORY</p>
-          <p class="blogList__content">TECHNOLOGY</p>
+          <!-- <p class="blogList__content">TECHNOLOGY</p> -->
+          <p class="blogList__content"><?php single_cat_title(); ?></p>
         </div>
         <!-- ↑カテゴリページのみ*************************************** -->
         <p id="blogListMenu" class="blogList__menu">CATEGORY</p>
         <nav id="blogListNav" class="blogListNav">
           <ul class="blogListNav__ul">
-            <li class="blogListNav__list"><a href="blog.html" class="blogListNav__link">ALL</a></li>
-            <li class="blogListNav__list"><a href="#" class="blogListNav__link">TECHNOLOGY</a></li>
-            <li class="blogListNav__list"><a href="#" class="blogListNav__link">CURRY</a></li>
-            <li class="blogListNav__list"><a href="#" class="blogListNav__link">EVENT</a></li>
+            <?php
+            $terms = get_terms('genre');
+            foreach ($terms as $term) {
+                echo '<li class="blogListNav__list"><a class="blogListNav__link" href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+            }
+            ?>
+            <li class="blogListNav__list"><a href="<?php echo esc_url( get_home_url() ); ?>/archives/blog" class="blogListNav__link">ALL</a></li>
           </ul>
         </nav>
       </div>
-      <!-- 投稿内容 -->
+
+      <!-- ↓ループ表示  =================== -->
       <div class="blogList__container">
-        <a href="blog_single.html" class="blogList__link">
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <!-- ループさせるコンテンツ -->
           <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
+            <a class="category-link" href="<?php the_permalink(); ?>">
+              <!-- サムネイル表示 -->
+              <?php if(has_post_thumbnail()): ?>
+                  <p><?php the_post_thumbnail("", array("class" => "blogList__img")); ?></p>
+              <?php else: ?>
+                  <p><img class="blogList__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像"></p>
+              <?php endif; ?>
+              <div class="blogList__inner">
+                <div class="blogList__unit">
+                  <p class="blogList__date"><?php the_time('Y.m.d'); ?></p>
+                  <p class="blogList__category">
+                    <?php
+                      $terms = get_the_terms($post->ID, 'genre');
+                      foreach($terms as $term):
+                      echo $term->name;
+                      endforeach;
+                    ?>
+                  </p>
+                </div>
+                <p class="blogList__txt"><?php the_title(); ?></p>
               </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
+            </a>
           </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <!-- ↓pc用ダミー  ================================== -->
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <a href="blog_single.html" class="blogList__link responsivePc">
-          <div class="blogList__box">
-            <p class="blogList__pic"><img src="./assets/image/top/blog_img2.jpg" alt="ブログ内容写真" class="blogList__img"></p>
-            <div class="blogList__inner">
-              <div class="blogList__unit">
-                <p class="blogList__date">2023.09.23</p>
-                <p class="blogList__category">CATEGORY</p>
-              </div>
-              <p class="blogList__txt">E CROSS TALK vol.10 ワークショップに参加しました！</p>
-            </div>
-          </div>
-        </a>
-        <!-- ↑pc用ダミー  ================================== -->
+        <?php endwhile;
+          endif;
+          wp_reset_postdata();
+        ?>
       </div>
+      <!-- ↑ループ表示  =================== -->
+
       <!-- ページネーション -->
       <ul class="blogList__pageUl">
         <li class="blogList__pageList"><a href="#" class="blogList__pageLink">&lt;</a></li>

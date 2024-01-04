@@ -90,12 +90,18 @@
                                 <?php if(has_post_thumbnail()): ?>
                                     <?php the_post_thumbnail("", array("class" => "swiper-blog__img")); ?>
                                 <?php else: ?>
-                                    <!-- no imageパターン -->
-                                    <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="テスト">
+                                    <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像">
                                 <?php endif; ?>
                                 <div class="swiper-blog__unit">
                                     <p class="swiper-blog__date"><?php the_time('Y.m.d'); ?></p>
-                                    <p class="swiper-blog__category"><?php echo get_the_term_list($post->ID, 'genre'); ?></p>
+                                    <p class="swiper-blog__category">
+                                        <?php
+                                            $terms = get_the_terms($post->ID, 'genre');
+                                            foreach($terms as $term):
+                                            echo $term->name;
+                                            endforeach;
+                                        ?>
+                                    </p>
                                 </div>
                                 <p class="swiper-blog__txt"><?php the_title(); ?></p>
                             </a>
