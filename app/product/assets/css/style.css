@@ -1133,14 +1133,6 @@ keyframe animation
     transform: translateX(-100%);
   }
 }
-#blog .responsivePc {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  #blog .responsivePc {
-    display: block;
-  }
-}
 #blog .wrapper {
   padding: 0 3rem;
 }
@@ -1322,9 +1314,12 @@ keyframe animation
     transition: none;
   }
 }
+#blog .blogListNav__ul {
+  display: flex;
+  flex-direction: column-reverse;
+}
 @media screen and (min-width: 1024px) {
   #blog .blogListNav__ul {
-    display: flex;
     flex-direction: row-reverse;
   }
 }
@@ -1711,6 +1706,7 @@ keyframe animation
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
 }
+
 /* ================================================================
 変数
 ================================================================ */

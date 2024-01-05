@@ -87,9 +87,10 @@
               <h5 class="blogSingle__h5">H5タイトル</h5>
               <p class="blogSingle__txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
             </div>
+            <!-- ページリンクナビ -->
             <ul class="blogSingle__nav">
-              <li class="blogSingle__prev"><a href="#" class="blogSingle__navLink">&larr;　PREV</a></li>
-              <li class="blogSingle__next"><a href="#" class="blogSingle__navLink">NEXT　&rarr;</a></li>
+              <?php previous_post_link('%link', '&larr;　PREV'); ?>
+              <?php next_post_link('%link', 'NEXT　&rarr;'); ?>
             </ul>
           </div>
         </section>
