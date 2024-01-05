@@ -15,7 +15,6 @@
         <!-- ↓カテゴリページのみ - 現在のカテゴリ表示 *************************************** -->
         <div class="blogList__group">
           <p class="blogList__heading">CATEGORY</p>
-          <!-- <p class="blogList__content">TECHNOLOGY</p> -->
           <p class="blogList__content"><?php single_cat_title(); ?></p>
         </div>
         <!-- ↑カテゴリページのみ*************************************** -->

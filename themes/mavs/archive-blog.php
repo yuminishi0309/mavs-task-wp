@@ -30,8 +30,6 @@
       <div class="blogList__container">
         <?php
           $paged = get_query_var('paged')? get_query_var('paged') : 1;
-
-
           $wp_query = new WP_Query();
           $my_posts = array(
               'post_type' => 'blog',

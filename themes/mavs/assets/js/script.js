@@ -50,8 +50,10 @@ $(function () {
     // ナビゲーションカレント表示  =======================================
     const links = document.querySelectorAll(".blogListNav__link");
     links.forEach(function (link) {
-        if (link.href === location.href) {
-            link.closest(".blogListNav__link").classList.add("currentCategory");
+        const categoryHref = link.getAttribute("href").split("/page/")[0];
+        const currentHref = location.href.split("/page/")[0];
+        if (categoryHref === currentHref) {
+            link.classList.add("currentCategory");
         }
     });
     /* ================================================================
