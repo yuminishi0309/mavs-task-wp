@@ -1,2 +1,83 @@
 @import "_variable.scss";
 
+/* ================================================================
+keyframe animation
+================================================================ */
+
+// 共通================================================================ */
+// セクションタイトル
+@keyframes text-animation {
+    0% {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+#animationDelay0 {
+    animation-delay: 0s;
+}
+#animationDelay1 {
+    animation-delay: 0.05s;
+}
+#animationDelay2 {
+    animation-delay: 0.1s;
+}
+#animationDelay3 {
+    animation-delay: 0.15s;
+}
+#animationDelay4 {
+    animation-delay: 0.2s;
+}
+#animationDelay5 {
+    animation-delay: 0.25s;
+}
+#animationDelay6 {
+    animation-delay: 0.3s;
+}
+#animationDelay7 {
+    animation-delay: 0.35s;
+}
+
+// fadeUp
+@keyframes fadeUp {
+    0% {
+        transform: translateY(24px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+// top page================================================================ */
+// mv 横からスライド
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+// mv テキスト回転＠MV
+@keyframes rotation {
+    from {
+        transform: rotate(0deg); transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg); transform: rotate(359deg);
+    }
+}
+// mv ループアニメーション
+@keyframes loop {
+    0%{
+      transform: translateX(100%);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+}

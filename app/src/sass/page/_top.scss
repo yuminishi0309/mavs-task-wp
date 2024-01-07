@@ -334,9 +334,9 @@
       }
     }
 
-    // READ MOREボタン
     &__btn {
       @include readMoreBtn;
+
       display: flex;
       justify-content: center;
     }
@@ -370,56 +370,15 @@
         width: 35rem;
       }
     }
+    // セクションタイトル
     &__ttl {
-      position: relative;
-      display: inline-block;
-      font-family: $plus;
-      font-size: 5.3rem;
-      font-weight: 700;
-      line-height: normal;
-
-      @media screen and (min-width: 1024px) {
-        font-size: 7.1rem;
-      }
-
-      // 文頭型抜き
-      &::first-letter {
-        color: $white;
-      }
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        content: "";
-        width: 3.3rem;
-        height: 80%;
-        background: #000;
-        z-index: -1;
-        @media screen and (min-width: 1024px) {
-          width: 4.3rem;
-        }
-      }
-      // タイトル下線
-      &::after {
-        position: absolute;
-        bottom: 6px;
-        right: 0;
-        display: block;
-        content: "";
-        width: 200%;
-        height: 1.5px;
-        background: $black;
-      }
+      @include secTtl;
     }
+
     &__sub {
-      margin-bottom: 4rem;
-      font-size: 1.2rem;
-      
-      @media screen and (min-width: 1024px) {
-        font-size: 1.6rem;
-      }
+      @include secTtlSub;
     }
+
     &__txt {
       margin-bottom: 4rem;
 
@@ -468,73 +427,37 @@
   ================================================================ */
   .blog {
     padding-top: 11.3rem;
-    
+
+    // セクションタイトル
     &__ttl {
-      // 後でmixin
-      position: relative;
-      display: inline-block;
-      // text-align: center;
-      font-family: $plus;
-      font-size: 5.3rem;
-      font-weight: 700;
-      line-height: normal;
+      @include secTtl(1500%);
+
       transform: translateX(80%);
       
       @media screen and (min-width: 768px) {
         transform: translateX(200%);
       }
-      
       @media screen and (min-width: 1024px) {
-        font-size: 7.1rem;
         transform: translateX(300%);
       }
 
-      // 文頭型抜き
-      &::first-letter {
-        color: $white;
-      }
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        content: "";
-        width: 3.3rem;
-        height: 80%;
-        background: #000;
-        z-index: -1;
-        @media screen and (min-width: 1024px) {
-          width: 4.3rem;
-        }
-      }
       // タイトル下線
       &::after {
-        position: absolute;
-        bottom: 6px;
         left: 0;
-        display: block;
-        content: "";
-        width: 1500%;
-        height: 1.5px;
-        background: $black;
       }
     }
+
     &__sub {
-      // 後でmixin
-      font-size: 1.2rem;
-      
-      @media screen and (min-width: 1024px) {
-        font-size: 1.6rem;
-      }
-      // mixin外
+      @include secTtlSub;
+
       text-align: center;
-      margin-bottom: 4rem;
       transform: translateX(15%);
 
       @media screen and (min-width: 768px) {
         transform: translateX(5%);
       }
     }
+
     &__btn {
       @include readMoreBtn;
 
@@ -549,7 +472,6 @@
       margin-bottom: 5rem;
     }
     &__slide {
-      // padding: 0 1rem;
       @media screen and (min-width: 768px) {
         padding: 0;
       }
@@ -560,7 +482,6 @@
     &__img {
       display: block;
       height: 100%;
-      
     }
     &__unit {
       display: flex;
@@ -607,32 +528,21 @@
       padding: 14rem 22rem 0;
       margin-bottom: 15rem;
     }
+
     &__container {
       position: relative;
     }
+    
+    // セクションタイトル
     &__ttl {
-      @extend .service__ttl;
-
-      // 【途中】以下指定できるmixinか、他方法に
-      &::before {
-        width: 4.6rem;
-        @media screen and (min-width: 1024px) {
-          width: 6.3rem;
-        }
-      }
+      @include secTtl;
     }
+
     &__sub {
-      // mixin
-      margin-bottom: 4rem;
-      font-size: 1.2rem;
-      
-      @media screen and (min-width: 1024px) {
-        font-size: 1.6rem;
-      }
+      @include secTtlSub;
     }
     
     &__bg {
-      // position: relative;
       width: 100%;
       margin-left: -3rem;
       margin-bottom: 5rem;
@@ -778,29 +688,23 @@
       padding: 14rem 22rem 0;
       margin-bottom: 11.8rem;
     }
+
     &__wrap {
       @media screen and (min-width: 1024px) {
         display: flex;
         justify-content: space-between;
       }
     }
-    &__ttl {
-      @extend .service__ttl;
 
-      // 【途中】以下指定できるmixinか、他方法に
-      &::before {
-        width: 4rem;
-        @media screen and (min-width: 1024px) {
-          width: 5.3rem;
-        }
-      }
+    // セクションタイトル
+    &__ttl {
+      @include secTtl;
     }
+
     &__sub {
-      @extend .service__sub;
-      @media screen and (min-width: 1024px) {
-        // margin-bottom: 5.8rem;
-      }
+      @include secTtlSub;
     }
+
     &__btn {
       display: none;
 
@@ -811,11 +715,13 @@
         justify-content: flex-start;
       }
     }
+
     &__container {
       @media screen and (min-width: 1024px) {
         width: 73.1rem;
       }
     }
+
     &__box {
       padding: 1.5rem 0;
       border-top: 1px solid $black;
@@ -823,20 +729,25 @@
       @media screen and (min-width: 1024px) {
         padding: 2rem 0;
       }
+
       &:last-child {
         border-bottom: 1px solid $black;
       }
     }
+
     &__link-ttl {
       transition: .1s ease-in-out;
+
       &:hover {
         transform: translateX(2rem);
       }
+
       @media screen and (min-width: 1024px) {
         display: flex;
         gap: 4.5rem; 
       }
     }
+
     &__date {
       @media screen and (min-width: 1024px) {
         margin-left: 5rem;

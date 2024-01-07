@@ -43,7 +43,7 @@
               </tr>
             </table>
             <div class="contactConfirm__unit">
-              <p class="contactConfirm__btn">
+              <p class="contactConfirm__btn-return">
                 <a href="<?php echo esc_url( get_home_url() ); ?>/contact" class="contactConfirm__link">
                   <span class="contactConfirm__letter readMoreLetter">&larr;　戻る</span>
                 </a>

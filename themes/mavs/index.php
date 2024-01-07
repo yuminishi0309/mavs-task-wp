@@ -53,14 +53,22 @@
         <section id="service" class="service standardScroll">
           <div class="service__wrap">
             <div class="service__container">
-              <h2 class="service__ttl">SERVICE</h2>
-              <p class="service__sub">サービス</p>
-              <p class="service__txt">マーベリックスは経験豊富なメンバーによるサイト制作やシステム開発を得意としています。さらに業務に柔軟に対応できる「リモートラボ」なら、お客様の開発を効率的に進めることができます。</p>
-              <p class="service__btn">
+                <h2 class="service__ttl">
+                    <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay1">S</span>
+                    <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay2">E</span>
+                    <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay3">R</span>
+                    <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay4">V</span>
+                    <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay5">I</span>
+                    <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay6">C</span>
+                    <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay7">E</span>
+                </h2>
+                <p class="service__sub">サービス</p>
+                <p class="service__txt">マーベリックスは経験豊富なメンバーによるサイト制作やシステム開発を得意としています。さらに業務に柔軟に対応できる「リモートラボ」なら、お客様の開発を効率的に進めることができます。</p>
+                <p class="service__btn">
                 <a href="#" class="service__link">
-                  <span class="service__letter readMoreLetter">READ MORE</span>
+                    <span class="service__letter readMoreLetter">READ MORE</span>
                 </a>
-              </p>
+                </p>
             </div>
             <div class="service__pic"></div>
           </div>
@@ -68,7 +76,12 @@
         <!-- blog sec ===================================== -->
         <section id="blog" class="blog standardScroll">
           <div class="blog__wrap">
-            <h2 class="blog__ttl">BLOG</h2>
+            <h2 class="blog__ttl">
+                <span class="blog__ttlLetter txtAnimationFadeUp" id="animationDelay1">B</span>
+                <span class="blog__ttlLetter txtAnimationFadeUp" id="animationDelay2">L</span>
+                <span class="blog__ttlLetter txtAnimationFadeUp" id="animationDelay3">O</span>
+                <span class="blog__ttlLetter txtAnimationFadeUp" id="animationDelay4">G</span>
+            </h2>
             <p class="blog__sub">ブログ</p>
             <!-- スライダー本体 ================== -->
             <div class="swiper swiper-blog">
@@ -127,7 +140,14 @@
         <section id="member" class="member standardScroll">
           <div class="member__wrap">
             <div class="member__container">
-              <h2 class="member__ttl">MEMBER</h2>
+            <h2 class="member__ttl">
+                <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay1">M</span>
+                <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay2">E</span>
+                <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay3">M</span>
+                <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay4">B</span>
+                <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay5">E</span>
+                <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay6">R</span>
+            </h2>
               <p class="member__sub">メンバー</p>
               <div class="member__bg">
                 <div class="member__bg-pic"></div>
@@ -164,7 +184,12 @@
         <section id="news" class="news standardScroll">
           <div class="news__wrap">
             <div class="news__unit">
-              <h2 class="news__ttl">NEWS</h2>
+            <h2 class="news__ttl">
+                <span class="news__ttlLetter txtAnimationFadeUp" id="animationDelay1">N</span>
+                <span class="news__ttlLetter txtAnimationFadeUp" id="animationDelay2">E</span>
+                <span class="news__ttlLetter txtAnimationFadeUp" id="animationDelay3">W</span>
+                <span class="news__ttlLetter txtAnimationFadeUp" id="animationDelay4">S</span>
+            </h2>
               <p class="news__sub">ニュース</p>
               <p class="news__btn">
                 <a href="#" class="news__link">

@@ -2,14 +2,34 @@ $(function () {
     /* ================================================================
     top page
     ================================================================ */
-    // ハンバーガーメニューボタン
+    // 共通 スクロール時の設定
+    const windowHeight = $(window).innerHeight();
+    $(window).on('scroll', function(){
+            const ST = $(window).scrollTop();
+        // ページ全体の共通fadeUp設定
+        $('.fadeUp').each(function(){
+            const target = $(this).offset().top;
+            if(ST > target - windowHeight / 1.4){
+                $(this).addClass('showElement');
+            }
+        });
+        // セクションタイトル fadeUp設定
+        $('.txtAnimationFadeUp').each(function(){
+            const target = $(this).offset().top;
+            if(ST > target - windowHeight / 1.4){
+                $(this).addClass('showAnimation');
+            }
+        });
+    });
+
+    // header ハンバーガーメニューボタン
     $('#btn').on('click', function(){
         $('#btn__top').toggleClass('rotate-top');
         $('#btn__middle').toggleClass('hide-middle');
         $('#btn__bottom').toggleClass('rotate-bottom');
         $('#gnavFadeIn').toggleClass('gnav-active');
     });
-    // ナビゲーション操作
+    // header ナビゲーション操作
     $('.gnavFadeIn__link').on('click', function () {
         $('#btn__top').removeClass('rotate-top');
         $('#btn__middle').removeClass('hide-middle');

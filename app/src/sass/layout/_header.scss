@@ -74,6 +74,9 @@
 
             &>a {
                 padding: 0.6rem 2rem;
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }

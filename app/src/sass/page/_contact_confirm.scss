@@ -150,24 +150,85 @@
                 gap: 3rem;
             }
         }
+
+        // 戻るボタン/送信ボタン
+        &__btn-return {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-family: $futura;
+            font-weight: 500;
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 0;
+            }
+
+            &>a {
+                position: relative;
+                overflow: hidden;
+                padding: 0.6rem 4.2rem;
+                background: $darkGrey;
+                border-radius: 6.25rem;
+        
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: hsla(0,0%,90%,.4);
+                    border-radius: 6.25rem;
+                    transform: scaleX(0);
+                    transform-origin: right top;
+                    transition: transform .2s ease-in-out .01s;
+                }
+        
+                &:hover {
+                    &:before {
+                        transform: scale(1);
+                        transform-origin: left top;
+                    }
+                    &:after {
+                        transform: scale(1);
+                        transform-origin: left top;
+                    }
+                    .readMoreLetter {
+                        top: 0;
+                        left: -0.4rem;
+                    }
+                }
+        
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(315.21deg,#4e4e4e,$darkGrey 100.37%);
+                    border-radius: 6.25rem;
+                    transform: scaleX(0);
+                    transform-origin: right top;
+                    transition: transform .4s ease-in-out .07s;
+                }
+
+                &>span {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    color: $white;
+                    transition: .35s ease-in-out .2s;
+                    z-index: 1;
+                }
+            }
+        }
         
         &__btn {
             @include readMoreBtn;
 
             display: flex;
             justify-content: center;
-
-            &:first-child {
-                margin-bottom: 2rem;
-
-                @media screen and (min-width: 1024px) {
-                    margin-bottom: 0;
-                }
-
-                &>a {
-                    background: $darkGrey;
-                }
-            }
         }
     }
 }

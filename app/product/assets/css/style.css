@@ -5,45 +5,6 @@
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 #top {
   /* ================================================================
   mv
@@ -425,36 +386,55 @@ keyframe animation
 }
 #top .about__btn > a {
   position: relative;
+  overflow: hidden;
   padding: 0.6rem 4.2rem;
   background: #000;
   border-radius: 6.25rem;
 }
-#top .about__btn > a::after {
+#top .about__btn > a::before {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  content: "";
-  height: 100%;
-  width: 0;
-  background: #fff;
-  border-radius: 6.25rem;
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-#top .about__btn > a:hover::after {
-  width: 100%;
+  top: 0;
   left: 0;
-  right: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#top .about__btn > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#top .about__btn > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
 }
 #top .about__btn > a:hover .readMoreLetter {
-  color: #000;
-  z-index: 1;
+  top: 0;
+  left: 0.4rem;
+}
+#top .about__btn > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
 }
 #top .about__btn > a > span {
   position: relative;
+  top: 0;
+  left: 0;
   color: #fff;
-  transform-origin: center left;
-  transition: color 0.3s ease;
+  transition: 0.35s ease-in-out 0.2s;
   z-index: 1;
 }
 #top .service {
@@ -485,39 +465,21 @@ keyframe animation
     width: 35rem;
   }
 }
-#top .service__ttl, #top .news__ttl, #top .member__ttl {
+#top .service__ttl {
   position: relative;
   display: inline-block;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
   font-weight: 700;
   line-height: normal;
+  letter-spacing: -2.1rem;
 }
 @media screen and (min-width: 1024px) {
-  #top .service__ttl, #top .news__ttl, #top .member__ttl {
+  #top .service__ttl {
     font-size: 7.1rem;
   }
 }
-#top .service__ttl::first-letter, #top .news__ttl::first-letter, #top .member__ttl::first-letter {
-  color: #fff;
-}
-#top .service__ttl::before, #top .news__ttl::before, #top .member__ttl::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 3.3rem;
-  height: 80%;
-  background: #000;
-  z-index: -1;
-}
-@media screen and (min-width: 1024px) {
-  #top .service__ttl::before, #top .news__ttl::before, #top .member__ttl::before {
-    width: 4.3rem;
-  }
-}
-#top .service__ttl::after, #top .news__ttl::after, #top .member__ttl::after {
+#top .service__ttl::after {
   position: absolute;
   bottom: 6px;
   right: 0;
@@ -527,12 +489,22 @@ keyframe animation
   height: 1.5px;
   background: #000;
 }
-#top .service__sub, #top .news__sub {
+#top .service__ttl > span {
+  display: inline-block;
+  letter-spacing: -0.1rem;
+  opacity: 0;
+}
+#top .service__ttl > span:first-child {
+  color: #fff;
+  background-color: black;
+  line-height: 1;
+}
+#top .service__sub {
   margin-bottom: 4rem;
   font-size: 1.2rem;
 }
 @media screen and (min-width: 1024px) {
-  #top .service__sub, #top .news__sub {
+  #top .service__sub {
     font-size: 1.6rem;
   }
 }
@@ -553,36 +525,55 @@ keyframe animation
 }
 #top .service__btn > a {
   position: relative;
+  overflow: hidden;
   padding: 0.6rem 4.2rem;
   background: #000;
   border-radius: 6.25rem;
 }
-#top .service__btn > a::after {
+#top .service__btn > a::before {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  content: "";
-  height: 100%;
-  width: 0;
-  background: #fff;
-  border-radius: 6.25rem;
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-#top .service__btn > a:hover::after {
-  width: 100%;
+  top: 0;
   left: 0;
-  right: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#top .service__btn > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#top .service__btn > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
 }
 #top .service__btn > a:hover .readMoreLetter {
-  color: #000;
-  z-index: 1;
+  top: 0;
+  left: 0.4rem;
+}
+#top .service__btn > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
 }
 #top .service__btn > a > span {
   position: relative;
+  top: 0;
+  left: 0;
   color: #fff;
-  transform-origin: center left;
-  transition: color 0.3s ease;
+  transition: 0.35s ease-in-out 0.2s;
   z-index: 1;
 }
 @media screen and (min-width: 1024px) {
@@ -624,7 +615,33 @@ keyframe animation
   font-size: 5.3rem;
   font-weight: 700;
   line-height: normal;
+  letter-spacing: -2.1rem;
   transform: translateX(80%);
+}
+@media screen and (min-width: 1024px) {
+  #top .blog__ttl {
+    font-size: 7.1rem;
+  }
+}
+#top .blog__ttl::after {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  display: block;
+  content: "";
+  width: 1500%;
+  height: 1.5px;
+  background: #000;
+}
+#top .blog__ttl > span {
+  display: inline-block;
+  letter-spacing: -0.1rem;
+  opacity: 0;
+}
+#top .blog__ttl > span:first-child {
+  color: #fff;
+  background-color: black;
+  line-height: 1;
 }
 @media screen and (min-width: 768px) {
   #top .blog__ttl {
@@ -633,43 +650,16 @@ keyframe animation
 }
 @media screen and (min-width: 1024px) {
   #top .blog__ttl {
-    font-size: 7.1rem;
     transform: translateX(300%);
   }
 }
-#top .blog__ttl::first-letter {
-  color: #fff;
-}
-#top .blog__ttl::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 3.3rem;
-  height: 80%;
-  background: #000;
-  z-index: -1;
-}
-@media screen and (min-width: 1024px) {
-  #top .blog__ttl::before {
-    width: 4.3rem;
-  }
-}
 #top .blog__ttl::after {
-  position: absolute;
-  bottom: 6px;
   left: 0;
-  display: block;
-  content: "";
-  width: 1500%;
-  height: 1.5px;
-  background: #000;
 }
 #top .blog__sub {
+  margin-bottom: 4rem;
   font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 4rem;
   transform: translateX(15%);
 }
 @media screen and (min-width: 1024px) {
@@ -690,36 +680,55 @@ keyframe animation
 }
 #top .blog__btn > a {
   position: relative;
+  overflow: hidden;
   padding: 0.6rem 4.2rem;
   background: #000;
   border-radius: 6.25rem;
 }
-#top .blog__btn > a::after {
+#top .blog__btn > a::before {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  content: "";
-  height: 100%;
-  width: 0;
-  background: #fff;
-  border-radius: 6.25rem;
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-#top .blog__btn > a:hover::after {
-  width: 100%;
+  top: 0;
   left: 0;
-  right: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#top .blog__btn > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#top .blog__btn > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
 }
 #top .blog__btn > a:hover .readMoreLetter {
-  color: #000;
-  z-index: 1;
+  top: 0;
+  left: 0.4rem;
+}
+#top .blog__btn > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
 }
 #top .blog__btn > a > span {
   position: relative;
+  top: 0;
+  left: 0;
   color: #fff;
-  transform-origin: center left;
-  transition: color 0.3s ease;
+  transition: 0.35s ease-in-out 0.2s;
   z-index: 1;
 }
 #top .swiper-blog {
@@ -794,13 +803,39 @@ keyframe animation
 #top .member__container {
   position: relative;
 }
-#top .member__ttl::before {
-  width: 4.6rem;
+#top .member__ttl {
+  position: relative;
+  display: inline-block;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 5.3rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.1rem;
 }
 @media screen and (min-width: 1024px) {
-  #top .member__ttl::before {
-    width: 6.3rem;
+  #top .member__ttl {
+    font-size: 7.1rem;
   }
+}
+#top .member__ttl::after {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  display: block;
+  content: "";
+  width: 200%;
+  height: 1.5px;
+  background: #000;
+}
+#top .member__ttl > span {
+  display: inline-block;
+  letter-spacing: -0.1rem;
+  opacity: 0;
+}
+#top .member__ttl > span:first-child {
+  color: #fff;
+  background-color: black;
+  line-height: 1;
 }
 #top .member__sub {
   margin-bottom: 4rem;
@@ -885,36 +920,55 @@ keyframe animation
 }
 #top .member__btn > a {
   position: relative;
+  overflow: hidden;
   padding: 0.6rem 4.2rem;
   background: #000;
   border-radius: 6.25rem;
 }
-#top .member__btn > a::after {
+#top .member__btn > a::before {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  content: "";
-  height: 100%;
-  width: 0;
-  background: #fff;
-  border-radius: 6.25rem;
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-#top .member__btn > a:hover::after {
-  width: 100%;
+  top: 0;
   left: 0;
-  right: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#top .member__btn > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#top .member__btn > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
 }
 #top .member__btn > a:hover .readMoreLetter {
-  color: #000;
-  z-index: 1;
+  top: 0;
+  left: 0.4rem;
+}
+#top .member__btn > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
 }
 #top .member__btn > a > span {
   position: relative;
+  top: 0;
+  left: 0;
   color: #fff;
-  transform-origin: center left;
-  transition: color 0.3s ease;
+  transition: 0.35s ease-in-out 0.2s;
   z-index: 1;
 }
 @media screen and (min-width: 1024px) {
@@ -1000,12 +1054,47 @@ keyframe animation
     justify-content: space-between;
   }
 }
-#top .news__ttl::before {
-  width: 4rem;
+#top .news__ttl {
+  position: relative;
+  display: inline-block;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 5.3rem;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -2.1rem;
 }
 @media screen and (min-width: 1024px) {
-  #top .news__ttl::before {
-    width: 5.3rem;
+  #top .news__ttl {
+    font-size: 7.1rem;
+  }
+}
+#top .news__ttl::after {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  display: block;
+  content: "";
+  width: 200%;
+  height: 1.5px;
+  background: #000;
+}
+#top .news__ttl > span {
+  display: inline-block;
+  letter-spacing: -0.1rem;
+  opacity: 0;
+}
+#top .news__ttl > span:first-child {
+  color: #fff;
+  background-color: black;
+  line-height: 1;
+}
+#top .news__sub {
+  margin-bottom: 4rem;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 1024px) {
+  #top .news__sub {
+    font-size: 1.6rem;
   }
 }
 #top .news__btn {
@@ -1020,36 +1109,55 @@ keyframe animation
   }
   #top .news__btn > a {
     position: relative;
+    overflow: hidden;
     padding: 0.6rem 4.2rem;
     background: #000;
     border-radius: 6.25rem;
   }
-  #top .news__btn > a::after {
+  #top .news__btn > a::before {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    left: auto;
-    content: "";
-    height: 100%;
-    width: 0;
-    background: #fff;
-    border-radius: 6.25rem;
-    transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  }
-  #top .news__btn > a:hover::after {
-    width: 100%;
+    top: 0;
     left: 0;
-    right: auto;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 90%, 0.4);
+    border-radius: 6.25rem;
+    transform: scaleX(0);
+    transform-origin: right top;
+    transition: transform 0.2s ease-in-out 0.01s;
+  }
+  #top .news__btn > a:hover:before {
+    transform: scale(1);
+    transform-origin: left top;
+  }
+  #top .news__btn > a:hover:after {
+    transform: scale(1);
+    transform-origin: left top;
   }
   #top .news__btn > a:hover .readMoreLetter {
-    color: #000;
-    z-index: 1;
+    top: 0;
+    left: 0.4rem;
+  }
+  #top .news__btn > a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+    border-radius: 6.25rem;
+    transform: scaleX(0);
+    transform-origin: right top;
+    transition: transform 0.4s ease-in-out 0.07s;
   }
   #top .news__btn > a > span {
     position: relative;
+    top: 0;
+    left: 0;
     color: #fff;
-    transform-origin: center left;
-    transition: color 0.3s ease;
+    transition: 0.35s ease-in-out 0.2s;
     z-index: 1;
   }
 }
@@ -1094,45 +1202,6 @@ keyframe animation
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 #blog .wrapper {
   padding: 0 3rem;
 }
@@ -1435,45 +1504,6 @@ keyframe animation
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 #blogSingle .wrapper {
   padding: 0 3rem;
 }
@@ -1713,45 +1743,6 @@ keyframe animation
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 #contact .wrapper {
   padding: 0 3rem;
 }
@@ -1866,36 +1857,55 @@ keyframe animation
 }
 #contact .contact__btn > a {
   position: relative;
+  overflow: hidden;
   padding: 0.6rem 4.2rem;
   background: #000;
   border-radius: 6.25rem;
 }
-#contact .contact__btn > a::after {
+#contact .contact__btn > a::before {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  content: "";
-  height: 100%;
-  width: 0;
-  background: #fff;
-  border-radius: 6.25rem;
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-#contact .contact__btn > a:hover::after {
-  width: 100%;
+  top: 0;
   left: 0;
-  right: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#contact .contact__btn > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#contact .contact__btn > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
 }
 #contact .contact__btn > a:hover .readMoreLetter {
-  color: #000;
-  z-index: 1;
+  top: 0;
+  left: 0.4rem;
+}
+#contact .contact__btn > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
 }
 #contact .contact__btn > a > span {
   position: relative;
+  top: 0;
+  left: 0;
   color: #fff;
-  transform-origin: center left;
-  transition: color 0.3s ease;
+  transition: 0.35s ease-in-out 0.2s;
   z-index: 1;
 }
 #contact .form {
@@ -1991,45 +2001,6 @@ keyframe animation
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 #contactConfirm .wrapper {
   padding: 0 3rem;
 }
@@ -2184,6 +2155,71 @@ keyframe animation
     gap: 3rem;
   }
 }
+#contactConfirm .contactConfirm__btn-return {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+}
+@media screen and (min-width: 1024px) {
+  #contactConfirm .contactConfirm__btn-return {
+    margin-bottom: 0;
+  }
+}
+#contactConfirm .contactConfirm__btn-return > a {
+  position: relative;
+  overflow: hidden;
+  padding: 0.6rem 4.2rem;
+  background: #888;
+  border-radius: 6.25rem;
+}
+#contactConfirm .contactConfirm__btn-return > a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#contactConfirm .contactConfirm__btn-return > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#contactConfirm .contactConfirm__btn-return > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#contactConfirm .contactConfirm__btn-return > a:hover .readMoreLetter {
+  top: 0;
+  left: -0.4rem;
+}
+#contactConfirm .contactConfirm__btn-return > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #888 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
+}
+#contactConfirm .contactConfirm__btn-return > a > span {
+  position: relative;
+  top: 0;
+  left: 0;
+  color: #fff;
+  transition: 0.35s ease-in-out 0.2s;
+  z-index: 1;
+}
 #contactConfirm .contactConfirm__btn {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
@@ -2192,48 +2228,56 @@ keyframe animation
 }
 #contactConfirm .contactConfirm__btn > a {
   position: relative;
+  overflow: hidden;
   padding: 0.6rem 4.2rem;
   background: #000;
   border-radius: 6.25rem;
 }
-#contactConfirm .contactConfirm__btn > a::after {
+#contactConfirm .contactConfirm__btn > a::before {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  content: "";
-  height: 100%;
-  width: 0;
-  background: #fff;
-  border-radius: 6.25rem;
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-#contactConfirm .contactConfirm__btn > a:hover::after {
-  width: 100%;
+  top: 0;
   left: 0;
-  right: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#contactConfirm .contactConfirm__btn > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#contactConfirm .contactConfirm__btn > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
 }
 #contactConfirm .contactConfirm__btn > a:hover .readMoreLetter {
-  color: #000;
-  z-index: 1;
+  top: 0;
+  left: 0.4rem;
+}
+#contactConfirm .contactConfirm__btn > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
 }
 #contactConfirm .contactConfirm__btn > a > span {
   position: relative;
+  top: 0;
+  left: 0;
   color: #fff;
-  transform-origin: center left;
-  transition: color 0.3s ease;
+  transition: 0.35s ease-in-out 0.2s;
   z-index: 1;
-}
-#contactConfirm .contactConfirm__btn:first-child {
-  margin-bottom: 2rem;
-}
-@media screen and (min-width: 1024px) {
-  #contactConfirm .contactConfirm__btn:first-child {
-    margin-bottom: 0;
-  }
-}
-#contactConfirm .contactConfirm__btn:first-child > a {
-  background: #888;
 }
 
 /* ================================================================
@@ -2242,45 +2286,6 @@ keyframe animation
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 #contactComplete .wrapper {
   padding: 0 3rem;
 }
@@ -2395,36 +2400,55 @@ keyframe animation
 }
 #contactComplete .contactComplete__btn > a {
   position: relative;
+  overflow: hidden;
   padding: 0.6rem 4.2rem;
   background: #000;
   border-radius: 6.25rem;
 }
-#contactComplete .contactComplete__btn > a::after {
+#contactComplete .contactComplete__btn > a::before {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  left: auto;
-  content: "";
-  height: 100%;
-  width: 0;
-  background: #fff;
-  border-radius: 6.25rem;
-  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-}
-#contactComplete .contactComplete__btn > a:hover::after {
-  width: 100%;
+  top: 0;
   left: 0;
-  right: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 90%, 0.4);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
+}
+#contactComplete .contactComplete__btn > a:hover:before {
+  transform: scale(1);
+  transform-origin: left top;
+}
+#contactComplete .contactComplete__btn > a:hover:after {
+  transform: scale(1);
+  transform-origin: left top;
 }
 #contactComplete .contactComplete__btn > a:hover .readMoreLetter {
-  color: #000;
-  z-index: 1;
+  top: 0;
+  left: 0.4rem;
+}
+#contactComplete .contactComplete__btn > a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+  border-radius: 6.25rem;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.4s ease-in-out 0.07s;
 }
 #contactComplete .contactComplete__btn > a > span {
   position: relative;
+  top: 0;
+  left: 0;
   color: #fff;
-  transform-origin: center left;
-  transition: color 0.3s ease;
+  transition: 0.35s ease-in-out 0.2s;
   z-index: 1;
 }
 
@@ -2437,6 +2461,48 @@ mixin
 /* ================================================================
 keyframe animation
 ================================================================ */
+@keyframes text-animation {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+#animationDelay0 {
+  animation-delay: 0s;
+}
+
+#animationDelay1 {
+  animation-delay: 0.05s;
+}
+
+#animationDelay2 {
+  animation-delay: 0.1s;
+}
+
+#animationDelay3 {
+  animation-delay: 0.15s;
+}
+
+#animationDelay4 {
+  animation-delay: 0.2s;
+}
+
+#animationDelay5 {
+  animation-delay: 0.25s;
+}
+
+#animationDelay6 {
+  animation-delay: 0.3s;
+}
+
+#animationDelay7 {
+  animation-delay: 0.35s;
+}
+
 @keyframes fadeUp {
   0% {
     transform: translateY(24px);
@@ -2479,45 +2545,6 @@ keyframe animation
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .header {
   position: fixed;
   top: 0;
@@ -2594,40 +2621,62 @@ keyframe animation
   }
   .gnavTop__btn > a {
     position: relative;
+    overflow: hidden;
     padding: 0.6rem 4.2rem;
     background: #000;
     border-radius: 6.25rem;
   }
-  .gnavTop__btn > a::after {
+  .gnavTop__btn > a::before {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    left: auto;
-    content: "";
-    height: 100%;
-    width: 0;
-    background: #fff;
-    border-radius: 6.25rem;
-    transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  }
-  .gnavTop__btn > a:hover::after {
-    width: 100%;
+    top: 0;
     left: 0;
-    right: auto;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 90%, 0.4);
+    border-radius: 6.25rem;
+    transform: scaleX(0);
+    transform-origin: right top;
+    transition: transform 0.2s ease-in-out 0.01s;
+  }
+  .gnavTop__btn > a:hover:before {
+    transform: scale(1);
+    transform-origin: left top;
+  }
+  .gnavTop__btn > a:hover:after {
+    transform: scale(1);
+    transform-origin: left top;
   }
   .gnavTop__btn > a:hover .readMoreLetter {
-    color: #000;
-    z-index: 1;
+    top: 0;
+    left: 0.4rem;
+  }
+  .gnavTop__btn > a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(315.21deg, #4e4e4e, #1d1d1d 100.37%);
+    border-radius: 6.25rem;
+    transform: scaleX(0);
+    transform-origin: right top;
+    transition: transform 0.4s ease-in-out 0.07s;
   }
   .gnavTop__btn > a > span {
     position: relative;
+    top: 0;
+    left: 0;
     color: #fff;
-    transform-origin: center left;
-    transition: color 0.3s ease;
+    transition: 0.35s ease-in-out 0.2s;
     z-index: 1;
   }
   .gnavTop__btn > a {
     padding: 0.6rem 2rem;
+  }
+  .gnavTop__btn > a:hover {
+    opacity: 1;
   }
 }
 
@@ -2818,45 +2867,6 @@ keyframe animation
 /* ================================================================
 mixin
 ================================================================ */
-/* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .footer {
   position: relative;
   color: #fff;
@@ -3059,45 +3069,6 @@ keyframe animation
 mixin
 ================================================================ */
 /* ================================================================
-keyframe animation
-================================================================ */
-@keyframes fadeUp {
-  0% {
-    transform: translateY(24px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes loop {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-/* ================================================================
 top page
 ================================================================ */
 .rotate-top {
@@ -3115,6 +3086,10 @@ top page
 .gnav-active {
   opacity: 1;
   pointer-events: auto;
+}
+
+.showAnimation {
+  animation: text-animation 0.6s forwards;
 }
 
 /* ================================================================
