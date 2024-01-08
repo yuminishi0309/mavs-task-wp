@@ -91,26 +91,26 @@
         width: 110%;
         height: 1px;
         background: $black;
-        animation: slide 1s 1.3s backwards;
+        animation: slide 1s 1.7s backwards;
       }
       &--01 {
         display: block;
-        animation: fadeUp 1s 0.5s backwards;
+        animation: fadeUp 1s 0.9s backwards;
       }
       &--02 {
         display: block;
-        animation: fadeUp 1s 0.7s backwards;
+        animation: fadeUp 1s 1.1s backwards;
       }
       &--03 {
         display: block;
-        animation: fadeUp 1s 0.9s backwards;
+        animation: fadeUp 1s 1.3s backwards;
       }
     }
 
     &__sub {
       margin-left: 1.5rem;
       font-weight: 700;
-      animation: fadeUp 1s 1.7s backwards;
+      animation: fadeUp 1s 2.1s backwards;
 
       @media screen and (min-width: 600px) {
         font-size: 1.2rem;
@@ -164,7 +164,8 @@
       animation: rotation 20s infinite linear;
     }
     // ↑回転アニメーションのロゴ=================
-
+    
+    // mv背景=================================
     &__bg {
       position: relative;
       height: 100vh;
@@ -176,7 +177,7 @@
       bottom: 0rem;
       right: 3rem;
       width: 61rem;
-      animation: slide-fadeIn 1s 3.2s both;
+      animation: slide-fadeIn-wolf 2.4s 3.6s both;
 
       @media screen and (min-width: 500px) {
         width: auto;
@@ -205,7 +206,7 @@
       top: 11.5rem;
       left: -20rem;
       width: 64.4rem;
-      animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 1.9s both;
+      animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.4s both;
       z-index: -3;
 
       @media screen and (min-width: 768px) {
@@ -217,7 +218,7 @@
       }
       @media screen and (min-width: 1024px) {
         top: auto;
-        bottom: 0;
+        bottom: -2px;
         left: 26rem;
         width: 43vw;
         height: 86vh;
@@ -235,7 +236,7 @@
       position: relative;
       top: 0;
       left: -15.2rem;
-      animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 2s both;
+      animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.5s both;
       z-index: -2;
 
       @media screen and (min-width: 768px) {
@@ -262,7 +263,7 @@
       background: url(../image/top/mv_plant.png) left top / cover;
       width: 37.7rem;
       height: 47.0rem;
-      animation: slide-fadeIn 1s 3s both;
+      animation: slide-fadeIn 2s 3s both;
       z-index: -4;
       
       @media screen and (min-width: 768px) {
@@ -737,6 +738,7 @@
     &__container {
       @media screen and (min-width: 1024px) {
         width: 73.1rem;
+        transition-delay: .6s;
       }
     }
 
@@ -754,7 +756,7 @@
     }
 
     &__link-ttl {
-      transition: .1s ease-in-out;
+      transition: .3s ease-in-out;
 
       &:hover {
         transform: translateX(2rem);

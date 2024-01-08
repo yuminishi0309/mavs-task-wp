@@ -22,6 +22,26 @@ top page
 .showAnimation {
     animation: text-animation 0.6s forwards;
 }
+
+// ページ全体の共通fadeUp アニメーション
+.fadeUp {
+    position: relative;
+    top: 10px;
+    // transform: translateY(1rem);
+    opacity: 0;
+    transition: 1s;
+    >::after {
+        opacity: 0;
+    }
+}
+.showElement {
+    top: 0;
+    // transform: translateY(0);
+    opacity: 1;
+    >::after {
+        opacity: 1;
+    }
+}
 /* ================================================================
 blog page
 ================================================================ */

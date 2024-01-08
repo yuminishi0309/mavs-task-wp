@@ -38,10 +38,10 @@
             </p>
         </div>
         <!-- about sec ===================================== -->
-        <section id="about" class="about scroll">
+        <section id="about" class="about fadeUp">
           <div class="about__wrap">
             <h2 class="about__ttl">ABOUT</h2>
-            <p class="about__txt">
+            <p class="about__txt fadeUp">
               <span class="about__txtSpan--01">マーベリックスは<br class="about__br">技術力とコミュニケーションスキルを<br class="about__br">兼ね備えたエンジニア集団。<br class="about__br--tb"></span>
               <span class="about__txtSpan--02">それぞれの個性を活かしチームで取り組むからこそ最高の価値を提供できる。<br class="about__br--tb"></span>
               変化を恐れず己を磨き、挑戦を続けながら明日の世界を創造していく。
@@ -66,15 +66,17 @@
                     <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay6">C</span>
                     <span class="service__ttlLetter txtAnimationFadeUp" id="animationDelay7">E</span>
                 </h2>
-                <p class="service__sub">サービス</p>
-                <p class="service__txt">マーベリックスは経験豊富なメンバーによるサイト制作やシステム開発を得意としています。さらに業務に柔軟に対応できる「リモートラボ」なら、お客様の開発を効率的に進めることができます。</p>
+                <p class="service__sub fadeUp">サービス</p>
+                <p class="service__txt fadeUp">マーベリックスは経験豊富なメンバーによるサイト制作やシステム開発を得意としています。さらに業務に柔軟に対応できる「リモートラボ」なら、お客様の開発を効率的に進めることができます。</p>
                 <p class="service__btn">
                 <a href="#" class="service__link">
                     <span class="service__letter readMoreLetter">READ MORE</span>
                 </a>
                 </p>
             </div>
-            <div class="service__pic"></div>
+            <div class="fadeUp">
+                <div class="service__pic"></div>
+            </div>
           </div>
         </section>
         <!-- blog sec ===================================== -->
@@ -86,7 +88,7 @@
                 <span class="blog__ttlLetter txtAnimationFadeUp" id="animationDelay3">O</span>
                 <span class="blog__ttlLetter txtAnimationFadeUp" id="animationDelay4">G</span>
             </h2>
-            <p class="blog__sub">ブログ</p>
+            <p class="blog__sub fadeUp">ブログ</p>
             <!-- スライダー本体 ================== -->
             <div class="swiper swiper-blog">
                 <div class="swiper-wrapper swiper-blog__wrapper">
@@ -152,13 +154,15 @@
                 <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay5">E</span>
                 <span class="member__ttlLetter txtAnimationFadeUp" id="animationDelay6">R</span>
             </h2>
-              <p class="member__sub">メンバー</p>
-              <div class="member__bg">
-                <div class="member__bg-pic"></div>
-                <div class="member__bg-plant"></div>
-              </div>
-              <p class="member__txt">個性あるマーベリックスの仲間をご紹介します！</p>
-              <p class="member__btn">
+                <p class="member__sub fadeUp">メンバー</p>
+                <div class="member__bg">
+                    <div class="fadeUp">
+                        <div class="member__bg-pic"></div>
+                    </div>
+                    <div class="member__bg-plant"></div>
+                </div>
+                <p class="member__txt fadeUp">個性あるマーベリックスの仲間をご紹介します！</p>
+                <p class="member__btn">
                 <a href="#" class="member__link">
                   <span class="member__letter readMoreLetter">READ MORE</span>
                 </a>
@@ -194,14 +198,14 @@
                 <span class="news__ttlLetter txtAnimationFadeUp" id="animationDelay3">W</span>
                 <span class="news__ttlLetter txtAnimationFadeUp" id="animationDelay4">S</span>
             </h2>
-              <p class="news__sub">ニュース</p>
+              <p class="news__sub fadeUp">ニュース</p>
               <p class="news__btn">
                 <a href="#" class="news__link">
                   <span class="news__letter readMoreLetter">READ MORE</span>
                 </a>
               </p>
             </div>
-            <div class="news__container">
+            <div class="news__container fadeUp">
               <div class="news__box">
                 <a href="#" class="news__link-ttl">
                   <p class="news__date">2022.05.01</p>

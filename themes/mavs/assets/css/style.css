@@ -126,24 +126,24 @@ mixin
   width: 110%;
   height: 1px;
   background: #000;
-  animation: slide 1s 1.3s backwards;
+  animation: slide 1s 1.7s backwards;
 }
 #top .mv__ttl--01 {
   display: block;
-  animation: fadeUp 1s 0.5s backwards;
+  animation: fadeUp 1s 0.9s backwards;
 }
 #top .mv__ttl--02 {
   display: block;
-  animation: fadeUp 1s 0.7s backwards;
+  animation: fadeUp 1s 1.1s backwards;
 }
 #top .mv__ttl--03 {
   display: block;
-  animation: fadeUp 1s 0.9s backwards;
+  animation: fadeUp 1s 1.3s backwards;
 }
 #top .mv__sub {
   margin-left: 1.5rem;
   font-weight: 700;
-  animation: fadeUp 1s 1.7s backwards;
+  animation: fadeUp 1s 2.1s backwards;
 }
 @media screen and (min-width: 600px) {
   #top .mv__sub {
@@ -210,7 +210,7 @@ mixin
   bottom: 0rem;
   right: 3rem;
   width: 61rem;
-  animation: slide-fadeIn 1s 3.2s both;
+  animation: slide-fadeIn-wolf 2.4s 3.6s both;
 }
 @media screen and (min-width: 500px) {
   #top .mv__bg-wolf {
@@ -245,7 +245,7 @@ mixin
   top: 11.5rem;
   left: -20rem;
   width: 64.4rem;
-  animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 1.9s both;
+  animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.4s both;
   z-index: -3;
 }
 @media screen and (min-width: 768px) {
@@ -260,7 +260,7 @@ mixin
 @media screen and (min-width: 1024px) {
   #top .mv__bg-grey {
     top: auto;
-    bottom: 0;
+    bottom: -2px;
     left: 26rem;
     width: 43vw;
     height: 86vh;
@@ -278,7 +278,7 @@ mixin
   position: relative;
   top: 0;
   left: -15.2rem;
-  animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 2s both;
+  animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 0.5s both;
   z-index: -2;
 }
 @media screen and (min-width: 768px) {
@@ -309,7 +309,7 @@ mixin
   background: url(../image/top/mv_plant.png) left top/cover;
   width: 37.7rem;
   height: 47rem;
-  animation: slide-fadeIn 1s 3s both;
+  animation: slide-fadeIn 2s 3s both;
   z-index: -4;
 }
 @media screen and (min-width: 768px) {
@@ -509,12 +509,12 @@ mixin
 #top .service__ttl > span {
   display: inline-block;
   letter-spacing: -0.1rem;
+  line-height: 1;
   opacity: 0;
 }
 #top .service__ttl > span:first-child {
   color: #fff;
   background-color: black;
-  line-height: 1;
 }
 #top .service__sub {
   margin-bottom: 4rem;
@@ -653,12 +653,12 @@ mixin
 #top .blog__ttl > span {
   display: inline-block;
   letter-spacing: -0.1rem;
+  line-height: 1;
   opacity: 0;
 }
 #top .blog__ttl > span:first-child {
   color: #fff;
   background-color: black;
-  line-height: 1;
 }
 @media screen and (min-width: 768px) {
   #top .blog__ttl {
@@ -847,12 +847,12 @@ mixin
 #top .member__ttl > span {
   display: inline-block;
   letter-spacing: -0.1rem;
+  line-height: 1;
   opacity: 0;
 }
 #top .member__ttl > span:first-child {
   color: #fff;
   background-color: black;
-  line-height: 1;
 }
 #top .member__sub {
   margin-bottom: 4rem;
@@ -1098,12 +1098,12 @@ mixin
 #top .news__ttl > span {
   display: inline-block;
   letter-spacing: -0.1rem;
+  line-height: 1;
   opacity: 0;
 }
 #top .news__ttl > span:first-child {
   color: #fff;
   background-color: black;
-  line-height: 1;
 }
 #top .news__sub {
   margin-bottom: 4rem;
@@ -1181,6 +1181,7 @@ mixin
 @media screen and (min-width: 1024px) {
   #top .news__container {
     width: 73.1rem;
+    transition-delay: 0.6s;
   }
 }
 #top .news__box {
@@ -1196,7 +1197,7 @@ mixin
   border-bottom: 1px solid #000;
 }
 #top .news__link-ttl {
-  transition: 0.1s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 #top .news__link-ttl:hover {
   transform: translateX(2rem);
@@ -2488,35 +2489,35 @@ keyframe animation
     opacity: 1;
   }
 }
-#animationDelay0 {
+#animationDelay1 {
   animation-delay: 0s;
 }
 
-#animationDelay1 {
+#animationDelay2 {
   animation-delay: 0.05s;
 }
 
-#animationDelay2 {
+#animationDelay3 {
   animation-delay: 0.1s;
 }
 
-#animationDelay3 {
+#animationDelay4 {
   animation-delay: 0.15s;
 }
 
-#animationDelay4 {
+#animationDelay5 {
   animation-delay: 0.2s;
 }
 
-#animationDelay5 {
+#animationDelay6 {
   animation-delay: 0.25s;
 }
 
-#animationDelay6 {
+#animationDelay7 {
   animation-delay: 0.3s;
 }
 
-#animationDelay7 {
+#animationDelay8 {
   animation-delay: 0.35s;
 }
 
@@ -2550,15 +2551,26 @@ keyframe animation
 }
 @keyframes slide-fadeIn {
   0% {
-    transform: translateX(-2rem);
+    transform: translateX(-1rem);
     opacity: 0;
   }
-  30% {
+  50% {
     opacity: 1;
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes slide-fadeIn-wolf {
+  0% {
+    transform: translateX(-6rem);
+    opacity: 0;
+  }
+  20% {
     opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 @keyframes rotation {
@@ -3130,6 +3142,24 @@ top page
 
 .showAnimation {
   animation: text-animation 0.6s forwards;
+}
+
+.fadeUp {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  transition: 1s;
+}
+.fadeUp > ::after {
+  opacity: 0;
+}
+
+.showElement {
+  top: 0;
+  opacity: 1;
+}
+.showElement > ::after {
+  opacity: 1;
 }
 
 /* ================================================================

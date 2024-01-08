@@ -16,7 +16,7 @@ $(function () {
         // セクションタイトル fadeUp設定
         $('.txtAnimationFadeUp').each(function(){
             const target = $(this).offset().top;
-            if(ST > target - windowHeight / 1.4){
+            if(ST > target - windowHeight / 1.3){
                 $(this).addClass('showAnimation');
             }
         });
