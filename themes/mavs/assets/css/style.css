@@ -194,16 +194,23 @@ mixin
 }
 #top .mv__img {
   display: block;
+  height: 100%;
 }
 #top .mv__iconTxt {
   position: absolute;
   animation: rotation 20s infinite linear;
+}
+#top .mv__bg {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 #top .mv__bg-wolf {
   position: absolute;
   bottom: 0rem;
   right: 3rem;
   width: 61rem;
+  animation: slide-fadeIn 1s 3.2s both;
 }
 @media screen and (min-width: 500px) {
   #top .mv__bg-wolf {
@@ -236,54 +243,63 @@ mixin
 #top .mv__bg-grey {
   position: absolute;
   top: 11.5rem;
-  left: -10rem;
-  background: url(../image/top/mv_bg.png) left top/contain;
-  width: 40.3rem;
-  height: 45.7rem;
+  left: -20rem;
+  width: 64.4rem;
+  animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 1.9s both;
   z-index: -3;
 }
 @media screen and (min-width: 768px) {
   #top .mv__bg-grey {
-    width: 62rem;
-    height: 70.3rem;
+    top: auto;
+    bottom: 0;
+    left: -6rem;
+    height: 86vh;
+    width: 98vw;
   }
 }
 @media screen and (min-width: 1024px) {
   #top .mv__bg-grey {
     top: auto;
     bottom: 0;
-    left: 30.7rem;
+    left: 26rem;
+    width: 43vw;
+    height: 86vh;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: portrait) {
   #top .mv__bg-grey {
-    width: 82rem;
-    height: 102rem;
-    top: 16.7rem;
-    left: 5rem;
+    bottom: 0;
+    left: -17rem;
+    width: 98vw;
   }
 }
 #top .mv__bg-city {
-  background: url(../image/top/mv_city.png) center center/cover;
-  height: 100vh;
+  width: 180%;
+  position: relative;
+  top: 0;
+  left: -15.2rem;
+  animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 2s both;
   z-index: -2;
+}
+@media screen and (min-width: 768px) {
+  #top .mv__bg-city {
+    left: 5rem;
+    width: auto;
+    height: 100%;
+  }
 }
 @media screen and (min-width: 1024px) {
   #top .mv__bg-city {
-    position: relative;
-    right: 3.5rem;
-    background: url(../image/top/mv_city.png) center center/contain no-repeat;
+    left: 35.7rem;
+    width: 46vw;
+    height: 100vh;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: portrait) {
   #top .mv__bg-city {
-    position: static;
-    background: url(../image/top/mv_city.png) center center/cover no-repeat;
-  }
-}
-@media screen and (min-width: 1240px) {
-  #top .mv__bg-city {
-    background: url(../image/top/mv_city.png) center center/contain no-repeat;
+    left: 5rem;
+    width: auto;
+    height: 100%;
   }
 }
 #top .mv__bg-plant {
@@ -293,6 +309,7 @@ mixin
   background: url(../image/top/mv_plant.png) left top/cover;
   width: 37.7rem;
   height: 47rem;
+  animation: slide-fadeIn 1s 3s both;
   z-index: -4;
 }
 @media screen and (min-width: 768px) {
@@ -2519,6 +2536,29 @@ keyframe animation
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes slide-skew {
+  0% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes slide-fadeIn {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 @keyframes rotation {

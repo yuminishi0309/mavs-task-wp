@@ -156,6 +156,7 @@
 
     &__img {
       display: block;
+      height: 100%;
     }
 
     &__iconTxt {
@@ -164,11 +165,18 @@
     }
     // ↑回転アニメーションのロゴ=================
 
+    &__bg {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
     &__bg-wolf {
       position: absolute;
       bottom: 0rem;
       right: 3rem;
       width: 61rem;
+      animation: slide-fadeIn 1s 3.2s both;
 
       @media screen and (min-width: 500px) {
         width: auto;
@@ -195,46 +203,55 @@
     &__bg-grey {
       position: absolute;
       top: 11.5rem;
-      left: -10rem;
-      background: url(../image/top/mv_bg.png) left top / contain;
-      width: 40.3rem;
-      height: 45.7rem;
+      left: -20rem;
+      width: 64.4rem;
+      animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 1.9s both;
       z-index: -3;
 
       @media screen and (min-width: 768px) {
-        width: 62rem;
-        height: 70.3rem;
+        top: auto;
+        bottom: 0;
+        left: -6rem;
+        height: 86vh;
+        width: 98vw;
       }
       @media screen and (min-width: 1024px) {
         top: auto;
         bottom: 0;
-        left: 30.7rem;
+        left: 26rem;
+        width: 43vw;
+        height: 86vh;
       }
+
       @media #{$tabLarge} {
-        width: 82rem;
-        height: 102rem;
-        top: 16.7rem;
-        left: 5rem;
+        bottom: 0;
+        left: -17rem;
+        width: 98vw;
       }
     }
 
     &__bg-city {
-      background: url(../image/top/mv_city.png) center center / cover;
-      height: 100vh;
+      width: 180%;
+      position: relative;
+      top: 0;
+      left: -15.2rem;
+      animation: slide-skew 0.6s cubic-bezier(0.25, 1, 0.5, 1) 2s both;
       z-index: -2;
-      
-      @media screen and (min-width: 1024px) {
-        position: relative;
-        right: 3.5rem;
-        background: url(../image/top/mv_city.png) center center / contain no-repeat;
 
+      @media screen and (min-width: 768px) {
+        left: 5rem;
+        width: auto;
+        height: 100%;
+      }
+      @media screen and (min-width: 1024px) {
+        left: 35.7rem;
+        width: 46vw;
+        height: 100vh;
       }
       @media #{$tabLarge} {
-        position: static;
-        background: url(../image/top/mv_city.png) center center / cover no-repeat;
-      }
-      @media screen and (min-width: 1240px) {
-        background: url(../image/top/mv_city.png) center center / contain no-repeat;
+        left: 5rem;
+        width: auto;
+        height: 100%;
       }
     }
 
@@ -245,6 +262,7 @@
       background: url(../image/top/mv_plant.png) left top / cover;
       width: 37.7rem;
       height: 47.0rem;
+      animation: slide-fadeIn 1s 3s both;
       z-index: -4;
       
       @media screen and (min-width: 768px) {

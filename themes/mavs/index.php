@@ -3,7 +3,7 @@
     <main id="top">
       <div class="wrapper">
         <!-- mv ===================================== -->
-        <div class="mv scroll">
+        <div class="mv">
           <div class="mv__wrap">
             <div class="mv__container">
               <p class="mv__ttl">
@@ -21,8 +21,12 @@
                 <p class="mv__bg-wolf">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/mv_wolf.png" alt="狼の顔" class="mv__img">
                 </p>
-                <div class="mv__bg-grey"></div>
-                <div class="mv__bg-city"></div>
+                <p class="mv__bg-grey">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/mv_bg.png" alt="グレーの背景画像" class="mv__img">
+                </p>
+                <p class="mv__bg-city">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/mv_city.png" alt="街の背景画像" class="mv__img">
+                </p>
                 <div class="mv__bg-plant"></div>
             </div>
           </div>
