@@ -25,21 +25,18 @@
           </ul>
         </nav>
       </div>
-
       <!-- ↓ループ表示  =================== -->
       <div class="blogList__container">
         <?php
           $paged = get_query_var('paged')? get_query_var('paged') : 1;
-          $wp_query = new WP_Query();
           $my_posts = array(
-              'post_type' => 'blog',
-              'paged' => $paged,
-              'posts_per_page' => '12',
+            'post_type' => 'blog',
+            'paged' => $paged,
+            'posts_per_page' => 12,
           );
-
-          $wp_query->query($my_posts);
+          $wp_query = new WP_Query($my_posts);
           if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();
-                  $obj = get_post_type_object($post->post_type);
+            $obj = get_post_type_object($post->post_type);
         ?>
           <!-- ループさせるコンテンツ -->
           <div class="blogList__box">

@@ -136,7 +136,7 @@
             </div>
             <!-- ↑ここまでスライダー本体 ================== -->
             <p class="blog__btn">
-              <a href="blog.html" class="blog__link">
+              <a href="<?php echo esc_url( get_home_url() ); ?>/archives/blog" class="blog__link">
                 <span class="blog__letter readMoreLetter">READ MORE</span>
               </a>
             </p>

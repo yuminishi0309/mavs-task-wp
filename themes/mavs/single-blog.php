@@ -40,53 +40,7 @@
               <?php else: ?>
                 <p>記事が見つかりませんでした</p>
               <?php endif; ?>
-              <!-- ↑カスタム投稿記事 -->
-                    
-              <h2 class="blogSingle__h2">H2タイトル</h2>
-              <p class="blogSingle__txt">テキストテキストテキストテキスト<span class="blogSingle__bold">太字テキスト</span>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-                こちらが<span><a href="#" class="blogSingle__link">おすすめリンク</a></span>です
-              </p>
-              <p class="blogSingle__txt"></p>
-              <h3 class="blogSingle__h3">H3タイトル</h3>
-              <p class="blogSingle__txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              <!-- 表 -->
-              <table class="blogSingle__table">
-                <tr class="blogSingle__tr">
-                  <th class="blogSingle__th">タイトル</th>
-                  <th class="blogSingle__th">タイトル</th>
-                  <th class="blogSingle__th">タイトル</th>
-                </tr>
-                <tr class="blogSingle__tr">
-                  <td class="blogSingle__td">テキスト</td>
-                  <td class="blogSingle__td">テキスト</td>
-                  <td class="blogSingle__td">テキスト</td>
-                </tr>
-                <tr class="blogSingle__tr">
-                  <td class="blogSingle__td">テキスト</td>
-                  <td class="blogSingle__td">テキスト</td>
-                  <td class="blogSingle__td">テキスト</td>
-                </tr>
-                <tr class="blogSingle__tr">
-                  <td class="blogSingle__td">テキスト</td>
-                  <td class="blogSingle__td">テキスト</td>
-                  <td class="blogSingle__td">テキスト</td>
-                </tr>
-              </table>
-              <h4 class="blogSingle__h4">H4タイトル</h4>
-              <p class="blogSingle__txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-              <ol class="blogSingle__ol">
-                <li class="blogSingle__li">リストタイトル<br>あいうえお</li>
-                <li class="blogSingle__li">リストタイトル</li>
-                <li class="blogSingle__li">リストタイトル</li>
-              </ol>
-              <ul class="blogSingle__ul">
-                <li class="blogSingle__li">リストタイトル<br>かきくけこ</li>
-                <li class="blogSingle__li">リストタイトル</li>
-                <li class="blogSingle__li">リストタイトル</li>
-              </ul>
-              <h5 class="blogSingle__h5">H5タイトル</h5>
-              <p class="blogSingle__txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            </div>
+              
             <!-- ページリンクナビ -->
             <ul class="blogSingle__nav">
               <?php previous_post_link('%link', '&larr;　PREV'); ?>

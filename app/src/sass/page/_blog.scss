@@ -293,16 +293,28 @@
             justify-content: center;
             width: 100%;
             border-right: 2px solid $white;
+            padding: 0.6rem 0;
+
+            &:last-child {
+                border: none;
+            }
         }
     }
     .current {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100%;
+        background: $darkGrey;
         border-right: 2px solid $white;
 
+        &:first-child {
+            border-radius: 6.25rem 0 0 6.25rem;
+            padding-left: 0.4rem;
+        }
         &:last-child {
-            border: none;
+            border-radius: 0 6.25rem 6.25rem 0;
+            padding-right: 0.4rem;
         }
     }
 }

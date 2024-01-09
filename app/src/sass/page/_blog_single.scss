@@ -139,7 +139,7 @@
             
             @media screen and (min-width: 1024px) {
                 margin-bottom: 6rem;
-                font-size: 2rem;
+                font-size: 3.4rem;
             }
         }
         
@@ -157,97 +157,8 @@
             height: 100%;
         }
 
-        &__h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-        }
-        
         &__txt {
-            margin-bottom: 2rem;
-        }
-        
-        &__bold {
-            font-weight: 700;
-        }
-        
-        &__link {
-            color: #00c2ff;
-        }
-        
-        &__h3 {
-            margin-bottom: 2rem;
-            font-size: 2.4rem;
-            font-weight: 700;
-
-            &::after {
-                display:block; 
-                content: "";
-                width: 100%;
-                height: 1px;
-                background: $black;
-            }
-        }
-
-        &__table {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-        
-        &__th {
-            text-align: left;
-            padding: 0.2rem 0.4rem;
-            background: $grey;
-            border: 1px solid #999;
-            
-            @media screen and (min-width: 1024px) {
-                padding: 1rem 2rem;
-            }
-        }
-        
-        &__td {
-            padding: 0.2rem 0.4rem;
-            border: 1px solid #999;
-            
-            @media screen and (min-width: 1024px) {
-                padding: 1rem 2rem;
-            }
-        }
-        
-        &__h4 {
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-        
-        &__ol {
-            margin-bottom: 3rem;
-            margin-left: 1.8rem;
-            list-style-type: auto;
-        }
-        
-        &__li {
-            &::marker {
-                color: $magenda;
-            }
-        }
-        
-        &__ul {
-            margin-bottom: 2.5rem;
-            margin-left: 1.8rem;
-            list-style-type: disc;
-        }
-        
-        &__h5 {
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-        
-        &__nav {
-            display: flex;
-            justify-content: space-between;
-            font-family: $futura;
-            font-weight: 500;
+            margin-top: 6rem;
         }
     }
 }

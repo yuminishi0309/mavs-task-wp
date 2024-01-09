@@ -36,6 +36,7 @@
 
     &__link {
         display: block;
+        transition: .3s;
 
         &:hover {
             opacity: 0.6;
@@ -66,7 +67,7 @@
             display: block;
             padding: 0.06rem 1rem;
             &:hover {
-                opacity: .5;
+                opacity: .6;
             }
         }
         &__btn {
@@ -152,6 +153,7 @@
 
     &__logoLink {
         display: block;
+        transition: .3s;
 
         &:hover {
             opacity: 0.6;

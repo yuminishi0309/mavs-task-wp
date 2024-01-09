@@ -45,14 +45,14 @@
                 <!-- FadeInナビゲーション -->
                 <nav class="gnavFadeIn" id="gnavFadeIn">
                     <p class="gnavFadeIn__logo">
-                        <a href="index.html" class="gnavFadeIn__logoLink">
+                        <a href="<?php echo esc_url( get_home_url() ); ?>" class="gnavFadeIn__logoLink">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/logo-wh.svg" alt="マーベリックスロゴ" class="gnavFadeIn__img">
                         </a>
                     </p>
                     <div class="gnavFadeIn__wrap">
                         <div class="gnavFadeIn__container">
                             <ul class="gnavFadeIn__nav--left">
-                                <li class="gnavFadeIn__list"><a href="index.html" class="gnavFadeIn__link">TOP</a></li>
+                                <li class="gnavFadeIn__list"><a href="<?php echo esc_url( get_home_url() ); ?>" class="gnavFadeIn__link">TOP</a></li>
                                 <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">ABOUT</a></li>
                                 <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">WORKS</a></li>
                                 <li class="gnavFadeIn__list"><a href="#" class="gnavFadeIn__link">SERVICE</a></li>
