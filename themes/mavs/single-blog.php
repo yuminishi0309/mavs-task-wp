@@ -27,20 +27,16 @@
                   </p>
                 </div>
                 <p class="blogSingle__heading"><?php the_title(); ?></p>
-
                 <?php if(has_post_thumbnail()): ?>
                   <?php the_post_thumbnail("", array("class" => "blogSingle__img")); ?>
                 <?php else: ?>
                   <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像">
                 <?php endif; ?>
-
                 <p class="blogSingle__txt"><?php the_content(); ?></p>
-
               <?php endwhile; ?>
               <?php else: ?>
                 <p>記事が見つかりませんでした</p>
               <?php endif; ?>
-              
             <!-- ページリンクナビ -->
             <ul class="blogSingle__nav">
               <?php previous_post_link('%link', '&larr;　PREV'); ?>

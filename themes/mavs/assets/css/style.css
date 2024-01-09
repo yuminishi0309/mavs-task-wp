@@ -1260,17 +1260,17 @@ mixin
 #blog .blogList__ttl {
   position: relative;
   display: inline-block;
+  margin-top: 11.2rem;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
   font-weight: 700;
   line-height: normal;
-  margin-top: 11.2rem;
 }
 @media screen and (min-width: 1024px) {
   #blog .blogList__ttl {
-    font-size: 7.1rem;
     margin-top: 14rem;
     margin-left: 21.8rem;
+    font-size: 7.1rem;
   }
 }
 #blog .blogList__ttl::first-letter {
@@ -1355,6 +1355,7 @@ mixin
 }
 #blog .blogList__menu {
   position: relative;
+  font-size: 2rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -1375,11 +1376,13 @@ mixin
 }
 #blog .blogList__menu::after {
   position: absolute;
-  right: 10px;
-  top: 5px;
-  content: "〈";
-  transform: rotate(270deg);
-  transition: 0.2s;
+  right: 1rem;
+  top: 1.2rem;
+  content: "";
+  background: url(../image/blog/category-toggle.svg) left top/cover;
+  width: 1.5rem;
+  height: 0.8rem;
+  transition: 0.3s;
 }
 #blog .blogListNav {
   position: absolute;
@@ -1421,27 +1424,36 @@ mixin
   #blog .blogList__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 3rem;
     margin: 0 10rem 5rem;
   }
 }
 #blog .blogList__box {
   margin-bottom: 3rem;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
 }
 @media screen and (min-width: 1024px) {
   #blog .blogList__box {
-    width: 39.4rem;
-    margin-bottom: 5rem;
+    width: 39.3rem;
+    margin-bottom: 2rem;
   }
+}
+#blog .blogList__box:hover .blogList__img {
+  transform: scale(1.1);
 }
 #blog .blogList__link {
   display: block;
 }
+#blog .blogList__pic {
+  overflow: hidden;
+}
 #blog .blogList__img {
   display: block;
   height: 100%;
+  transition: 0.3s;
 }
 #blog .blogList__inner {
   padding: 2rem;
@@ -1689,6 +1701,16 @@ mixin
 }
 #blogSingle .blogSingle__txt {
   margin-top: 6rem;
+}
+#blogSingle .blogSingle__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+}
+#blogSingle .blogSingle__nav > a:last-child {
+  margin-left: auto;
 }
 
 /* ================================================================
@@ -3108,8 +3130,7 @@ blog page
   opacity: 1;
 }
 #blog .RotateItem::after {
-  content: "〉";
-  top: -2px;
+  transform: rotate(180deg);
 }
 @media screen and (min-width: 1024px) {
   #blog .currentCategory::after {

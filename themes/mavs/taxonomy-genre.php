@@ -40,9 +40,9 @@
             <a class="category-link" href="<?php the_permalink(); ?>">
               <!-- サムネイル表示 -->
               <?php if(has_post_thumbnail()): ?>
-                  <p><?php the_post_thumbnail("", array("class" => "blogList__img")); ?></p>
+                  <p  class="blogList__pic"><?php the_post_thumbnail("", array("class" => "blogList__img")); ?></p>
               <?php else: ?>
-                  <p><img class="blogList__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像"></p>
+                  <p class="blogList__pic"><img class="blogList__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像"></p>
               <?php endif; ?>
               <div class="blogList__inner">
                 <div class="blogList__unit">

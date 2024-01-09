@@ -160,5 +160,17 @@
         &__txt {
             margin-top: 6rem;
         }
+
+        &__nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 6rem;
+            font-family: $futura;
+            font-weight: 500;
+
+            >a:last-child{
+                margin-left: auto;
+            }
+        }
     }
 }

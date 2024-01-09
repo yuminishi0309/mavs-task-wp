@@ -54,8 +54,9 @@ blog page
     // ページ内ナビゲーション > トグルメニュー開閉時に変化する記号
     .RotateItem {
         &::after {
-            content: "〉";
-            top: -2px;
+            // content: "〉";
+            // top: -2px;
+            transform: rotate(180deg);
         }
     }
 
