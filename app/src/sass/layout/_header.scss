@@ -129,10 +129,6 @@
     transition: .4s;
     opacity: 0;
     pointer-events: none;
-    // 作業用 後で削除******
-    // opacity: 1;
-    // pointer-events: auto;
-    // ↑作業用 ******
 
     @media screen and (min-width: 1024px) {
         display: none;

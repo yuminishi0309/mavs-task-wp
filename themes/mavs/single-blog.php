@@ -39,8 +39,8 @@
               <?php endif; ?>
             <!-- ページリンクナビ -->
             <ul class="blogSingle__nav">
-              <?php previous_post_link('%link', '&larr;　PREV'); ?>
-              <?php next_post_link('%link', 'NEXT　&rarr;'); ?>
+              <div class="blogSingle__prev"><?php previous_post_link('%link', '&larr;　PREV'); ?></div>
+              <div class="blogSingle__next"><?php next_post_link('%link', 'NEXT　&rarr;'); ?></div>
             </ul>
           </div>
         </section>

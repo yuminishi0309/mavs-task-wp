@@ -1787,7 +1787,10 @@ mixin
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
 }
-#blogSingle .blogSingle__nav > a:last-child {
+#blogSingle .blogSingle__prev {
+  margin-right: auto;
+}
+#blogSingle .blogSingle__next {
   margin-left: auto;
 }
 
@@ -2128,17 +2131,17 @@ mixin
 #contactConfirm .contactConfirm__ttl {
   position: relative;
   display: inline-block;
+  margin-top: 11.2rem;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
   font-weight: 700;
   line-height: normal;
-  margin-top: 11.2rem;
 }
 @media screen and (min-width: 1024px) {
   #contactConfirm .contactConfirm__ttl {
-    font-size: 7.1rem;
     margin-top: 14rem;
     margin-left: 21.8rem;
+    font-size: 7.1rem;
   }
 }
 #contactConfirm .contactConfirm__ttl::first-letter {
@@ -2164,7 +2167,6 @@ mixin
   position: absolute;
   bottom: 6px;
   right: 0;
-  display: block;
   content: "";
   width: 200%;
   height: 2px;
@@ -2176,13 +2178,13 @@ mixin
   }
 }
 #contactConfirm .contactConfirm__sub {
-  font-size: 1.2rem;
   margin-bottom: 6rem;
+  font-size: 1.2rem;
 }
 @media screen and (min-width: 1024px) {
   #contactConfirm .contactConfirm__sub {
-    font-size: 1.6rem;
     margin-left: 21.8rem;
+    font-size: 1.6rem;
   }
 }
 #contactConfirm .contactConfirm__container {
@@ -2413,17 +2415,17 @@ mixin
 #contactComplete .contactComplete__ttl {
   position: relative;
   display: inline-block;
+  margin-top: 11.2rem;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
   font-weight: 700;
   line-height: normal;
-  margin-top: 11.2rem;
 }
 @media screen and (min-width: 1024px) {
   #contactComplete .contactComplete__ttl {
-    font-size: 7.1rem;
     margin-top: 14rem;
     margin-left: 21.8rem;
+    font-size: 7.1rem;
   }
 }
 #contactComplete .contactComplete__ttl::first-letter {
@@ -2461,13 +2463,13 @@ mixin
   }
 }
 #contactComplete .contactComplete__sub {
-  font-size: 1.2rem;
   margin-bottom: 6rem;
+  font-size: 1.2rem;
 }
 @media screen and (min-width: 1024px) {
   #contactComplete .contactComplete__sub {
-    font-size: 1.6rem;
     margin-left: 21.8rem;
+    font-size: 1.6rem;
   }
 }
 #contactComplete .contactComplete__container {

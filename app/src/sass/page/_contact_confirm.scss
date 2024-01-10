@@ -18,20 +18,16 @@
         &__ttl {
             position: relative;
             display: inline-block;
+            margin-top: 11.2rem;
             font-family: $plus;
             font-size: 5.3rem;
             font-weight: 700;
             line-height: normal;
-
-            // このページの個別設定
-            margin-top: 11.2rem;
       
             @media screen and (min-width: 1024px) {
-                font-size: 7.1rem;
-
-                // このページの個別設定
                 margin-top: 14rem;
                 margin-left: 21.8rem;
+                font-size: 7.1rem;
             }
       
             // 文頭型抜き
@@ -50,36 +46,31 @@
                 z-index: -1;
                 
                 @media screen and (min-width: 1024px) {
-                width: 4.9rem;
+                    width: 4.9rem;
                 }
             }
             // タイトル下線
             &::after {
-              position: absolute;
-              bottom: 6px;
-              right: 0;
-              display: block;
-              content: "";
-              width: 200%;
-              height: 2px;
-              background: $black;
+                position: absolute;
+                bottom: 6px;
+                right: 0;
+                content: "";
+                width: 200%;
+                height: 2px;
+                background: $black;
 
-              @media screen and (min-width: 1024px) {
-                  width: 300%;
-              }
+                @media screen and (min-width: 1024px) {
+                    width: 300%;
+                }
             }
         }
         &__sub {
-            font-size: 1.2rem;
-
-            // このページの個別設定
             margin-bottom: 6rem; 
+            font-size: 1.2rem;
             
             @media screen and (min-width: 1024px) {
-                font-size: 1.6rem;
-
-                // このページの個別設定
                 margin-left: 21.8rem;
+                font-size: 1.6rem;
             }
         }
         

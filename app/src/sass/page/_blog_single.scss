@@ -167,10 +167,14 @@
             margin-top: 6rem;
             font-family: $futura;
             font-weight: 500;
+        }
 
-            >a:last-child{
-                margin-left: auto;
-            }
+        &__prev {
+            margin-right: auto;
+        }
+        
+        &__next {
+            margin-left: auto;
         }
     }
 }
