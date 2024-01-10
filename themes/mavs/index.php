@@ -33,14 +33,15 @@
         </div>
         <!-- mv以降の全体bg ===================================== -->
         <div class="mainBg">
-            <p class="mainBg-bg">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/about_bg.png" alt="グラデーション背景画像" class="mainBg__img">
+            <p id="mainBg-color" class="mainBg-color">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/about_bg-color.png" alt="グラデーション背景画像" class="mainBg__img">
             </p>
+            <div id="mainBg-grey" class="mainBg-grey"></div>
         </div>
         <!-- about sec ===================================== -->
-        <section id="about" class="about fadeUp">
+        <section id="about" class="about">
           <div class="about__wrap">
-            <h2 class="about__ttl">ABOUT</h2>
+            <h2 class="about__ttl fadeUp">ABOUT</h2>
             <p class="about__txt fadeUp">
               <span class="about__txtSpan--01">マーベリックスは<br class="about__br">技術力とコミュニケーションスキルを<br class="about__br">兼ね備えたエンジニア集団。<br class="about__br--tb"></span>
               <span class="about__txtSpan--02">それぞれの個性を活かしチームで取り組むからこそ最高の価値を提供できる。<br class="about__br--tb"></span>

@@ -2,7 +2,7 @@ $(function () {
     /* ================================================================
     top page
     ================================================================ */
-    // 共通 スクロール時の設定
+    // スクロール時の設定
     const windowHeight = $(window).innerHeight();
     $(window).on('scroll', function(){
             const ST = $(window).scrollTop();
@@ -13,13 +13,19 @@ $(function () {
                 $(this).addClass('showElement');
             }
         });
-        // セクションタイトル fadeUp設定
+        // セクションタイトル共通 fadeUp設定
         $('.txtAnimationFadeUp').each(function(){
             const target = $(this).offset().top;
             if(ST > target - windowHeight / 1.3){
                 $(this).addClass('showAnimation');
             }
         });
+        // セクションbg スライドfadeIn設定
+        const aboutTop = $('#about').offset().top;
+        if(ST > aboutTop - windowHeight / 2){
+            $('#mainBg-color').addClass('mainBgColor-slideIn');
+            $('#mainBg-grey').addClass('mainBgGrey-slideIn');
+        }
     });
 
     // header ハンバーガーメニューボタン

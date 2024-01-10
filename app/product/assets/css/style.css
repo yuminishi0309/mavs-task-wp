@@ -329,27 +329,53 @@ mixin
 #top .mainBg {
   position: relative;
 }
-#top .mainBg-bg {
+#top .mainBg-color {
   position: absolute;
   top: 2.4rem;
   right: -13.5rem;
-  width: 102rem;
+  width: 139.2rem;
+  transform: translate(-25%, 100vh);
+  transition: 0.6s 0.2s;
+  opacity: 0;
   z-index: -10;
 }
 @media screen and (min-width: 768px) {
-  #top .mainBg-bg {
-    right: 5.5rem;
+  #top .mainBg-color {
+    right: 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  #top .mainBg-bg {
+  #top .mainBg-color {
     top: 0;
     right: 0;
-    left: 0;
+    left: -36.6rem;
   }
 }
 #top .mainBg__img {
   display: block;
+}
+#top .mainBg-grey {
+  position: absolute;
+  top: 13.6rem;
+  left: -37rem;
+  width: 33.5rem;
+  height: 220.2rem;
+  background: linear-gradient(18deg, #FFF 0%, #CCC 100%);
+  transform: skewX(-23deg) translate(-25%, 100vh);
+  transition: 0.6s;
+  opacity: 0;
+  z-index: -11;
+}
+@media screen and (min-width: 768px) {
+  #top .mainBg-grey {
+    left: -15rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .mainBg-grey {
+    top: 11.2rem;
+    left: 12.2rem;
+  }
 }
 #top .about {
   padding: 13rem 3rem 0;
@@ -2793,13 +2819,25 @@ mixin
   z-index: 10;
 }
 .gnavFadeIn__list {
-  margin: 0.8rem 0;
+  margin: 1.6rem 0.6rem;
+}
+@media screen and (min-width: 768px) {
+  .gnavFadeIn__list {
+    margin: 2.6rem 0.6rem;
+  }
 }
 .gnavFadeIn__link {
   position: relative;
-  padding: 0.6rem;
+  padding: 0.6rem 0;
+  font-size: 1.6rem;
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .gnavFadeIn__link {
+    padding: 1rem 0;
+    font-size: 2.6rem;
+  }
 }
 .gnavFadeIn__link::before {
   content: "";
@@ -2843,7 +2881,7 @@ mixin
 .nav__btn::after {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 54%;
   display: block;
   content: "CONTACT　→";
   color: #fff;
@@ -2852,20 +2890,24 @@ mixin
 }
 .nav__btn:last-child::after {
   content: "RECRUIT　→";
+  letter-spacing: 0.13rem;
 }
 .nav__btnBg::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   background: linear-gradient(315.21deg, #6e6e6e, #1d1d1d 100.37%);
   width: 100%;
   height: 100%;
-  transition: ease 0.4s;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
   pointer-events: none;
 }
 .nav__btnBg:hover::before {
-  transform: translateX(100%);
+  transform: scale(1);
+  transform-origin: left top;
 }
 .nav__link {
   display: block;
@@ -2954,11 +2996,17 @@ mixin
   }
 }
 .footerGnav__list {
-  margin: 0.7rem 0;
+  margin: 1.6rem 0.6rem;
+}
+@media screen and (min-width: 768px) {
+  .footerGnav__list {
+    margin: 2.6rem 0.6rem;
+  }
 }
 .footerGnav__link {
   position: relative;
-  padding: 0.6rem;
+  padding: 0.6rem 0;
+  font-size: 1.6rem;
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
 }
@@ -3010,7 +3058,7 @@ mixin
 .footerNav__btn::after {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 54%;
   display: block;
   content: "CONTACT　→";
   color: #fff;
@@ -3019,20 +3067,24 @@ mixin
 }
 .footerNav__btn:last-child::after {
   content: "RECRUIT　→";
+  letter-spacing: 0.13rem;
 }
 .footerNav__btnBg::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   background: linear-gradient(315.21deg, #6e6e6e, #1d1d1d 100.37%);
   width: 100%;
   height: 100%;
-  transition: ease 0.3s;
+  transform: scaleX(0);
+  transform-origin: right top;
+  transition: transform 0.2s ease-in-out 0.01s;
   pointer-events: none;
 }
 .footerNav__btnBg:hover::before {
-  transform: translateX(100%);
+  transform: scale(1);
+  transform-origin: left top;
 }
 .footerNav__link {
   display: block;
@@ -3082,7 +3134,7 @@ mixin
 mixin
 ================================================================ */
 /* ================================================================
-top page
+header
 ================================================================ */
 .rotate-top {
   transform: rotate(45deg);
@@ -3101,25 +3153,34 @@ top page
   pointer-events: auto;
 }
 
-.showAnimation {
-  animation: text-animation 0.6s forwards;
-}
-
-.fadeUp {
+/* ================================================================
+top page
+================================================================ */
+#top .fadeUp {
   position: relative;
   top: 10px;
   opacity: 0;
   transition: 1s;
 }
-.fadeUp > ::after {
+#top .fadeUp > ::after {
   opacity: 0;
 }
-
-.showElement {
+#top .showElement {
   top: 0;
   opacity: 1;
 }
-.showElement > ::after {
+#top .showElement > ::after {
+  opacity: 1;
+}
+#top .showAnimation {
+  animation: text-animation 0.6s forwards;
+}
+#top .mainBgColor-slideIn {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+#top .mainBgGrey-slideIn {
+  transform: skewX(-23deg) translate(0, 0);
   opacity: 1;
 }
 

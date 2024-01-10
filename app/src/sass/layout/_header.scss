@@ -197,15 +197,24 @@
     }
 
     &__list {
-        margin: 0.8rem 0;
+        margin: 1.6rem 0.6rem;
+
+        @media screen and (min-width: 768px) {
+            margin: 2.6rem 0.6rem;
+        }
     }
 
     &__link {
         position: relative;
-        // display: block;
-        padding: 0.6rem;
+        padding: 0.6rem 0;
+        font-size: 1.6rem;
         font-family: $futura;
         font-weight: 500;
+        
+        @media screen and (min-width: 768px) {
+            padding: 1rem 0;
+            font-size: 2.6rem;
+        }
 
         &::before {
             content: "";
@@ -249,11 +258,12 @@
         transform: skewX(-23deg);
         transition: ease .4s;
         cursor: pointer;
+
         // ボタン内テキスト
         &::after {
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 54%;
             display: block;
             content: "CONTACT　→";
             color: $white;
@@ -263,6 +273,7 @@
         &:last-child {
             &::after {
                 content: "RECRUIT　→";
+                letter-spacing: 0.13rem;
             }
         }
     }
@@ -271,16 +282,19 @@
         content: '';
         position: absolute;
         top: 0;
-        left: -100%;
+        left: 0;
         background: linear-gradient(315.21deg,#6e6e6e,#1d1d1d 100.37%);
         width: 100%;
         height: 100%;
-        transition: ease .4s;
+        transform: scaleX(0);
+        transform-origin: right top;
+        transition: transform .2s ease-in-out .01s;
         pointer-events: none;
       }
 
     &__btnBg:hover::before {
-        transform: translateX(100%);
+        transform: scale(1);
+        transform-origin: left top;
     }
 
     &__link {
