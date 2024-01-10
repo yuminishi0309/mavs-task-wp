@@ -37,9 +37,16 @@ mixin
   left: 0;
   z-index: 1;
 }
+@media screen and (min-width: 1024px) {
+  #top .mv__container {
+    top: 50%;
+    transform: translateY(-60%);
+  }
+}
 @media only screen and (min-width: 1024px) and (orientation: portrait) {
   #top .mv__container {
     top: 20rem;
+    transform: translateY(0);
   }
 }
 #top .mv__ttl {
@@ -170,8 +177,8 @@ mixin
 }
 #top .mv__icon {
   position: absolute;
-  bottom: 0.97rem;
-  left: 0.94rem;
+  bottom: 1.5rem;
+  left: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,6 +188,7 @@ mixin
 }
 @media screen and (min-width: 768px) {
   #top .mv__icon {
+    bottom: 5.6rem;
     left: 3.8rem;
   }
 }
@@ -712,7 +720,12 @@ mixin
 }
 @media screen and (min-width: 768px) {
   #top .blog__sub {
-    transform: translateX(5%);
+    transform: translateX(6.5%);
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .blog__sub {
+    transform: translateX(4.5%);
   }
 }
 #top .blog__btn {
@@ -787,12 +800,17 @@ mixin
     padding: 0;
   }
 }
+#top .swiper-blog__slide:hover .swiper-blog__img {
+  transform: scale(1.1);
+}
 #top .swiper-blog__pic {
+  overflow: hidden;
   margin-bottom: 2.7rem;
 }
 #top .swiper-blog__img {
   display: block;
   height: 100%;
+  transition: 0.3s;
 }
 #top .swiper-blog__unit {
   display: flex;
@@ -893,6 +911,11 @@ mixin
   width: 100%;
   margin-left: -3rem;
   margin-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  #top .member__bg {
+    margin-left: 0;
+  }
 }
 #top .member__bg-pic {
   background: url(../image/top/member_img.jpg) center center/contain;
@@ -1073,8 +1096,29 @@ mixin
   width: 100%;
   height: 100%;
 }
+@media screen and (min-width: 1024px) {
+  #top .banner {
+    position: relative;
+  }
+}
+#top .banner__link {
+  display: block;
+}
+#top .banner__link:hover .banner__pic {
+  opacity: 0.7;
+}
 #top .banner__pic {
-  cursor: pointer;
+  display: block;
+  transition: 0.3;
+}
+@media screen and (min-width: 1024px) {
+  #top .banner__pic-man {
+    position: absolute;
+    bottom: -2.8rem;
+    left: 0;
+    width: 41.9rem;
+    height: 53.9rem;
+  }
 }
 #top .news {
   padding: 13rem 3rem 0;
@@ -1095,6 +1139,12 @@ mixin
   #top .news__wrap {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .news__unit {
+    width: 21.8rem;
   }
 }
 #top .news__ttl {
@@ -1117,7 +1167,7 @@ mixin
   right: 0;
   display: block;
   content: "";
-  width: 200%;
+  width: 210%;
   height: 1.5px;
   background: #000;
 }
@@ -1138,6 +1188,11 @@ mixin
 @media screen and (min-width: 1024px) {
   #top .news__sub {
     font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #top .news__sub {
+    margin-bottom: 5.8rem;
   }
 }
 #top .news__btn {
@@ -1211,27 +1266,24 @@ mixin
   }
 }
 #top .news__box {
-  padding: 1.5rem 0;
   border-top: 1px solid #000;
-}
-@media screen and (min-width: 1024px) {
-  #top .news__box {
-    padding: 2rem 0;
-  }
 }
 #top .news__box:last-child {
   border-bottom: 1px solid #000;
 }
 #top .news__link-ttl {
+  display: block;
+  padding: 1.5rem 0;
   transition: 0.3s ease-in-out;
 }
 #top .news__link-ttl:hover {
-  transform: translateX(2rem);
+  background: #E6E6E6;
 }
 @media screen and (min-width: 1024px) {
   #top .news__link-ttl {
     display: flex;
     gap: 4.5rem;
+    padding: 1.84rem 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2473,38 +2525,30 @@ keyframe animation
     opacity: 1;
   }
 }
-#animationDelay1 {
+#top #animationDelay1 {
   animation-delay: 0s;
 }
-
-#animationDelay2 {
+#top #animationDelay2 {
   animation-delay: 0.05s;
 }
-
-#animationDelay3 {
+#top #animationDelay3 {
   animation-delay: 0.1s;
 }
-
-#animationDelay4 {
+#top #animationDelay4 {
   animation-delay: 0.15s;
 }
-
-#animationDelay5 {
+#top #animationDelay5 {
   animation-delay: 0.2s;
 }
-
-#animationDelay6 {
+#top #animationDelay6 {
   animation-delay: 0.25s;
 }
-
-#animationDelay7 {
+#top #animationDelay7 {
   animation-delay: 0.3s;
 }
-
-#animationDelay8 {
+#top #animationDelay8 {
   animation-delay: 0.35s;
 }
-
 @keyframes fadeUp {
   0% {
     transform: translateY(24px);
@@ -2575,6 +2619,7 @@ keyframe animation
     transform: translateX(-100%);
   }
 }
+
 /* ================================================================
 変数
 ================================================================ */

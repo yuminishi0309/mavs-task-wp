@@ -14,8 +14,14 @@
       left: 0;
       z-index: 1;
 
+      @media screen and (min-width: 1024px) {
+        top: 50%;
+        transform: translateY(-60%);
+      }
+
       @media #{$tabLarge} {
         top: 20rem;
+        transform: translateY(0);
       }
     }
     
@@ -133,8 +139,8 @@
     // 回転アニメーションのロゴ============
     &__icon {
       position: absolute;
-      bottom: 0.97rem;
-      left: 0.94rem;
+      bottom: 1.5rem;
+      left: 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -143,6 +149,7 @@
       z-index: 1;
 
       @media screen and (min-width: 768px) {
+        bottom: 5.6rem;
         left: 3.8rem;
       }
       @media screen and (min-width: 1024px) {
@@ -497,7 +504,10 @@
       transform: translateX(15%);
 
       @media screen and (min-width: 768px) {
-        transform: translateX(5%);
+        transform: translateX(6.5%);
+      }
+      @media screen and (min-width: 1024px) {
+        transform: translateX(4.5%);
       }
     }
 
@@ -514,18 +524,30 @@
     @media screen and (min-width: 1024px) {
       margin-bottom: 5rem;
     }
+
     &__slide {
       @media screen and (min-width: 768px) {
         padding: 0;
       }
+
+      &:hover {
+        .swiper-blog__img {
+          transform: scale(1.1);
+        }
+      }
     }
+
     &__pic {
+      overflow: hidden;
       margin-bottom: 2.7rem;
     }
+
     &__img {
       display: block;
       height: 100%;
+      transition: .3s;
     }
+
     &__unit {
       display: flex;
       gap: 2.4rem;
@@ -536,6 +558,7 @@
         font-size: 1.6rem;
       }
     }
+
     &__category {
       display: flex;
       align-items: center;
@@ -549,6 +572,7 @@
         background: #4d4d4d;
       }
     }
+
     &__txt {
       font-size: 1.8rem;
       font-weight: 700;
@@ -589,7 +613,12 @@
       width: 100%;
       margin-left: -3rem;
       margin-bottom: 5rem;
+
+      @media screen and (min-width: 1024px) {
+        margin-left: 0;
+      }
     }
+
     &__bg-pic {
       background: url(../image/top/member_img.jpg) center center / contain;
       width: 100%;
@@ -714,8 +743,39 @@
     }
   }
   // バナー
-  .banner__pic {
-    cursor: pointer;
+  .banner {
+    @media screen and (min-width: 1024px) {
+      position: relative;
+      
+    }
+
+    &__link {
+      display: block;
+
+      &:hover {
+        .banner__pic {
+          // transform: scale(1.1);
+          opacity: .7;
+        }
+      }
+    }
+
+    &__pic {
+      display: block;
+      // cursor: pointer;
+      transition: .3;
+    }
+
+    &__pic-man {
+      @media screen and (min-width: 1024px) {
+      position: absolute;
+      bottom: -2.8rem;
+      left: 0;
+      width: 41.9rem;
+      height: 53.9rem;
+      }
+    }
+
   }
   /* ================================================================
   news
@@ -736,16 +796,27 @@
       @media screen and (min-width: 1024px) {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    &__unit {
+      @media screen and (min-width: 1024px) {
+        width: 21.8rem;
       }
     }
 
     // セクションタイトル
     &__ttl {
-      @include secTtl;
+      @include secTtl (210%);
     }
 
     &__sub {
       @include secTtlSub;
+
+      @media screen and (min-width: 1024px) {
+        margin-bottom: 5.8rem;
+      }
     }
 
     &__btn {
@@ -767,12 +838,7 @@
     }
 
     &__box {
-      padding: 1.5rem 0;
       border-top: 1px solid $black;
-      
-      @media screen and (min-width: 1024px) {
-        padding: 2rem 0;
-      }
 
       &:last-child {
         border-bottom: 1px solid $black;
@@ -780,15 +846,18 @@
     }
 
     &__link-ttl {
+      display: block;
+      padding: 1.5rem 0;
       transition: .3s ease-in-out;
 
       &:hover {
-        transform: translateX(2rem);
+        background: $grey;
       }
 
       @media screen and (min-width: 1024px) {
         display: flex;
-        gap: 4.5rem; 
+        gap: 4.5rem;
+        padding: 1.84rem 0;
       }
     }
 

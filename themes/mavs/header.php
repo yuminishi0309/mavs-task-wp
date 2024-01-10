@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css" rel="stylesheet" />
     <link href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" rel="stylesheet" />
-    <!-- <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/image/top/favicon.png" /> -->
     <?php wp_head(); ?>
   </head>
   <body>

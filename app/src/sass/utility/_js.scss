@@ -21,45 +21,39 @@ header
 top page
 ================================================================ */
 #top {
-// ページ全体の共通fadeUp アニメーション
-.fadeUp {
-    position: relative;
-    top: 10px;
-    opacity: 0;
-    transition: 1s;
-    >::after {
+    // ページ全体の共通fadeUp アニメーション
+    .fadeUp {
+        position: relative;
+        top: 10px;
         opacity: 0;
+        transition: 1s;
+        >::after {
+            opacity: 0;
+        }
     }
-}
-.showElement {
-    top: 0;
-    opacity: 1;
-    >::after {
+    .showElement {
+        top: 0;
+        opacity: 1;
+        >::after {
+            opacity: 1;
+        }
+    }
+
+    // セクションタイトル アニメーション
+    .showAnimation {
+        animation: text-animation 0.6s forwards;
+    }
+
+    // セクションbg スライドfadeIn設定
+    .mainBgColor-slideIn {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    .mainBgGrey-slideIn {
+        transform: skewX(-23deg) translate(0,0);
         opacity: 1;
     }
 }
-
-// セクションタイトル アニメーション
-.showAnimation {
-    animation: text-animation 0.6s forwards;
-}
-
-// セクションbg スライドfadeIn設定
-.mainBgColor-slideIn {
-    // transform: translate(0,0) !important;
-    // opacity: 1 !important;
-    transform: translate(0,0);
-    opacity: 1;
-}
-.mainBgGrey-slideIn {
-    // transform: skewX(-23deg) translate(0,0) !important;
-    // opacity: 1 !important;
-    transform: skewX(-23deg) translate(0,0);
-    opacity: 1;
-}
-}
-
-
 /* ================================================================
 blog page
 ================================================================ */

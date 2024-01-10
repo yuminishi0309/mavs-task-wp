@@ -108,9 +108,13 @@
                         <div class="swiper-slide swiper-blog__slide">
                             <a href="<?php the_permalink(); ?>">
                                 <?php if(has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail("", array("class" => "swiper-blog__img")); ?>
+                                    <p class="swiper-blog__pic">
+                                        <?php the_post_thumbnail("", array("class" => "swiper-blog__img")); ?>
+                                    </p>
                                 <?php else: ?>
-                                    <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像">
+                                    <p class="swiper-blog__pic">
+                                        <img class="swiper-blog__img" src="<?php echo get_template_directory_uri(); ?>/assets/image/blog/no-image.jpg" alt="no imageの画像">
+                                    </p>
                                 <?php endif; ?>
                                 <div class="swiper-blog__unit">
                                     <p class="swiper-blog__date"><?php the_time('Y.m.d'); ?></p>
@@ -144,7 +148,7 @@
           </div>
         </section>
         <!-- member sec ===================================== -->
-        <section id="member" class="member standardScroll">
+        <section id="member" class="member">
           <div class="member__wrap">
             <div class="member__container">
             <h2 class="member__ttl">
@@ -172,25 +176,33 @@
           </div>
         </section>
         <!-- テキストループアニメーション ===================================== -->
-        <div id="loop" class="loop__wrap standardScroll">
+        <div id="loop" class="loop__wrap">
           <p class="loop__txt1"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
           <p class="loop__txt2"><img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/member_mvs-txt.svg" alt="MVSテキスト" class="loop__img"></p>
         </div>
         <!-- バナー ===================================== -->
-        <div id="banner" class="banner__wrap standardScroll">
+        <div id="banner" class="banner">
           <a href="#" class="banner__link">
             <picture class="banner__pic">
               <!-- PC用の画像 -->
-              <source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-pc.jpg">
+              <source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-pc-bg.jpg">
               <!-- TAB用の画像 -->
               <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-pc.jpg">
               <!-- スマホ用とデフォルト設定 -->
               <img src="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-sp.jpg" alt="スマホ用バナー" class="banner__img">
             </picture>
+            <picture class="banner__pic-man">
+              <!-- PC用の画像 -->
+              <source class="banner__src-man" media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/image/top/banner-pc-man.png">
+              <!-- TAB用の画像 -->
+              <source media="(min-width: 768px)" srcset="">
+              <!-- スマホ用とデフォルト設定 -->
+              <img src="">
+            </picture>
           </a>
         </div>
         <!-- news sec ===================================== -->
-        <section id="news" class="news standardScroll">
+        <section id="news" class="news">
           <div class="news__wrap">
             <div class="news__unit">
             <h2 class="news__ttl">
