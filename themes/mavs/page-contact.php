@@ -32,16 +32,16 @@
                 <div class="form__box">
                   <p class="form__txt form__bold">性別</p>
                   <div class="form__unit">
-                    <label><input type="radio" name="sex" value="男性">男性</label>
-                    <label><input type="radio" name="sex" value="女性">女性</label>
+                    <label><input class="form__radio" type="radio" name="sex" value="男性">男性</label>
+                    <label><input class="form__radio" type="radio" name="sex" value="女性">女性</label>
                   </div>
                 </div>
                 <div class="form__box">
                   <p class="form__txt form__bold">お問い合わせ種別</p>
                   <div class="form__group">
-                    <label class="form__category"><input type="checkbox" name="category" value="制作依頼">ホームページの制作依頼</label>
-                    <label class="form__category"><input type="checkbox" name="category" value="新規取引">新規お取引に関するお問い合わせ</label>
-                    <label class="form__category"><input type="checkbox" name="category" value="採用">採用に関するお問い合わせ</label>
+                    <label class="form__category"><input class="form__check" type="checkbox" name="category" value="制作依頼">ホームページの制作依頼</label>
+                    <label class="form__category"><input class="form__check" type="checkbox" name="category" value="新規取引">新規お取引に関するお問い合わせ</label>
+                    <label class="form__category"><input class="form__check" type="checkbox" name="category" value="採用">採用に関するお問い合わせ</label>
                   </div>
                 </div>
                 <div class="form__box">
