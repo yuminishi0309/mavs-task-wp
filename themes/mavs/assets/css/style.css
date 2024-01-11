@@ -339,8 +339,8 @@ mixin
 }
 #top .mainBg-color {
   position: absolute;
-  top: 2.4rem;
-  right: -13.5rem;
+  top: 0;
+  right: -15rem;
   width: 139.2rem;
   transform: translate(-25%, 100vh);
   transition: 0.6s 0.2s;
@@ -364,7 +364,7 @@ mixin
 }
 #top .mainBg-grey {
   position: absolute;
-  top: 13.6rem;
+  top: 11.2rem;
   left: -37rem;
   width: 33.5rem;
   height: 220.2rem;
