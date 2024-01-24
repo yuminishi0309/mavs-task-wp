@@ -32,8 +32,8 @@
                 <div class="form__box">
                   <p class="form__txt form__bold">性別</p>
                   <div class="form__unit">
-                    <label><input class="form__radio" type="radio" name="sex" value="男性">男性</label>
-                    <label><input class="form__radio" type="radio" name="sex" value="女性">女性</label>
+                    <input id="man" class="form__radio" type="radio" name="sex" value="男性"><label for="man" class="form__sex">男性</label>
+                    <input id="woman" class="form__radio" type="radio" name="sex" value="女性"><label for="woman" class="form__sex">女性</label>
                   </div>
                 </div>
                 <div class="form__box">
