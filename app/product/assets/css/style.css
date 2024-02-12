@@ -1996,11 +1996,17 @@ mixin
 @media screen and (min-width: 1024px) {
   #contact .form__box {
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
   }
 }
 #contact .form__label:first-child {
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  #contact .form__label:first-child {
+    margin-bottom: 0;
+  }
 }
 #contact .form__input {
   height: 4.8rem;
@@ -2022,6 +2028,11 @@ mixin
 }
 #contact .form__txt:first-child {
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  #contact .form__txt:first-child {
+    margin-bottom: 0;
+  }
 }
 #contact .form__unit {
   display: flex;
@@ -2072,18 +2083,37 @@ mixin
   }
 }
 #contact .form__category {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
   margin-bottom: 1rem;
 }
-#contact .form__check {
+#contact .form__category::before {
+  content: "";
+  width: 2rem;
+  height: 2rem;
   margin: 0 1rem;
-  transform: scale(1.5);
-  accent-color: #fff;
+  border: 1px solid #A0A0A0;
+  border-radius: 0.5rem;
 }
-@media screen and (min-width: 1024px) {
-  #contact .form__check {
-    margin: 0 2rem;
-    transform: scale(2);
-  }
+#contact .form__category::after {
+  position: absolute;
+  content: "";
+  top: 0.7rem;
+  left: 1.65rem;
+  width: 0.71rem;
+  height: 1.16rem;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+#contact .form input[type=checkbox]:checked + .form__category:after {
+  opacity: 1;
+}
+#contact .form__check {
+  display: none;
 }
 #contact .form__time {
   width: 16rem;
@@ -2109,6 +2139,7 @@ mixin
 @media screen and (min-width: 1024px) {
   #contact .form__textarea {
     width: 69.6rem;
+    height: 15rem;
   }
 }
 #contact .form__textarea:focus {
